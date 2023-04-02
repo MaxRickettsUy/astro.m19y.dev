@@ -1,0 +1,59 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import '../styles/styles.css';
+import '../styles/footer.css';
+import '../styles/header.css';
+import '../styles/main.css';
+import '../styles/new.css';
+import '../styles/new-styles.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	    <link rel="shortcut icon" type="image/jpg" href="../img/merle.png"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta charset="UTF-8">
+	    <meta name="description" content="m19y.dev/random home directory.">
+	    <meta property="og:title" content="projects">
+	    <meta property="og:description" content="m19y.dev/random home directory.">
+	    <meta property="og:image" content="img/merle.png">
+	    <meta property="og:locale" content="en_US">
+	    <meta property="og:type" content="website">
+	    <meta property="og:url" content="https://www.m19y.dev/pages/random.html">
+
+	    <style>
+	      li {
+	        color: white
+	      }
+	    </style>
+	
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
