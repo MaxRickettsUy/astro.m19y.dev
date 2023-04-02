@@ -1,0 +1,11 @@
+---
+export interface Props {
+    img: string
+}
+
+const { img } = Astro.props;
+---
+
+<a class="m-1" target="_blank" href=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`>
+  <img alt="" src=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}` />
+</a>

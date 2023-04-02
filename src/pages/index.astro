@@ -1,81 +1,71 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
-
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<!-- Panelbear -->
+  <script is:inline async src="https://cdn.panelbear.com/analytics.js?site=68TLdJZ1g5r"></script>
+  <script>
+      window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+      panelbear('config', { site: '68TLdJZ1g5r' });
+  </script>
+<Layout>
+	<body>
+		<div id="container">
+			<Header />
+			<main>
+				<div class="flex h-[75%] mt-2">
+					<div class="container post">
+						<div class="p-2">
+							<div class="page-title">
+								<h1>Hey, I'm Max.👋🏼</h1>
+							</div>
+							<div class="centered-div">
+								<p class="text-[18px]">
+									I'm a <a target="_blank" rel="noopener noreferrer" href="https://interclypse.com/">software developer</a> (mostly frontend these days) and <a target="_blank" rel="noopener noreferrer" href="https://exerceo.org/">mentor</a>.
+								</p>
+								<p class="text-[18px]">
+									This site is a mishmash of things including:
+									a store of interesting works and resources I've found over the years,
+									a list (and possible chronicle) of personal projects and what I've learned from them and more.
+								</p>
+								<p class="text-[18px]">
+									Besides software I enjoy music (hardcore punk, black metal, rap, jazz ...), gardening (mainly vegetables), indoor bouldering and golf among other things.
+									<br/><br/>
+								</p>
+								<div class="text-center">
+									<a href="pages/setup.html"><h3 style="color: var(--link)">Check out my setup</h3></a>
+								</div>
+								<div class="text-center">
+									<h3>Some other blogs/sites I recommend:</h3>
+									<ul id="blogs">
+										<li>
+											<a target="_blank" rel="noopener noreferrer" href="https://usesthis.com/">uses this.</a>
+										</li>
+										<li>
+											<a target="_blank" rel="noopener noreferrer" href="https://hckrnews.com/">hckr news.</a>
+										</li>
+										<li>
+											<a target="_blank" rel="noopener noreferrer" href="https://seekingalpha.com/">seeking alpha.</a>
+										</li>
+										<li>
+											<a target="_blank" rel="noopener noreferrer" href="https://plainoldrecipe.com/">plain old recipe</a>
+											(<a target="_blank" rel="noopener noreferrer" href="https://playn-olde-recipy.herokuapp.com">and my fork!</a>).
+										</li>
+									</ul>
+									<a style="color: var(--link)" href="/pages/random/cool-sites.html">See more here</a> 😎
+									<div style="margin-top: 20px;">
+										<a href="https://gossipsweb.net">
+											<img src="https://gossipsweb.net/images/twwmwh-lime.jpg" alt="This website was made with hands." style="height: 40px; width: 14rem; border: 1px dashed #fff; padding: 4px;" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<Footer />
+		</div>
+  </body>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>

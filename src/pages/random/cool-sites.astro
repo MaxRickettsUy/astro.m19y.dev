@@ -1,14 +1,16 @@
 ---
 import CoolSite from '../../components/CoolSite.astro';
+import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Layout from '../../layouts/Layout.astro';
 ---
+
 <Layout title="cool sites">
-<body>
+  <body>
     <div id="container">
       <Header />
       <main>
-        <div class="flex-grid">
+        <div class="flex h-[75%] mt-2">
           <div class="container post">
             <div class="inner">
               <div class="page-title">
@@ -33,19 +35,7 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
       </main>
-      <div class="siteFooter">
-        <div class="siteFooter__section disclaimer-container">
-          <div>
-            <p class="disclaimer">
-              Disclaimer: All content on this site relates to personal opinions/
-              experiences and does not reflect my work, employer and/or colleagues.
-            </p>
-            <div class="last-updated-container">
-              <p class="last-updated date" id="last-updated"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   </body>
 </Layout>
