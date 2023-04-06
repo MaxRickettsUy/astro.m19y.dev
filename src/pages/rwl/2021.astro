@@ -20,12 +20,12 @@ import Layout from '../../layouts/Layout.astro';
               </div>
               <p style="float: right">⏳ - In Progress</p>
               <p style="float: right">🎧 - Audio book</p>
-              <div>
+              <div class="flex flex-col">
                 <h2>books</h2>
-                <BookLink href="https://en.wikipedia.org/wiki/The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" />⏳
-                <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" />⏳
-                <BookLink href="https://en.wikipedia.org/wiki/Bullshit_Jobs" label="Bullshit Jobs" />⏳
-                <BookLink href="https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" />⏳🎧
+                <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
+                <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
+                <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress/>
+                <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
               </div>
               <hr/>
               <div>
@@ -35,94 +35,82 @@ import Layout from '../../layouts/Layout.astro';
                 <div class="row">
                   <div class="column">
                     <ArticleLink
-                      archive="https://web.archive.org/web/20210131111955/https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington"
+                      archive="20210131111955/https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington"
                       href="https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington"
                       label="We Quit Our Jobs to Build a Cabin—Everything Went Wrong"
                     />
                     <ArticleLink
-                      archive="https://web.archive.org/web/20210225030458/https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/"
+                      archive="20210225030458/https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/"
                       href="https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/"
                       label="The Premium Mediocre Life of Maya Millenial"
                     />
                     <ArticleLink
-                      archive="https://web.archive.org/web/20210317014451/https://charliereese.ca/article/2019-year-in-review"
+                      archive="20210317014451/https://charliereese.ca/article/2019-year-in-review"
                       href="https://charliereese.ca/article/2019-year-in-review"
                       label="2019 - My Year in Review (Charlie Reese)"
                     />
-                    <p class="title-link">
-                      <a target="_blank" href="https://livingafi.com/2021/03/17/the-2021-early-retirement-update/">
-                        <i>The 2021 Early Retirement Update</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210328223049/https://livingafi.com/2021/03/17/the-2021-early-retirement-update/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://missiveapp.com/blog/how-we-built-1m-arr-email-client">
-                        <i>How We Bootstrapped a $1M ARR Email Client</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210409010922/https://missiveapp.com/blog/how-we-built-1m-arr-email-client">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="http://paulgraham.com/own.html">
-                        <i>A Project of One's Own</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210608103914/http://paulgraham.com/own.html">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/">
-                        <i>Young, Dumb, and Broke: Why Outdoorsy Types Suck at Money</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210715203653/https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://mcfunley.com/choose-boring-technology">
-                        <i>Choose Boring Technology</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20211024115808/https://mcfunley.com/choose-boring-technology">archive</a>]
-                    </p>
+                    <ArticleLink
+                      archive="20210328223049/https://livingafi.com/2021/03/17/the-2021-early-retirement-update/"
+                      href="https://livingafi.com/2021/03/17/the-2021-early-retirement-update/"
+                      label="The 2021 Early Retirement Update"
+                    />
+                    <ArticleLink
+                      archive="20210409010922/https://missiveapp.com/blog/how-we-built-1m-arr-email-client"
+                      href="https://missiveapp.com/blog/how-we-built-1m-arr-email-client"
+                      label="How We Bootstrapped a $1M ARR Email Client"
+                    />
+                    <ArticleLink
+                      archive="20210608103914/http://paulgraham.com/own.html"
+                      href="http://paulgraham.com/own.html"
+                      label="A Project of One's Own"
+                    />
+                    <ArticleLink
+                      archive="20210715203653/https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/"
+                      href="https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/"
+                      label="Young, Dumb, and Broke: Why Outdoorsy Types Suck at Money"
+                    />
+                    <ArticleLink
+                      archive="20211024115808/https://mcfunley.com/choose-boring-technology"
+                      href="https://mcfunley.com/choose-boring-technology"
+                      label="Choose Boring Technology"
+                    />
                   </div>
                   <div class="column">
-                    <p class="title-link">
-                      <a target="_blank" href="https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat">
-                        <i>My Priceless Summer on a Maine Lobster Boat</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20201112011102/https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://chelseatroy.com/2021/01/14/quantifying-technical-debt/">
-                        <i>Quantifying Technical Debt</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210116225645/https://chelseatroy.com/2021/01/14/quantifying-technical-debt/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://www.ribice.ba/go-restful-starter-kit/">
-                        <i>Golang restful starter kit - GORSK</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210321171055/https://www.ribice.ba/go-restful-starter-kit/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://news.ycombinator.com/item?id=26647717">
-                        <i>Ask HN: I've realized I'm a bad software engineer and I'm over 30, what's next?</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210331235339/https://news.ycombinator.com/item?id=26647717">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://anthonynsimon.com/blog/one-man-saas-architecture/">
-                        <i>The Architecture Behind A One-Person Tech Startup</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210408144534if_/https://anthonynsimon.com/blog/one-man-saas-architecture/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://jmmv.dev/2021/04/always-be-quitting.html">
-                        <i>Always Be Quitting</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210610062705/https://jmmv.dev/2021/04/always-be-quitting.html">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/">
-                        <i>Reflections on 10,000 Hours of Programming</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20210808021055/https://matt-rickard.com/reflections-on-10-000-hours-of-programming/">archive</a>]
-                    </p>
+                    <ArticleLink
+                      archive="20201112011102/https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat"
+                      href="https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat"
+                      label="My Priceless Summer on a Maine Lobster Boat"
+                    />
+                    <ArticleLink
+                      archive="20210116225645/https://chelseatroy.com/2021/01/14/quantifying-technical-debt/"
+                      href="https://chelseatroy.com/2021/01/14/quantifying-technical-debt/"
+                      label="Quantifying Technical Debt"
+                    />
+                    <ArticleLink
+                      archive="20210321171055/https://www.ribice.ba/go-restful-starter-kit/"
+                      href="https://www.ribice.ba/go-restful-starter-kit/"
+                      label="Golang restful starter kit - GORSK"
+                    />
+                    <ArticleLink
+                      archive="20210331235339/https://news.ycombinator.com/item?id=26647717"
+                      href="https://news.ycombinator.com/item?id=26647717"
+                      label="Ask HN: I've realized I'm a bad software engineer and I'm over 30, what's next?"
+                    />
+                    <ArticleLink
+                      archive="20210408144534if_/https://anthonynsimon.com/blog/one-man-saas-architecture/"
+                      href="https://anthonynsimon.com/blog/one-man-saas-architecture/"
+                      label="The Architecture Behind A One-Person Tech Startup"
+                    />
+                    <ArticleLink
+                      archive="20210610062705/https://jmmv.dev/2021/04/always-be-quitting.html"
+                      href="https://jmmv.dev/2021/04/always-be-quitting.html"
+                      label="Always Be Quitting"
+                    />
+                    <ArticleLink
+                      archive="20210808021055/https://matt-rickard.com/reflections-on-10-000-hours-of-programming/"
+                      href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/"
+                      label="Reflections on 10,000 Hours of Programming"
+                    />
                   </div>
                 </div>
               </div>
