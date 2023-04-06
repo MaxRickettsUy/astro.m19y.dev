@@ -1,30 +1,18 @@
-<!DOCTYPE html lang="en" class="no-js">
-  <head>
-    <title>rwl 2022</title>
-    <link rel="shortcut icon" type="image/jpg" href="../../img/merle.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Max's 2022 content consumption.">
-    <meta property="og:title" content="m19y.dev/2022">
-    <meta property="og:description" content="Max's 2022 content consumption.">
-    <meta property="og:image" content="img/merle.png">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.m19y.dev/pages/rwl/2022.html">
-    <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/footer.css">
-    <link rel="stylesheet" href="../../styles/header.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/new.css">
-    <link rel="stylesheet" href="../../styles/new-styles.css">
-    <script src="../../scripts.js"></script>
-    <script src="../../json/div-harvesting.js"></script>
-  </head>
+---
+import ArticleLink from '../../components/ArticleLink.astro';
+import BookLink from '../../components/BookLink.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+
+<Layout title="rwl 2022">
   <body>
     <div id="container">
-      <header class="header"></header>
+      <Header />
       <main>
-        <div class="flex-grid">
+        <div class="flex h-[75%] mt-2">
           <div class="container post">
             <div class="inner">
               <a href="2021.html" style="float: left">< 2021</a>
@@ -36,74 +24,20 @@
               <p style="float: right">🎧 - Audio book</p>
               <div>
                 <h2>books</h2>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_Snowball:_Warren_Buffett_and_the_Business_of_Life">
-                      The Snowball: Warren Buffett and the Business of Life
-                    </a>
-                  </i>⏳
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://itrevolution.com/the-phoenix-project/">
-                      The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win
-                    </a>
-                  </i>⏳
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/Bullshit_Jobs">
-                      Bullshit Jobs
-                    </a>
-                  </i>☑️
-                  <details>
-                    <summary>Thoughts</summary>
-                    In general, worth the read; probably longer than necessary. </br> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
-                    very mindblowing or surprising but for those <br/> who have never read the original essay and question the value <br/> of spending their life at their 9to5, I think it's something that to check out.
-                  </details>
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People">
-                      How to Win Friends and Influence People
-                    </a>
-                  </i>⏳🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_Intelligent_Investor">
-                      The Intelligent Investor
-                    </a>
-                  </i>⏳
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/King_Leopold%27s_Ghost">
-                      King Leopold's Ghost
-                    </a>
-                  </i>☑️🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/">
-                      Cheap Land Colorado
-                    </a>
-                  </i>⏳
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://jamesclear.com/atomic-habits">
-                      Atomic Habits
-                    </a>
-                  </i>⏳🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_Rise_of_Theodore_Roosevelt">
-                      The Rise of Theodore Roosevelt
-                    </a>
-                  </i>⏳🎧
-                </p>
+                <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
+                <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
+                <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete/>
+                <details>
+                  <summary>Thoughts</summary>
+                  In general, worth the read; probably longer than necessary. </br> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
+                  very mindblowing or surprising but for those <br/> who have never read the original essay and question the value <br/> of spending their life at their 9to5, I think it's something that to check out.
+                </details>
+                <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
+                <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
+                <BookLink href="King_Leopold%27s_Ghost" label="King Leopold's Ghost" wiki complete audiobook />
+                <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" inProgress />
+                <BookLink href="https://jamesclear.com/atomic-habits" label="Atomic Habits" inProgress audiobook />
+                <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
               </div>
               <hr/>
               <div>
@@ -340,19 +274,7 @@
           </div>
         </div>
       </main>
-      <div class="siteFooter">
-        <div class="siteFooter__section disclaimer-container">
-          <div>
-            <p class="disclaimer">
-              Disclaimer: All content on this site relates to personal opinions/
-              experiences and does not reflect my work, employer and/or colleagues.
-            </p>
-            <div class="last-updated-container">
-              <p class="last-updated date" id="last-updated"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   </body>
-</html>
+</Layout>

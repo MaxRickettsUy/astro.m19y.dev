@@ -1,13 +1,14 @@
 ---
 export interface Props {
   audiobook?: boolean,
+  complete?: boolean,
   label: string,
   href: string,
   inProgress?: boolean,
   wiki?: boolean
 }
 
-const { audiobook, inProgress, label, wiki } = Astro.props;
+const { audiobook, complete, inProgress, label, wiki } = Astro.props;
 let { href } = Astro.props;
 
 wiki ? href = `https://en.wikipedia.org/wiki/${href}` : href;
@@ -16,5 +17,6 @@ wiki ? href = `https://en.wikipedia.org/wiki/${href}` : href;
 <div class="title-link flex flex-row">
   <a class="italic mr-1" target="_blank" href={href}>{label}</a>
   { inProgress ? <span class="mr-1">⏳</span> : null}
+  { complete ? <span class="mr-1">☑️</span> : null}
   { audiobook ? <span>🎧</span> : null}
 </div>
