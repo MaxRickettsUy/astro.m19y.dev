@@ -1,0 +1,56 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Resizable Vuetify Table">
+  <body>
+    <div class="my-container">
+      <Header />
+      <main>
+        <div class="flex-grid">
+          <div class="container post">
+            <div class="inner">
+              <div class="page-title">
+                <h1>How to make a resizable Vuetify data table.</h1>
+                <p>8/9/2021</p>
+              </div>
+              <div class="centered-div">
+                <p class="post-text">
+                  I was recently tasked with using the<a target="_blank" rel="noopener noreferrer" href="https://vuetifyjs.com/en/components/data-tables/">
+                  Vuetify data table</a> component. The component accepts a <code>height</code> prop (no percentage or vh).
+                  I was able to leverage <a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/questions/59867308/dynamic-height-of-table-vuetify">this Stack Overflow question</a>
+                  to get the job temporarily before I developed a better method while attempting to write unit tests for my custom <code>Resizable</code> component.
+                </p>
+                <p class="post-text">
+                  Rather than creating and managing a separate component to handle resizing with a slot, I realized I
+                  could use the tables container (a <code>card</code> in this case) and it's <code>offsetHeight</code>
+                  to update the data table's height prop during <code>resize</code> event. I am using a magic number to
+                  deduct from the <code>offsetHeight</code> to better fit the data table in the card.
+                </p>
+                <p class="post-text">
+                  With this dynamic height, the data table scales with the card container which has a height of
+                  <code>60vh</code>. This way when the window is shortened, the data table remains within it's
+                  container and does not spill out of the container and potentially out of view.
+                </p>
+                <iframe src="https://codesandbox.io/embed/resizable-vuetify-data-table-se3us?fontsize=14&hidenavigation=1&theme=dark"
+                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                title="Resizable Vuetify Data Table"
+                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                ></iframe>
+                <br/>
+                <br/>
+                <div style="text-align: center;">
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/MaxRickettsUy/resizable-vuetify-data-table">Check out the Github repo.</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</Layout>

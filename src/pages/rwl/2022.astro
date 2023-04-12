@@ -1,22 +1,22 @@
 ---
-import ArticleLink from '../../components/ArticleLink.astro';
-import BookLink from '../../components/BookLink.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
-import Layout from '../../layouts/Layout.astro';
+import ArticleLink from '@components/ArticleLink.astro';
+import BookLink from '@components/BookLink.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
 ---
 
 
 <Layout title="rwl 2022">
   <body>
-    <div id="container">
+    <div class="my-container">
       <Header />
       <main>
         <div class="flex h-[75%] mt-2">
           <div class="container post">
             <div class="inner">
-              <a href="2021.html" style="float: left">< 2021</a>
-              <a href="2023.html" style="float: right">2023 ></a>
+              <a href="2021.html" style="float: left">&lt; 2021</a>
+              <a href="2023.html" style="float: right">2023 &gt;</a>
               <div class="page-title">
                 <h1>2022</h1>
               </div>
@@ -29,7 +29,7 @@ import Layout from '../../layouts/Layout.astro';
                 <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete/>
                 <details>
                   <summary>Thoughts</summary>
-                  In general, worth the read; probably longer than necessary. </br> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
+                  In general, worth the read; probably longer than necessary. <br/> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
                   very mindblowing or surprising but for those <br/> who have never read the original essay and question the value <br/> of spending their life at their 9to5, I think it's something that to check out.
                 </details>
                 <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
@@ -46,140 +46,30 @@ import Layout from '../../layouts/Layout.astro';
                 </h2>
                 <div class="row">
                   <div class="column">
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://moxie.org/2022/01/07/web3-first-impressions.html">
-                        <i>My first impressions of web3</i>
-                      </a>
-                      [<a class="archive" rel="noopener noreferrer" target="_blank" href="https://archive.is/yKBcS">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://connellmccarthy.com/article/my-home-office-2022/">
-                        <i>Connell McCarthy: My home office 2022</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://2021.stateofjs.com/en-US/">
-                        <i>State of Javascript 2021</i>
-                      </a>
-                      [<a class="archive" rel="noopener noreferrer" href="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://github.com/readme/stories/pedro-nauck">
-                        <i>Prioritizing health and balance over Docz</i>
-                      </a>
-                      [<a class="archive" target="blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220215122105/https://github.com/readme/stories/pedro-nauck">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://jvns.ca/blog/2021/12/31/2021--year-in-review/">
-                        <i>2021: Year in Review (jvns.ca)</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220109054747/https://jvns.ca/blog/2021/12/31/2021--year-in-review/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/">
-                        <i>You Don't Need a UI Framework</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220504093935/https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://blog.chainalysis.com/reports/how-terrausd-collapsed/">
-                        <i>The Trades That Triggered UST’s Collapse</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220620100926/https://blog.chainalysis.com/reports/how-terrausd-collapsed/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://mtlynch.io/tinypilot-redesign/">
-                        <i>I Regret My $46k Website Redesign</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20220721142528/https://mtlynch.io/tinypilot-redesign/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://notes.ghed.in/posts/the-best-iphone/">
-                        <i>The Best iPhone</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution">
-                        <i>The United States' Unamendable Constitution</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/">
-                        <i>How "Tactical" Infiltrated Everyday Life</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/">archive</a>]
-                    </p>
+                    <ArticleLink archive="https://archive.is/yKBcS" href="https://moxie.org/2022/01/07/web3-first-impressions.html" label="My first impressions of web3" />
+                    <ArticleLink archive="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/" href="https://connellmccarthy.com/article/my-home-office-2022/" label="Connell McCarthy: My home office 2022" />
+                    <ArticleLink archive="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/" href="https://2021.stateofjs.com/en-US/" label="State of Javascript 2021" />
+                    <ArticleLink archive="https://web.archive.org/web/20220215122105/https://github.com/readme/stories/pedro-nauck" href="https://github.com/readme/stories/pedro-nauck" label="Prioritizing health and balance over Docz" />
+                    <ArticleLink archive="https://web.archive.org/web/20220109054747/https://jvns.ca/blog/2021/12/31/2021--year-in-review/" href="https://jvns.ca/blog/2021/12/31/2021--year-in-review/" label="2021: Year in Review (jvns.ca)" />
+                    <ArticleLink archive="https://web.archive.org/web/20220504093935/https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" href="https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" label="You Don't Need a UI Framework" />
+                    <ArticleLink archive="https://web.archive.org/web/20220620100926/https://blog.chainalysis.com/reports/how-terrausd-collapsed/" href="https://blog.chainalysis.com/reports/how-terrausd-collapsed/" label="The Trades That Triggered UST’s Collapse" />
+                    <ArticleLink archive="https://web.archive.org/web/20220721142528/https://mtlynch.io/tinypilot-redesign/" href="https://mtlynch.io/tinypilot-redesign/" label="I Regret My $46k Website Redesign" />
+                    <ArticleLink archive="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/" href="https://notes.ghed.in/posts/the-best-iphone/" label="The Best iPhone" />
+                    <ArticleLink archive="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" label="The United States' Unamendable Constitution" />
+                    <ArticleLink archive="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/" label='How "Tactical" Infiltrated Everyday Life' />
                   </div>
                   <div class="column">
-                    <p class="title-link">
-                      <a target="_blank" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q">
-                        <i>On Web3 Infrastructure</i>
-                      </a>
-                      [<a class="archive" rel="noopener noreferrer" target="_blank" href="https://archive.fo/Tfzqc">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://mtlynch.io/solo-developer-year-4/">
-                        <i>My Fourth Year as a Bootstrapped Founder</i>
-                      </a>
-                      [<a class="archive" rel="noopener noreferrer" target="_blank" href="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://palladiummag.com/2022/01/06/quit-your-job/">
-                        <i>Quit Your Job</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://archive.is/fVaKb">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://future.a16z.com/software-development-building-for-99-developers/">
-                        <i>Building for the 99% Developers</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://johnnyrodgers.is/building-a-modern-home">
-                        <i>Building a Modern Home</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects">
-                        <i>I Spend Two Years Launching Tiny Projects</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220518111806/https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://littlegreenviper.com/miscellany/the-road-most-traveled-by/">
-                        <i>The Road Most Traveled By</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220507072842/https://littlegreenviper.com/miscellany/the-road-most-traveled-by/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://robbowen.digital/wrote-about/css-blend-mode-shaders/">
-                        <i>Holograms, light-leaks and how to build CSS-only shaders.</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220707165319/https://robbowen.digital/wrote-about/css-blend-mode-shaders/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/">
-                        <i>Outlaw Country</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20221213135831/https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas">
-                        <i>The man who bought Pine Bluff, Arkansas</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20221219034008/https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://putthison.com/is-it-classist-to-be-against-fast-fashion/">
-                        <i>Is It Classist To Be Against Fast Fashion?</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20221118214914/https://putthison.com/is-it-classist-to-be-against-fast-fashion/">archive</a>]
-                    </p>
+                    <ArticleLink archive="https://archive.fo/Tfzqc" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q" label="On Web3 Infrastructure" />
+                    <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" href="My Fourth Year as a Bootstrapped Founder" label="https://mtlynch.io/solo-developer-year-4/" />
+                    <ArticleLink archive="https://archive.is/fVaKb" href="https://palladiummag.com/2022/01/06/quit-your-job/" label="Quit Your Job" />
+                    <ArticleLink archive="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/" href="https://future.a16z.com/software-development-building-for-99-developers/" label="Building for the 99% Developers" />
+                    <ArticleLink archive="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home" href="https://johnnyrodgers.is/building-a-modern-home" label="Building a Modern Home" />
+                    <ArticleLink archive="https://web.archive.org/web/20220518111806/https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" href="https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" label="I Spent Two Years Launching Tiny Projects" />
+                    <ArticleLink archive="https://web.archive.org/web/20220507072842/https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" href="https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" label="The Road Most Traveled By" />
+                    <ArticleLink archive="https://web.archive.org/web/20220707165319/https://robbowen.digital/wrote-about/css-blend-mode-shaders/" href="https://robbowen.digital/wrote-about/css-blend-mode-shaders/" label="Holograms, light-leaks and how to build CSS-only shaders." />
+                    <ArticleLink archive="https://web.archive.org/web/20221213135831/https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" href="https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" label="Outlaw Country" />
+                    <ArticleLink archive="https://web.archive.org/web/20221219034008/https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" href="https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" label="The man who bought Pine Bluff, Arkansas" />
+                    <ArticleLink archive="https://web.archive.org/web/20221118214914/https://putthison.com/is-it-classist-to-be-against-fast-fashion/" href="https://putthison.com/is-it-classist-to-be-against-fast-fashion/" label="Is It Classist To Be Against Fast Fashion?" />
                   </div>
                 </div>
               </div>

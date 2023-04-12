@@ -5,12 +5,12 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import '../styles/styles.css';
-import '../styles/footer.css';
-import '../styles/header.css';
-import '../styles/main.css';
-import '../styles/new.css';
-import '../styles/new-styles.css';
+import '@styles/styles.css';
+import '@styles/footer.css';
+import '@styles/header.css';
+import '@styles/main.css';
+import '@styles/new.css';
+import '@styles/new-styles.css';
 ---
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ import '../styles/new-styles.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-	    <link rel="shortcut icon" type="image/jpg" href="../img/merle.png"/>
+	    <link rel="shortcut icon" type="image/jpg" href="@img/merle.png"/>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta charset="UTF-8">
 	    <meta name="description" content="m19y.dev/random home directory.">

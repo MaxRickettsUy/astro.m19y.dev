@@ -1,13 +1,14 @@
 ---
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
 
-import externalLink from '../img/external-link.svg';
+import externalLink from '@img/external-link.svg';
 ---
 
 <Layout title="Random">
   <body>
-    <div id="container">
+    <div class="my-container">
       <Header />
       <main>
         <div class="flex h-[75%] mt-2">
@@ -19,11 +20,8 @@ import externalLink from '../img/external-link.svg';
               <div class="centered-div">
                 <p><a href="random/merch-collection.html">Merch Collection</a></p>
                 <p class="flex flex-row">
-                  <a target="_blank" href="../docs/50_ui_tips.pdf">50 UI Tips</a>
+                  <a target="_blank" href="@docs/50_ui_tips.pdf">50 UI Tips</a>
                   <img src={externalLink} height="12"/>
-                </p>
-                <p>
-                  <a href="random/div-harvesting.html">Dividend Harvesting</a>
                 </p>
                 <p class="flex flex-row">
                   <a href="https://maxrickettsuy.github.io/bookmarks/" target="_blank" rel="noopener noreferrer">Bookmarks</a>
@@ -37,20 +35,7 @@ import externalLink from '../img/external-link.svg';
           </div>
         </div>
       </main>
-
-      <div class="siteFooter">
-        <div class="siteFooter__section disclaimer-container">
-          <div>
-            <p class="disclaimer">
-              Disclaimer: All content on this site relates to personal opinions/
-              experiences and does not reflect my work, employer and/or colleagues.
-            </p>
-            <div class="last-updated-container">
-              <p class="last-updated date" id="last-updated"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   </body>
 </Layout>

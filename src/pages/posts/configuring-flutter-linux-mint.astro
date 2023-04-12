@@ -1,0 +1,41 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Configuring Flutter Linux Mint">
+  <body>
+    <div class="my-container">
+      <Header />
+      <main>
+        <div class="flex-grid">
+          <div class="container post">
+            <div class="inner">
+              <div class="page-title">
+                <h1>How to Configure Flutter and Android Studio on Linux Mint</h1>
+                <p>4/15/2022</p>
+              </div>
+              <div class="centered-div">
+                <ol>
+                  <li>Download <a href="https://docs.flutter.dev/get-started/install/linux">Flutter</a> (I used snap)</li>
+                  <li>Run <code>flutter doctor</code></li>
+                  <li>Download <a href="https://developer.android.com/studio">Android Studio</a>. Save to <code>~/Download</code></li>
+                  <li><code>cd ~/Download</code> then <code>tar -xzf &ltandroid_studio_tgz&gt</code></li>
+                  <li><code>sudo mv &ltandroid_studio_dir&gt /usr/local</code></li>
+                  <li>Create symlink in <code>/usr/local/bin</code> : <code>ln -s /usr/local/<android_studio_dir>/bin/studio.sh studio.sh</code>. You will now be able to start from command line or i3bar with <code>studio.sh</code></li>
+                  <li>Install <a href="https://www.google.com/chrome/">Chrome</a></li>
+                  <li>Configure Android SDK path for Flutter: <code>flutter config --android-sdk /home/&ltuser_name&gt/Android/Sdk</code></li>
+                  <li>Use Android studio to get the remaining command line tools: <a href="https://stackoverflow.com/a/60529140">StackOverflow instructions</a></li>
+                  <li>Set licenses: <code>flutter doctor --android-licenses</code></li>
+                  <li>Run <code>flutter doctor</code></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</Layout>

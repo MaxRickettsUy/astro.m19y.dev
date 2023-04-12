@@ -7,10 +7,10 @@ export interface Props {
 
 const { href, img, name } = Astro.props;
 
-import externalLink from '../img/external-link.svg';
+import externalLink from '@img/external-link.svg';
 ---
 
-<div>
+<div class="m-2">
     <div class="flex flex-row">
         <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={href}><h3>{name}</h3></a>
         <img src={externalLink} height="12"/>

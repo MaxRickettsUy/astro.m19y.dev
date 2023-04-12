@@ -1,48 +1,48 @@
 ---
-import avatar from '../img/avatar.png';
+import avatar from '@img/avatar.png';
 
-import '../styles/styles.css';
-import '../styles/footer.css';
-import '../styles/header.css';
-import '../styles/main.css';
-import '../styles/new.css';
-import '../styles/new-styles.css';
+import '@styles/styles.css';
+import '@styles/footer.css';
+import '@styles/header.css';
+import '@styles/main.css';
+import '@styles/new.css';
+import '@styles/new-styles.css';
 ---
 
 <header class="header">
-    <nav class="navbar">
-        <a href="/"><img src={avatar} alt="avatar" class="avatar" /></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/" class="nav-link">/home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/posts" class="nav-link">/posts</a>
-          </li>
-          <li class="nav-item">
-            <a href="/projects" class="nav-link">/projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="/random" class="nav-link">/random</a>
-          </li>
-          <li class="nav-item">
-            <a href="/rwl" class="nav-link">/rwl</a>
-          </li>
-          <li class="nav-item">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <div class="slider round"></div>
-              </label>
-            </div>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+  <nav class="navbar">
+    <a href="/"><img src={avatar} alt="avatar" class="avatar" /></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="/" class="nav-link">/home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/posts" class="nav-link">/posts</a>
+      </li>
+      <li class="nav-item">
+        <a href="/projects" class="nav-link">/projects</a>
+      </li>
+      <li class="nav-item">
+        <a href="/random" class="nav-link">/random</a>
+      </li>
+      <li class="nav-item">
+        <a href="/rwl" class="nav-link">/rwl</a>
+      </li>
+      <li class="nav-item">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+          </label>
         </div>
-    </nav>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
 </header>
 
 <script>
@@ -52,12 +52,12 @@ import '../styles/new-styles.css';
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     }
-    
+
     const closeMenu = () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }
-    
+
     function switchTheme(e) {
         if (e.target.checked) {
           document.documentElement.setAttribute('data-theme', 'light');
@@ -70,18 +70,18 @@ import '../styles/new-styles.css';
     }
 
     const toggleSwitch = document.querySelector('.theme-switch >  input');
-    
+
     if(toggleSwitch) {
     toggleSwitch.addEventListener('change', switchTheme);
     }
-    
+
     const currentTheme = localStorage.getItem('theme');
-    
+
     if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    
+
         if (currentTheme === 'light') {
-            toggleSwitch.checked = true;
+          toggleSwitch.checked = true;
         }
     }
 

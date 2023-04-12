@@ -1,0 +1,76 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Update Wiki.js Heroku">
+  <body>
+    <div class="my-container">
+      <Header />
+      <main>
+        <div class="flex-grid">
+          <div class="container post">
+            <div class="inner">
+              <div class="page-title">
+                <h1>How to upgrade a Wiki Js Heroku deployment (to latest).</h1>
+                <p>2/5/2022</p>
+              </div>
+              <div class="centered-div">
+                <p class="post-text">
+                  I recently created a new wiki site and decided to go with <a href="https://js.wiki">Wiki Js</a>. What made this
+                  decision even easier was the option to <a href="https://docs.requarks.io/en/install/heroku">deploy to heroku</a>, which
+                  is falling out of fashion, but is what I'm familiar with. Today for the first time I noticed the new version alert in the admin section of my wiki.
+                </p>
+                <img alt="Image of outdated Wiki js ui" src="https://res.cloudinary.com/shoveltoss-com/image/upload/v1650332840/m19y.dev/wiki-heroku-update-post-old-version_dyj0vx_qn2ay8.webp" />
+                <p class="post-text">
+                  Since there is no option to upgrade from the ui directly I would
+                  have to do this manually.
+                </p>
+                <p class="post-text">
+                  There are no formal instruction in the Wiki Js docs. Fortunately the process is pretty simple (imo).
+                </p>
+                <p class="post-text">
+                  To upgrade Wiki Js:
+                </p>
+                <ol>
+                  <li>From the heroku cli: <code>heroku git:clone -a &lt;app_name&gt;</code></li>
+                  <li>You should get an <a href="https://help.heroku.com/XOBUHLKQ/why-do-i-see-a-message-you-appear-to-have-cloned-an-empty-repository-when-using-heroku-git-clone">empty repository warning.</a> <code>cd</code> into cloned directory</li>
+                  <li>Add origin remote pointing to <code>https://github.com/requarks/wiki-heroku/tree/2.x.</code></li>
+                  <li><code>git pull origin 2.x</code></li>
+                  <li><code>git push heroku</code></li>
+                </ol>
+                <p class="post-text">
+                  After Heroku redeploys your wiki you should see the new version in the admin dashboard.
+                </p>
+                <img alt="Image of Wiki Js with latest version" src="https://res.cloudinary.com/shoveltoss-com/image/upload/v1650332840/m19y.dev/wiki-heroku-update-post-new-version_izcdqp_hc1kcu.webp" />
+                <p class="post-text">
+                  <i>Update: 04/18/2022.</i>
+                </p>
+                <p class="post-text">
+                  After the initial upgrade, your repo on Heroku should remain update to date with the origin <code>2.x</code> branch. For additional upgrades, you only need to redeploy the application.
+                </p>
+                <p class="post-text">
+                  The simplest way to do this from the CLI is with these steps:
+                  <ol>
+                    <li><code>heroku git:clone -a &lt;app-name&gt;</code> -> <code>cd &lt;app_name&gt;</code></li>
+                    <li><code>git commit --amend</code></li>
+                    <li>Exit the editor without making changes.</li>
+                    <li><code>git push -f heroku</code></li>
+                  </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</Layout>
+
+<style>
+  ol > li {
+    padding: 10px;
+  }
+</style>

@@ -1,33 +1,20 @@
-<!DOCTYPE html lang="en" class="no-js">
-  <head>
-    <title>rwl 2022</title>
-    <link rel="shortcut icon" type="image/jpg" href="../../img/merle.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Max's 2023 content consumption.">
-    <meta property="og:title" content="m19y.dev/2023">
-    <meta property="og:description" content="Max's 2023 content consumption.">
-    <meta property="og:image" content="img/merle.png">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.m19y.dev/pages/rwl/2023.html">
-    <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/footer.css">
-    <link rel="stylesheet" href="../../styles/header.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/new.css">
-    <link rel="stylesheet" href="../../styles/new-styles.css">
-    <script src="../../scripts.js"></script>
-    <script src="../../json/div-harvesting.js"></script>
-  </head>
+---
+import ArticleLink from '@components/ArticleLink.astro';
+import BookLink from '@components/BookLink.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="rwl 2023">
   <body>
-    <div id="container">
-      <header class="header"></header>
+    <div class="my-container">
+      <Header />
       <main>
-        <div class="flex-grid">
+        <div class="flex h-[75%] mt-2">
           <div class="container post">
             <div class="inner">
-              <a href="2022.html" style="float: left">< 2022</a>
+              <a href="2022.html" style="float: left">&lt; 2022</a>
               <div class="page-title">
                 <h1>2023</h1>
               </div>
@@ -35,48 +22,12 @@
               <p style="float: right">🎧 - Audio book</p>
               <div>
                 <h2>books</h2>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People">
-                      How to Win Friends and Influence People
-                    </a>
-                  </i>⏳🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_Intelligent_Investor">
-                      The Intelligent Investor
-                    </a>
-                  </i>⏳
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/">
-                      Cheap Land Colorado
-                    </a>
-                  </i>☑️
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://jamesclear.com/atomic-habits">
-                      Atomic Habits
-                    </a>
-                  </i>☑️🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/The_Rise_of_Theodore_Roosevelt">
-                      The Rise of Theodore Roosevelt
-                    </a>
-                  </i>⏳🎧
-                </p>
-                <p class="title-link">
-                  <i>
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/Blood_Meridian">
-                      Blood Meridian
-                    </a>
-                  </i>⏳
-                </p>
+                <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
+                <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
+                <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" complete />
+                <BookLink href="https://jamesclear.com/atomic-habits" label="Atomic Habits" complete audiobook />
+                <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
+                <BookLink href="https://en.wikipedia.org/wiki/Blood_Meridian" label="Blood Meridian" inProgress />
               </div>
               <hr/>
               <div>
@@ -85,26 +36,11 @@
                 </h2>
                 <div class="row">
                   <div class="column">
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://kwon.nyc/notes/2022/">
-                        <i>2022 in review</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20230128035309/https://kwon.nyc/notes/2022/">archive</a>]
-                    </p>
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://sambf.substack.com/p/ftx-pre-mortem-overview">
-                        <i>FTX Pre-Mortem Overview</i>
-                      </a>
-                      [<a class="archive" target="_blank" href="https://web.archive.org/web/20230126152826/https://sambf.substack.com/p/ftx-pre-mortem-overview">archive</a>]
-                    </p>
+                    <ArticleLink archive="https://web.archive.org/web/20230128035309/https://kwon.nyc/notes/2022/" href="https://kwon.nyc/notes/2022/" label="2022 in review" />
+                    <ArticleLink archive="https://web.archive.org/web/20230126152826/https://sambf.substack.com/p/ftx-pre-mortem-overview" href="https://sambf.substack.com/p/ftx-pre-mortem-overview" label="FTX Pre-Mortem Overview" />
                   </div>
                   <div class="column">
-                    <p class="title-link">
-                      <a target="_blank" rel="noopener noreferrer" href="https://snowingpine.com/2023/01/05/on-trucking">
-                        <i>On Trucking</i>
-                      </a>
-                      [<a class="archive" target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20230126185034/https://snowingpine.com/2023/01/05/on-trucking">archive</a>]
-                    </p>
+                    <ArticleLink archive="https://web.archive.org/web/20230126185034/https://snowingpine.com/2023/01/05/on-trucking" href="https://snowingpine.com/2023/01/05/on-trucking" label="On Trucking" />
                   </div>
                 </div>
               </div>
@@ -153,19 +89,7 @@
           </div>
         </div>
       </main>
-      <div class="siteFooter">
-        <div class="siteFooter__section disclaimer-container">
-          <div>
-            <p class="disclaimer">
-              Disclaimer: All content on this site relates to personal opinions/
-              experiences and does not reflect my work, employer and/or colleagues.
-            </p>
-            <div class="last-updated-container">
-              <p class="last-updated date" id="last-updated"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   </body>
-</html>
+</Layout>

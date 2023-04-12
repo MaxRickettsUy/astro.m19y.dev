@@ -1,0 +1,40 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Posts">
+  <body>
+    <div class="my-container">
+      <Header />
+      <main>
+        <div class="flex-grid">
+          <div class="container post">
+            <div class="inner">
+              <div class="page-title">
+                <h1>Posts</h1>
+              </div>
+              <div class="centered-div" style="text-align: center;">
+                <p class="post-text">
+                  <a href="posts/resizable-vuetify-table.html">How to make a resizable Vuetify data table</a>
+                </p>
+              </div>
+              <div class="centered-div" style="text-align: center;">
+                <p class="post-text">
+                  <a href="posts/upgrade-wiki-js-heroku.html">How to Upgrade Wiki Js Heroku deployment</a>
+                </p>
+              </div>
+              <div class="centered-div" style="text-align: center;">
+                <p class="post-text">
+                  <a href="posts/configuring-flutter-linux-mint.html">How to Configure Flutter / Android Studio on Linux Mint</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</Layout>
