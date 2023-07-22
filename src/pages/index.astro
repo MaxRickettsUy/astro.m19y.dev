@@ -6,21 +6,21 @@ import Layout from '@layouts/Layout.astro';
 <!-- Panelbear -->
   <script is:inline async src="https://cdn.panelbear.com/analytics.js?site=68TLdJZ1g5r"></script>
   <script>
-      window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
-      panelbear('config', { site: '68TLdJZ1g5r' });
+		window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+		panelbear('config', { site: '68TLdJZ1g5r' });
   </script>
 <Layout title="m19y">
 	<body>
-		<div class="my-container">
+		<div class="flex flex-col h-full">
 			<Header />
 			<main>
 				<div class="flex h-[75%] mt-2">
 					<div class="container post">
 						<div class="p-2">
-							<div class="page-title">
+							<div class="">
 								<h1>Hey, I'm Max.👋🏼</h1>
 							</div>
-							<div class="centered-div">
+							<div class="">
 								<p class="text-[18px]">
 									I'm a <a target="_blank" rel="noopener noreferrer" href="https://interclypse.com/">software developer</a> (mostly frontend these days) and <a target="_blank" rel="noopener noreferrer" href="https://exerceo.org/">mentor</a>.
 								</p>
@@ -33,10 +33,10 @@ import Layout from '@layouts/Layout.astro';
 									Besides software I enjoy music (hardcore punk, black metal, rap, jazz ...), gardening (mainly vegetables), indoor bouldering and golf among other things.
 									<br/><br/>
 								</p>
-								<div class="text-center">
+								<div class="">
 									<a href="pages/setup.html"><h3 style="color: var(--link)">Check out my setup</h3></a>
 								</div>
-								<div class="text-center">
+								<div class="">
 									<h3>Some other blogs/sites I recommend:</h3>
 									<ul id="blogs">
 										<li>

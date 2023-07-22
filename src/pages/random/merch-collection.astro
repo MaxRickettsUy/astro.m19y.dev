@@ -6,35 +6,25 @@ import Merch from '@components/Merch.astro';
 ---
 <Layout title="merch-collection">
   <body>
-    <div class="my-container">
+    <div class="flex flex-col h-full">
       <Header />
       <main>
-        <div class="flex h-[75%] mt-2">
-          <div class="container post">
-            <div class="inner">
-              <div class="page-title">
-                <h2>
-                  Merch Collection
-                </h2>
-                <div>
-                  <p>Collection of merch from my days going to shows.</p>
-                </div>
-                <div class="merch-container">
-                    <Merch img="v1650332839/m19y.dev/IMG_1817_lp9zrh_qnix3y.webp" />
-                    <Merch img="v1650332840/m19y.dev/IMG_1818_ux6jxg_bnvvmk.webp" />
-                    <Merch img="v1650332839/m19y.dev/IMG_1824_vhede3_l4gm9l.webp" />
-                    <Merch img="v1650332840/m19y.dev/IMG_1825_usrqyv_p8ggsq.webp" />
-                    <Merch img="v1650332840/m19y.dev/IMG_1826_higudb_j0ogti.webp" />
-                    <p>Picked up both of these shirts at the Ottobar 9/10/2010.</p>
-                    <p>Full show roster: Bane, TUI, Cruel Hand, Alpha & Omega.</p>
-                    <a target="_blank" href="https://res.cloudinary.com/shoveltoss-com/image/upload/v1650332840/m19y.dev/IMG_2071_ctztu0_yezu5l.webp">
-                      <img alt="" src="https://res.cloudinary.com/shoveltoss-com/image/upload/v1650332840/m19y.dev/IMG_2071_ctztu0_yezu5l.webp" />
-                    </a>
-                    <p>From a show in 2010 (?) with Terror, Gravemaker, Foundation, Naysayer and Violent Side.</p>
-                    <Merch img="v1650332840/m19y.dev/IMG_2366_ik6tzf_uzlhxi.webp" />
-                    <p>Look like this was from  Sunday, July 3rd 2011. Lineup: Dead End Path, Free Spirit, United Youth, Mob Mentality, Black Rations</p>
-                </div>
-              </div>
+        <div class="flex mt-2">
+          <div>
+            <div class="p-5">
+              <h2>Merch Collection</h2>
+              <p>Collection of merch from my days going to shows.</p>
+              <Merch img="v1650332839/m19y.dev/IMG_1817_lp9zrh_qnix3y.webp" />
+              <Merch img="v1650332840/m19y.dev/IMG_1818_ux6jxg_bnvvmk.webp" />
+              <Merch img="v1650332839/m19y.dev/IMG_1824_vhede3_l4gm9l.webp" />
+              <Merch img="v1650332840/m19y.dev/IMG_1825_usrqyv_p8ggsq.webp" />
+              <Merch img="v1650332840/m19y.dev/IMG_1826_higudb_j0ogti.webp" />
+              <p>Picked up both of these shirts at the Ottobar 9/10/2010.</p>
+              <p>Full show roster: Bane, TUI, Cruel Hand, Alpha & Omega.</p>
+              <Merch img="v1650332840/m19y.dev/IMG_2071_ctztu0_yezu5l.webp" />
+              <p>From a show in 2010 (?) with Terror, Gravemaker, Foundation, Naysayer and Violent Side.</p>
+              <Merch img="v1650332840/m19y.dev/IMG_2366_ik6tzf_uzlhxi.webp" />
+              <p>Look like this was from  Sunday, July 3rd 2011. Lineup: Dead End Path, Free Spirit, United Youth, Mob Mentality, Black Rations</p>
             </div>
           </div>
         </div>
