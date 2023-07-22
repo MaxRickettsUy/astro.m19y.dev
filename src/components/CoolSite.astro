@@ -10,7 +10,7 @@ const { href, img, name } = Astro.props;
 import externalLink from '@img/external-link.svg';
 ---
 
-<div class="m-2">
+<div class="m-2 shadow-lg">
     <div class="flex flex-row">
         <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={href}><h3>{name}</h3></a>
         <img src={externalLink} height="12"/>

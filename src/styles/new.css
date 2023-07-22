@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 * {
-    /* margin: 0; */
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 li {
@@ -20,10 +18,6 @@ ol > li {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-}
-
-.hamburger {
-    display: none;
 }
 
 .bar {
@@ -57,53 +51,4 @@ ol > li {
     font-size: 2.1rem;
     font-weight: 500;
     color: #482ff7;
-}
-
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        height: 80vh;
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: var(--bg-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 1rem;
-    }
-
-    .nav-link{
-        color: var(--primary-color);
-        /* font-size: 1.6rem; */
-        font-weight: 400;
-        /* color: #475569; */
-    }
-
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg);
-    }
 }
