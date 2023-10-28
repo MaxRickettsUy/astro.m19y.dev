@@ -12,8 +12,8 @@ const blogs = [
 
 const years = [{href: "rwl/2021.html", label: 2021}, {href: "rwl/2022.html", label: 2022}, {href:"rwl/2023.html", label: 2023}];
 
-import externalLink from '@img/external-link.svg';
-import github from "@img/github.svg"
+import github from "../img/github.png"
+import { Image } from 'astro:assets';
 
 ---
 
@@ -75,7 +75,7 @@ import github from "@img/github.svg"
                 <div class="flex flex-row">
                   <a class="mr-2" href="https://prsnl.site">prsnl.site</a>
                   <a target="_blank" href="https://github.com/MaxRickettsUy/prsnl.site">
-                    <img width="20" height="20" src={github}/>
+                    <Image alt="Github logo" width="20" height="20" src={github}/>
                   </a>
                 </div>
                 <p class="post-text">A curated collection of personal websites and blogs.</p>

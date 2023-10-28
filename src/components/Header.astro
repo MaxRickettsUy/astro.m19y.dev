@@ -1,5 +1,6 @@
 ---
-import avatar from '@img/avatar.png';
+import { Image } from 'astro:assets';
+import avatar from '../../public/avatar.png';
 
 import '@styles/styles.css';
 import '@styles/footer.css';
@@ -11,7 +12,9 @@ import '@styles/new-styles.css';
 
 <header class="header">
   <nav class="navbar">
-    <a href="/"><img src={avatar} alt="avatar" class="avatar" /></a>
+    <a href="/">
+      <Image width="48" height="48" src={avatar} alt="avatar" />
+    </a>
     <ul class="nav-menu">
       <li class="nav-item">
         <div class="theme-switch-wrapper">
