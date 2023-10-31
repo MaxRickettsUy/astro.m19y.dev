@@ -1,6 +1,6 @@
 main {
-  overflow-y: scroll;
-  -ms-overflow-style: none;
+  overflow-y: auto;
+  /* -ms-overflow-style: none; */
 }
 
 html, body {

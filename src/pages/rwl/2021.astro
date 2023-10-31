@@ -23,7 +23,7 @@ import Layout from '@layouts/Layout.astro';
               <p style="float: right">⏳ - In Progress</p>
               <p style="float: right">🎧 - Audio book</p>
               <div>
-                <h2>books</h2>
+                <h2 class="text-lg">books</h2>
                 <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
                 <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
                 <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress/>
@@ -31,11 +31,11 @@ import Layout from '@layouts/Layout.astro';
               </div>
               <hr/>
               <div>
-                <h2>
+                <h2 class="text-lg">
                   articles
                 </h2>
-                <div class="row">
-                  <div class="column">
+                <div class="flex flex-row">
+                  <div class="flex flex-col">
                     <ArticleLink archive="https://web.archive.org/web/20210131111955/https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" href="https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" label="We Quit Our Jobs to Build a Cabin—Everything Went Wrong" />
                     <ArticleLink archive="https://web.archive.org/web/20210225030458/https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" href="https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" label="The Premium Mediocre Life of Maya Millenial" />
                     <ArticleLink archive="https://web.archive.org/web/20210317014451/https://charliereese.ca/article/2019-year-in-review" href="https://charliereese.ca/article/2019-year-in-review" label="2019 - My Year in Review (Charlie Reese)" />
@@ -44,8 +44,6 @@ import Layout from '@layouts/Layout.astro';
                     <ArticleLink archive="https://web.archive.org/web/20210608103914/http://paulgraham.com/own.html" href="http://paulgraham.com/own.html" label="A Project of One's Own" />
                     <ArticleLink archive="https://web.archive.org/web/20210715203653/https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" href="https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" label="Young, Dumb, and Broke: Why Outdoorsy Types Suck at Money" />
                     <ArticleLink archive="https://web.archive.org/web/20211024115808/https://mcfunley.com/choose-boring-technology" href="https://mcfunley.com/choose-boring-technology" label="Choose Boring Technology" />
-                  </div>
-                  <div class="column">
                     <ArticleLink archive="https://web.archive.org/web/20201112011102/https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" href="https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" label="My Priceless Summer on a Maine Lobster Boat" />
                     <ArticleLink archive="https://web.archive.org/web/20210116225645/https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" href="https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" label="Quantifying Technical Debt" />
                     <ArticleLink archive="https://web.archive.org/web/20210321171055/https://www.ribice.ba/go-restful-starter-kit/" href="https://www.ribice.ba/go-restful-starter-kit/" label="Golang restful starter kit - GORSK" />
@@ -58,8 +56,8 @@ import Layout from '@layouts/Layout.astro';
               </div>
               <hr/>
               <div>
-                <h2>albums</h2>
-                <p class="title-link">
+                <h2 class="text-lg">albums</h2>
+                <p class="text-md my-1">
                   <b>Lamp of Murmuur</b> - <i class="love">Heir of Ecliptical Romanticism</i>
                   <a target="_blank" href="https://deathkvltproductions.bandcamp.com/album/heir-of-ecliptical-romanticism">
                     [bandcamp]
@@ -67,7 +65,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span>Ripping, catchy black metal with great vocals. Highly recommended.</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Playboi Carti</b> - <i class="skip">Whole Lotta Red</i>
                   <a target="_blank" href="https://www.albumoftheyear.org/album/142562-playboi-carti-whole-lotta-red.php">
                     [aoty]
@@ -77,7 +75,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span><i>Die Lit</i> being one of my favorite albums of all time. Skip.</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Pallbearer</b> - <i class="meh">Forgotten Days</i>
                   <a target="_blank" href="https://pallbearer.bandcamp.com/album/forgotten-days">
                     [bandcamp]
@@ -85,7 +83,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span>More of a somber album for Pallbearer, slower too. A little too slow for me. Meh</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Valerie June</b> - <i class="meh">The Moon And Stars: Prescriptions For Dreamers</i>
                   <a target="_blank" href="https://valeriejune.bandcamp.com/album/the-moon-and-stars-prescriptions-for-dreamers">
                     [bandcamp]

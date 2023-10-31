@@ -26,7 +26,7 @@ import Layout from '@layouts/Layout.astro';
               <p style="float: right">⏳ - In Progress</p>
               <p style="float: right">🎧 - Audio book</p>
               <div>
-                <h2>books</h2>
+                <h2 class="text-lg">books</h2>
                 <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
                 <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
                 <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete/>
@@ -44,11 +44,9 @@ import Layout from '@layouts/Layout.astro';
               </div>
               <hr/>
               <div>
-                <h2>
-                  articles
-                </h2>
-                <div class="row">
-                  <div class="column">
+                <h2 class="text-lg">articles</h2>
+                <div class="flex flex-row">
+                  <div class="flex flex-col">
                     <ArticleLink archive="https://archive.is/yKBcS" href="https://moxie.org/2022/01/07/web3-first-impressions.html" label="My first impressions of web3" />
                     <ArticleLink archive="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/" href="https://connellmccarthy.com/article/my-home-office-2022/" label="Connell McCarthy: My home office 2022" />
                     <ArticleLink archive="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/" href="https://2021.stateofjs.com/en-US/" label="State of Javascript 2021" />
@@ -60,10 +58,8 @@ import Layout from '@layouts/Layout.astro';
                     <ArticleLink archive="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/" href="https://notes.ghed.in/posts/the-best-iphone/" label="The Best iPhone" />
                     <ArticleLink archive="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" label="The United States' Unamendable Constitution" />
                     <ArticleLink archive="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/" label='How "Tactical" Infiltrated Everyday Life' />
-                  </div>
-                  <div class="column">
                     <ArticleLink archive="https://archive.fo/Tfzqc" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q" label="On Web3 Infrastructure" />
-                    <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" href="My Fourth Year as a Bootstrapped Founder" label="https://mtlynch.io/solo-developer-year-4/" />
+                    <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" label="My Fourth Year as a Bootstrapped Founder" href="https://mtlynch.io/solo-developer-year-4/" />
                     <ArticleLink archive="https://archive.is/fVaKb" href="https://palladiummag.com/2022/01/06/quit-your-job/" label="Quit Your Job" />
                     <ArticleLink archive="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/" href="https://future.a16z.com/software-development-building-for-99-developers/" label="Building for the 99% Developers" />
                     <ArticleLink archive="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home" href="https://johnnyrodgers.is/building-a-modern-home" label="Building a Modern Home" />
@@ -118,8 +114,8 @@ import Layout from '@layouts/Layout.astro';
               </div>
               <hr/>
               <div>
-                <h2>albums</h2>
-                <p class="title-link">
+                <h2 class="text-lg">albums</h2>
+                <p class="text-md my-1">
                   <b>Babytron</b> - <i class="love">Megatron</i>
                   <a target="_blank" href="https://open.spotify.com/album/02OJapNdO1Dd4sGCbKVSiX">
                     [spotify]
@@ -127,7 +123,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span>Whole album bangs. Really love his off kilter, barely on beat flow. Beats are sensational and a breath of fresh air. Check it out.</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Kendrick Lamar</b> - <i class="love">Mr Morale and the Big Steppers</i>
                   <a target="_blank" href="https://open.spotify.com/album/1atjqOZTCdrjxjMyCPZc2g">
                     [spotify]
@@ -137,7 +133,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span><i>N95</i> bangs and so does <i>Die Hard</i>. Overall, I enjoy the more annoyed vibe from Kendrick.</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Destroy Lonely</b> - <i class="love">No Stylist</i>
                   <a target="_blank" href="https://open.spotify.com/album/4eofl3fkWPQWKpttvulret">
                     [spotify]
@@ -147,7 +143,7 @@ import Layout from '@layouts/Layout.astro';
                   <br/>
                   &ensp; <span>The first half is definitely stronger than the second but overall fun rap album.</span>
                 </p>
-                <p class="title-link">
+                <p class="text-md my-1">
                   <b>Lucki</b> - <i class="love">Flawless Like Me</i>
                   <a target="_blank" href="https://open.spotify.com/album/5zWZi7tO66MoobIAl9OxWS">
                     [spotify]

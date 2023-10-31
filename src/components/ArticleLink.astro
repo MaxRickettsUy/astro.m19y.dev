@@ -8,9 +8,9 @@ export interface Props {
 const { archive, href, label } = Astro.props;
 ---
 
-<p class="title-link">
+<div class="lg:text-md text-md my-1">
     <a target="_blank" href={href}>
       <i>{label}</i>
     </a>
-    [<a class="archive" target="_blank" href={archive}>archive</a>]
+    [<a class="archive text-xs" target="_blank" href={archive}>archive</a>]
 </p>

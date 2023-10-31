@@ -10,8 +10,6 @@
   vertical-align: middle;
   width: 50px;
   height: 50px;
-  /* border-radius: 100%;
-  border: 1px solid white; */
 }
 
 .centered-content {
@@ -74,21 +72,6 @@ ul#blogs li {
 
 .page-title {
   text-align: center;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  row-gap: 1ch;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
 }
 
 .post-text {

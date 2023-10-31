@@ -14,7 +14,7 @@ let { href } = Astro.props;
 wiki ? href = `https://en.wikipedia.org/wiki/${href}` : href;
 ---
 
-<div class="title-link flex flex-row">
+<div class="lg:text-md text-md my-1 flex flex-row">
   <a class="italic mr-1" target="_blank" href={href}>{label}</a>
   { inProgress ? <span class="mr-1">⏳</span> : null}
   { complete ? <span class="mr-1">☑️</span> : null}
