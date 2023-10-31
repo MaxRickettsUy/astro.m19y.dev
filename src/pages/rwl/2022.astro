@@ -2,6 +2,7 @@
 import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import Footer from '@components/Footer.astro';
+import GradientBar from '@components/GradientBar.astro';
 import Header from '@components/Header.astro';
 import Layout from '@layouts/Layout.astro';
 ---
@@ -15,10 +16,12 @@ import Layout from '@layouts/Layout.astro';
         <div class="flex h-[75%] mt-2">
           <div class="w-full post">
             <div class="inner">
-              <a href="2021.html" style="float: left">&lt; 2021</a>
-              <a href="2023.html" style="float: right">2023 &gt;</a>
-              <div class="page-title">
-                <h1>2022</h1>
+              <div class="flex flex-row justify-between">
+                <a href="2021.html">&lt; 2021</a>
+                <h1 class="text-lg">2022</h1>
+                <a href="2023.html">2023 &gt;</a>
+              </div>
+              <div class="text-center">
               </div>
               <p style="float: right">⏳ - In Progress</p>
               <p style="float: right">🎧 - Audio book</p>
@@ -156,10 +159,7 @@ import Layout from '@layouts/Layout.astro';
                 </p>
               </div>
               <br/>
-              <div class="gradient">
-                <p style="float: left;" class="love">Highly recommend</p>
-                <p style="float: right" class="skip">Skip</p>
-              </div>
+              <GradientBar />
             </div>
           </div>
         </div>
