@@ -24,34 +24,18 @@ import { Image } from 'astro:assets';
       <div class="flex flex-col">
         <div class="flex flex-col lg:flex-row flex-auto">
           <div class="flex flex-col flex-1">
-            <div class="p-2">
+            <div class="p-2 w-1/2">
               <h1 class="text-3xl">Welcome! I'm Max.👋🏼</h1>
               <p class="text-[18px]">
-                I'm a software developer.
+                I'm a front end software developer.
               </p>
               <p class="text-[18px]">
-                This site is a mishmash of things including:
-                a store of interesting works and resources I've found over the years,
-                a list of personal projects and what I've learned from them and more.
+                This site is an archive of interesting articles, links, sites and other things I've come across.
               </p>
               <p class="text-[18px] mt-2">
-                Besides software I enjoy music (hardcore punk, black metal, rap, jazz ...), gardening (mainly vegetables), indoor bouldering and golf among other things.
-                <br/><br/>
+                Besides software I enjoy music (hardcore punk, black metal, rap), gardening and hiking among other things.
               </p>
             </div>
-            <div class="p-2">
-              <span class="text-xl">Some other blogs/sites I recommend:</span>
-              <div class="flex flex-row space-x-2">
-                {
-                  blogs.map((blog) => (
-                    <a class="text-sm" target="_blank" rel="noopener noreferrer" href={blog.href}>{blog.label}.</a>
-                  ))
-                }
-              </div>
-              <a style="color: var(--link)" href="random/cool-sites">See more here</a> 😎
-            </div>	
-          </div>
-          <div class="flex flex-col flex-1">
             <div class="p-2">
               <h1 class="text-xl">Random 📜</h1>
               <div class="pl-2 flex flex-row flex-wrap">
@@ -69,34 +53,42 @@ import { Image } from 'astro:assets';
               <h1 class="text-xl">Projects 🧰</h1>
               <div>
                 <p>This is a list of my ongoing personal projects.</p>
-                </p>They are open source and if you find yourself here and would like to contribute please do!</p>
               </div>
               <div class="p-2">
                 <div class="flex flex-row">
-                  <a class="mr-2" href="https://prsnl.site">prsnl.site</a>
+                  <a target="_blank" class="mr-2" href="https://prsnl.site">prsnl.site</a>
                   <a target="_blank" href="https://github.com/MaxRickettsUy/prsnl.site">
                     <Image alt="Github logo" width="20" height="20" src={github}/>
                   </a>
                 </div>
-                <p class="post-text">A curated collection of personal websites and blogs.</p>
+                <p class="text-sm">A curated collection of personal websites and blogs.</p>
+              </div>
+              <div class="p-2">
+                <div class="flex flex-row">
+                  <a target="_blank" class="mr-2" href="https://shoveltoss.com">shoveltoss.com</a>
+                  <a target="_blank" href="https://github.com/buddies-dev/astro.shoveltoss.com">
+                    <Image alt="Github logo" width="20" height="20" src={github}/>
+                  </a>
+                </div>
+                <p class="text-sm">The official Shoveltoss website.</p>
               </div>
             </div>
             <div class="pl-2">
               <h1 class="text-xl">Read 📚 / Watch 📺 / Listen 🎧</h1>
               <div>
                 <p>
-                  Yearly collections of books, articles, and albums I've checked out.
+                  Different mediums indexed by year.
                 </p>
                 <div class="pl-2">
                   {
                     years.map((year) => (
-                      <a class="m-1" href={year.href}>{year.label}</a>
+                      <a class="m-1 text-sm" href={year.href}>{year.label}</a>
                     ))
-                  }                    
+                  }
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       <div class="flex justify-center" style="margin-top: 20px;">
