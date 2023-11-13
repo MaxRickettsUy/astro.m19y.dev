@@ -1,6 +1,4 @@
 ---
-import Footer from '@components/Footer.astro';
-import Header from '@components/Header.astro';
 import Layout from '@layouts/Layout.astro';
 
 const blogs = [
@@ -18,85 +16,79 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="m19y">
-	<body class="flex flex-col">
-    <Header />
-    <main class="flex flex-col flex-1 justify-between">
-      <div class="flex flex-col">
-        <div class="flex flex-col lg:flex-row flex-auto">
-          <div class="flex flex-col flex-1">
-            <div class="p-2 w-1/2">
-              <h1 class="text-3xl">Welcome! I'm Max.👋🏼</h1>
-              <p class="text-[18px]">
-                I'm a front end software developer.
-              </p>
-              <p class="text-[18px]">
-                This site is an archive of interesting articles, links, sites and other things I've come across.
-              </p>
-              <p class="text-[18px] mt-2">
-                Besides software I enjoy music (hardcore punk, black metal, rap), gardening and hiking among other things.
-              </p>
+  <div class="flex flex-col">
+    <div class="flex flex-col lg:flex-row flex-auto">
+      <div class="flex flex-col flex-1">
+        <div class="p-2 w-1/2">
+          <h1 class="text-3xl">Welcome! I'm Max.👋🏼</h1>
+          <p class="text-[18px]">
+            I'm a front end software developer.
+          </p>
+          <p class="text-[18px]">
+            This site is an archive of interesting articles, links, sites and other things I've come across.
+          </p>
+          <p class="text-[18px] mt-2">
+            Besides software I enjoy music (hardcore punk, black metal, rap), gardening and hiking among other things.
+          </p>
+        </div>
+        <div class="p-2">
+          <h1 class="text-xl">Random 📜</h1>
+          <div class="pl-2 flex flex-row flex-wrap">
+            <a class="m-1 text-sm" href="random/merch-collection.html">Merch Collection</a>
+            <p class="flex flex-row m-1">
+              <a class="text-sm" target="_blank" href="docs/50_ui_tips.pdf">50 UI Tips</a>
+            </p>
+            <p class="flex flex-row m-1">
+              <a class="text-sm" href="https://maxrickettsuy.github.io/bookmarks/" target="_blank" rel="noopener noreferrer">Bookmarks</a>
+            </p>
+            <a class="m-1 text-sm" href="random/cool-sites.html">Cool Sites</a>
+          </div>
+        </div>
+        <div class="pl-2">
+          <h1 class="text-xl">Projects 🧰</h1>
+          <div>
+            <p>This is a list of my ongoing personal projects.</p>
+          </div>
+          <div class="p-2">
+            <div class="flex flex-row">
+              <a target="_blank" class="mr-2" href="https://prsnl.site">prsnl.site</a>
+              <a target="_blank" href="https://github.com/MaxRickettsUy/prsnl.site">
+                <Image alt="Github logo" width="20" height="20" src={github}/>
+              </a>
             </div>
-            <div class="p-2">
-              <h1 class="text-xl">Random 📜</h1>
-              <div class="pl-2 flex flex-row flex-wrap">
-                <a class="m-1 text-sm" href="random/merch-collection.html">Merch Collection</a>
-                <p class="flex flex-row m-1">
-                  <a class="text-sm" target="_blank" href="docs/50_ui_tips.pdf">50 UI Tips</a>
-                </p>
-                <p class="flex flex-row m-1">
-                  <a class="text-sm" href="https://maxrickettsuy.github.io/bookmarks/" target="_blank" rel="noopener noreferrer">Bookmarks</a>
-                </p>
-                <a class="m-1 text-sm" href="random/cool-sites.html">Cool Sites</a>
-              </div>
+            <p class="text-sm">A curated collection of personal websites and blogs.</p>
+          </div>
+          <div class="p-2">
+            <div class="flex flex-row">
+              <a target="_blank" class="mr-2" href="https://shoveltoss.com">shoveltoss.com</a>
+              <a target="_blank" href="https://github.com/buddies-dev/astro.shoveltoss.com">
+                <Image alt="Github logo" width="20" height="20" src={github}/>
+              </a>
             </div>
+            <p class="text-sm">The official Shoveltoss website.</p>
+          </div>
+        </div>
+        <div class="pl-2">
+          <h1 class="text-xl">Read 📚 / Watch 📺 / Listen 🎧</h1>
+          <div>
+            <p>
+              Different mediums indexed by year.
+            </p>
             <div class="pl-2">
-              <h1 class="text-xl">Projects 🧰</h1>
-              <div>
-                <p>This is a list of my ongoing personal projects.</p>
-              </div>
-              <div class="p-2">
-                <div class="flex flex-row">
-                  <a target="_blank" class="mr-2" href="https://prsnl.site">prsnl.site</a>
-                  <a target="_blank" href="https://github.com/MaxRickettsUy/prsnl.site">
-                    <Image alt="Github logo" width="20" height="20" src={github}/>
-                  </a>
-                </div>
-                <p class="text-sm">A curated collection of personal websites and blogs.</p>
-              </div>
-              <div class="p-2">
-                <div class="flex flex-row">
-                  <a target="_blank" class="mr-2" href="https://shoveltoss.com">shoveltoss.com</a>
-                  <a target="_blank" href="https://github.com/buddies-dev/astro.shoveltoss.com">
-                    <Image alt="Github logo" width="20" height="20" src={github}/>
-                  </a>
-                </div>
-                <p class="text-sm">The official Shoveltoss website.</p>
-              </div>
-            </div>
-            <div class="pl-2">
-              <h1 class="text-xl">Read 📚 / Watch 📺 / Listen 🎧</h1>
-              <div>
-                <p>
-                  Different mediums indexed by year.
-                </p>
-                <div class="pl-2">
-                  {
-                    years.map((year) => (
-                      <a class="m-1 text-sm" href={year.href}>{year.label}</a>
-                    ))
-                  }
-                </div>
-              </div>
+              {
+                years.map((year) => (
+                  <a class="m-1 text-sm" href={year.href}>{year.label}</a>
+                ))
+              }
             </div>
           </div>
         </div>
       </div>
-      <div class="flex justify-center" style="margin-top: 20px;">
-        <a href="https://gossipsweb.net">
-          <img src="https://gossipsweb.net/images/twwmwh-lime.jpg" alt="This website was made with hands." style="height: 40px; width: 14rem; border: 1px dashed #fff; padding: 4px;" />
-        </a>
-      </div>
-    </main>
-    <Footer />
-  </body>
+    </div>
+  </div>
+  <div class="flex justify-center" style="margin-top: 20px;">
+    <a href="https://gossipsweb.net">
+      <img src="https://gossipsweb.net/images/twwmwh-lime.jpg" alt="This website was made with hands." style="height: 40px; width: 14rem; border: 1px dashed #fff; padding: 4px;" />
+    </a>
+  </div>
 </Layout>

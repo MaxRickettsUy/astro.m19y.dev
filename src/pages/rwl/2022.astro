@@ -1,166 +1,156 @@
 ---
 import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
-import Footer from '@components/Footer.astro';
 import GradientBar from '@components/GradientBar.astro';
-import Header from '@components/Header.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
 
 <Layout title="rwl 2022">
-  <body>
-    <div class="my-container">
-      <Header />
-      <main>
-        <div class="flex h-[75%] mt-2">
-          <div class="w-full post">
-            <div class="inner">
-              <div class="flex flex-row justify-between">
-                <a href="/rwl/2021.html">&lt; 2021</a>
-                <h1 class="text-lg">2022</h1>
-                <a href="/rwl/2023.html">2023 &gt;</a>
-              </div>
-              <div class="text-center">
-              </div>
-              <p style="float: right">⏳ - In Progress</p>
-              <p style="float: right">🎧 - Audio book</p>
-              <div>
-                <h2 class="text-lg">books</h2>
-                <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
-                <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
-                <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete/>
-                <details>
-                  <summary>Thoughts</summary>
-                  In general, worth the read; probably longer than necessary. <br/> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
-                  very mindblowing or surprising but for those <br/> who have never read the original essay and question the value <br/> of spending their life at their 9to5, I think it's something that to check out.
-                </details>
-                <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
-                <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
-                <BookLink href="King_Leopold%27s_Ghost" label="King Leopold's Ghost" wiki complete audiobook />
-                <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" inProgress />
-                <BookLink href="https://jamesclear.com/atomic-habits" label="Atomic Habits" inProgress audiobook />
-                <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
-              </div>
-              <hr/>
-              <div>
-                <h2 class="text-lg">articles</h2>
-                <div class="flex flex-row">
-                  <div class="flex flex-col">
-                    <ArticleLink archive="https://archive.is/yKBcS" href="https://moxie.org/2022/01/07/web3-first-impressions.html" label="My first impressions of web3" />
-                    <ArticleLink archive="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/" href="https://connellmccarthy.com/article/my-home-office-2022/" label="Connell McCarthy: My home office 2022" />
-                    <ArticleLink archive="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/" href="https://2021.stateofjs.com/en-US/" label="State of Javascript 2021" />
-                    <ArticleLink archive="https://web.archive.org/web/20220215122105/https://github.com/readme/stories/pedro-nauck" href="https://github.com/readme/stories/pedro-nauck" label="Prioritizing health and balance over Docz" />
-                    <ArticleLink archive="https://web.archive.org/web/20220109054747/https://jvns.ca/blog/2021/12/31/2021--year-in-review/" href="https://jvns.ca/blog/2021/12/31/2021--year-in-review/" label="2021: Year in Review (jvns.ca)" />
-                    <ArticleLink archive="https://web.archive.org/web/20220504093935/https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" href="https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" label="You Don't Need a UI Framework" />
-                    <ArticleLink archive="https://web.archive.org/web/20220620100926/https://blog.chainalysis.com/reports/how-terrausd-collapsed/" href="https://blog.chainalysis.com/reports/how-terrausd-collapsed/" label="The Trades That Triggered UST’s Collapse" />
-                    <ArticleLink archive="https://web.archive.org/web/20220721142528/https://mtlynch.io/tinypilot-redesign/" href="https://mtlynch.io/tinypilot-redesign/" label="I Regret My $46k Website Redesign" />
-                    <ArticleLink archive="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/" href="https://notes.ghed.in/posts/the-best-iphone/" label="The Best iPhone" />
-                    <ArticleLink archive="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" label="The United States' Unamendable Constitution" />
-                    <ArticleLink archive="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/" label='How "Tactical" Infiltrated Everyday Life' />
-                    <ArticleLink archive="https://archive.fo/Tfzqc" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q" label="On Web3 Infrastructure" />
-                    <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" label="My Fourth Year as a Bootstrapped Founder" href="https://mtlynch.io/solo-developer-year-4/" />
-                    <ArticleLink archive="https://archive.is/fVaKb" href="https://palladiummag.com/2022/01/06/quit-your-job/" label="Quit Your Job" />
-                    <ArticleLink archive="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/" href="https://future.a16z.com/software-development-building-for-99-developers/" label="Building for the 99% Developers" />
-                    <ArticleLink archive="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home" href="https://johnnyrodgers.is/building-a-modern-home" label="Building a Modern Home" />
-                    <ArticleLink archive="https://web.archive.org/web/20220518111806/https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" href="https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" label="I Spent Two Years Launching Tiny Projects" />
-                    <ArticleLink archive="https://web.archive.org/web/20220507072842/https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" href="https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" label="The Road Most Traveled By" />
-                    <ArticleLink archive="https://web.archive.org/web/20220707165319/https://robbowen.digital/wrote-about/css-blend-mode-shaders/" href="https://robbowen.digital/wrote-about/css-blend-mode-shaders/" label="Holograms, light-leaks and how to build CSS-only shaders." />
-                    <ArticleLink archive="https://web.archive.org/web/20221213135831/https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" href="https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" label="Outlaw Country" />
-                    <ArticleLink archive="https://web.archive.org/web/20221219034008/https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" href="https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" label="The man who bought Pine Bluff, Arkansas" />
-                    <ArticleLink archive="https://web.archive.org/web/20221118214914/https://putthison.com/is-it-classist-to-be-against-fast-fashion/" href="https://putthison.com/is-it-classist-to-be-against-fast-fashion/" label="Is It Classist To Be Against Fast Fashion?" />
-                  </div>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <h2>comments</h2>
-                <div class="row">
-                  <div class="column">
-                    <details>
-                      <summary>
-                        I think React is inherently terrible... <a target="_blank" href="https://news.ycombinator.com/item?id=30358997">🔗</a>
-                      </summary>
-                      <blockquote>
-                        rather than your reason. I think all libraries that try to abstract an underlying technology into something that it is not, and then also have to provide escape clauses for the abstraction because the user actually has to know how the underlying stuff works, are inherently broken. I also think state-based reactivity is a terrible way to reason about things because sometimes you don't want a certain part of the state to participate in the reactivity, and then at another time you do, so you have to add another state variable to say when it is OK for the other state variable to start participating in the state. It just isn't a good way to create algorithms.
-                        The whole idea of React performing a bunch of tasks in the background and updating everything when it feels like is just all a bunch of silly magic. In fact, my state of JavaScript 2021 would be pretty damning, but because of the libraries used instead of JavaScript (like React and TypeScript), not because of JavaScript.
-                        React presents a simple view of the world, but in doing so, you now have no idea what is actually happening, and you need to know that. This isn't like an array in JavaScript that is abstraction of an array in c that needs memory allocated and new arrays created and so on. You don't need to know how that works other than that the JavaScript version is a bit slower and you accept that. You need to know how all of the stuff React hides actually works to create your program.
-                        In terms of hooks, there are so many "rules". Instead of seeing an API, the API is moved into the documentation and not visible in the code until run-time when you get one of the many errors like not adding a dependency to a hook, using a hook outside of some specific area, etc, etc. It isn't JavaScript at all, so you no longer have the tools of the language to freely use to make your life easier.
-                    </blockquote>
-                    </details>
-                    <details>
-                      <summary>
-                        This is why I like frontend development... <a target="_blank" href="https://news.ycombinator.com/item?id=30324356">🔗</a>
-                      </summary>
-                      <blockquote>
-                        you get to see the results of your work.
-                        It's satisfying to start with a blank screen or perhaps a times new roman mess, and leave it as something that looks great and works well.
-                        Backend development can sometimes be a tedious death march where all you get at the end of the day/week/sprint is not-an-error or perhaps just wiring up RPCs, or maybe if you are very lucky upgrading to a new point-release of a library with no other visible changes. Don't get me wrong, refactoring and fixing backend bugs can be satisfying, but I often find it is not as genuinely enjoyable as being able to actually see the results of your work.
-                      </blockquote>
-                    </details>
-                  </div>
-                  <div class="column">
-                    <details>
-                      <summary>
-                        I'm not sure why people think getting vaccinated is evidence of support for mandatory vaccinations... <a target="_blank" href="https://news.ycombinator.com/item?id=30340554">🔗</a>
-                      </summary>
-                      <blockquote>
-                        Taxes are mandatory too, I pay them not because I think they're at the right level and used for the right things, but because of the practical repercussions of what would happen if I didn't and I got found out.
-                        (it shouldn't matter, but - I'm double vaccinated, mainly because the jurisdiction I live in requires it for air travel. I have no strong feelings about vaccines either way).
-                      </blockquote>
-                    </details>
-                  </div>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <h2 class="text-lg">albums</h2>
-                <p class="text-md my-1">
-                  <b>Babytron</b> - <i class="love">Megatron</i>
-                  <a target="_blank" href="https://open.spotify.com/album/02OJapNdO1Dd4sGCbKVSiX">
-                    [spotify]
-                  </a>
-                  <br/>
-                  &ensp; <span>Whole album bangs. Really love his off kilter, barely on beat flow. Beats are sensational and a breath of fresh air. Check it out.</span>
-                </p>
-                <p class="text-md my-1">
-                  <b>Kendrick Lamar</b> - <i class="love">Mr Morale and the Big Steppers</i>
-                  <a target="_blank" href="https://open.spotify.com/album/1atjqOZTCdrjxjMyCPZc2g">
-                    [spotify]
-                  </a>
-                  <br/>
-                  &ensp; <span>Haven't finished the album as of today (05/18/2022) but I really enjoyed the first half. <i>We Cry Together</i> is genuinely great especially followed by <i>Purple Hearts</i>.</span>
-                  <br/>
-                  &ensp; <span><i>N95</i> bangs and so does <i>Die Hard</i>. Overall, I enjoy the more annoyed vibe from Kendrick.</span>
-                </p>
-                <p class="text-md my-1">
-                  <b>Destroy Lonely</b> - <i class="love">No Stylist</i>
-                  <a target="_blank" href="https://open.spotify.com/album/4eofl3fkWPQWKpttvulret">
-                    [spotify]
-                  </a>
-                  <br/>
-                  &ensp; <span>This album worked the fill the gap Carti left recently. Very good production, quotable lines.</span>
-                  <br/>
-                  &ensp; <span>The first half is definitely stronger than the second but overall fun rap album.</span>
-                </p>
-                <p class="text-md my-1">
-                  <b>Lucki</b> - <i class="love">Flawless Like Me</i>
-                  <a target="_blank" href="https://open.spotify.com/album/5zWZi7tO66MoobIAl9OxWS">
-                    [spotify]
-                  </a>
-                  <br/>
-                  &ensp; <span>I've never loved Lucki's raps, but he has a phenomenal taste in beats, and FLM is a great example of this.</span>
-                  <br/>
-                  &ensp; <span>I really loved this album primarily for the production but Lucki can be catchy as well.</span>
-                </p>
-              </div>
-              <br/>
-              <GradientBar />
+  <div class="flex h-[75%] mt-2">
+    <div class="w-full post">
+      <div class="inner">
+        <div class="flex flex-row justify-between">
+          <a href="/rwl/2021.html">&lt; 2021</a>
+          <h1 class="text-lg">2022</h1>
+          <a href="/rwl/2023.html">2023 &gt;</a>
+        </div>
+        <div class="text-center">
+        </div>
+        <p style="float: right">⏳ - In Progress</p>
+        <p style="float: right">🎧 - Audio book</p>
+        <div>
+          <h2 class="text-lg">books</h2>
+          <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
+          <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
+          <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete/>
+          <details>
+            <summary>Thoughts</summary>
+            In general, worth the read; probably longer than necessary. <br/> I was well aware of the concept of BS Jobs before reading <br/> so nothing was
+            very mindblowing or surprising but for those <br/> who have never read the original essay and question the value <br/> of spending their life at their 9to5, I think it's something that to check out.
+          </details>
+          <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
+          <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
+          <BookLink href="King_Leopold%27s_Ghost" label="King Leopold's Ghost" wiki complete audiobook />
+          <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" inProgress />
+          <BookLink href="https://jamesclear.com/atomic-habits" label="Atomic Habits" inProgress audiobook />
+          <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
+        </div>
+        <hr/>
+        <div>
+          <h2 class="text-lg">articles</h2>
+          <div class="flex flex-row">
+            <div class="flex flex-col">
+              <ArticleLink archive="https://archive.is/yKBcS" href="https://moxie.org/2022/01/07/web3-first-impressions.html" label="My first impressions of web3" />
+              <ArticleLink archive="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/" href="https://connellmccarthy.com/article/my-home-office-2022/" label="Connell McCarthy: My home office 2022" />
+              <ArticleLink archive="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/" href="https://2021.stateofjs.com/en-US/" label="State of Javascript 2021" />
+              <ArticleLink archive="https://web.archive.org/web/20220215122105/https://github.com/readme/stories/pedro-nauck" href="https://github.com/readme/stories/pedro-nauck" label="Prioritizing health and balance over Docz" />
+              <ArticleLink archive="https://web.archive.org/web/20220109054747/https://jvns.ca/blog/2021/12/31/2021--year-in-review/" href="https://jvns.ca/blog/2021/12/31/2021--year-in-review/" label="2021: Year in Review (jvns.ca)" />
+              <ArticleLink archive="https://web.archive.org/web/20220504093935/https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" href="https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" label="You Don't Need a UI Framework" />
+              <ArticleLink archive="https://web.archive.org/web/20220620100926/https://blog.chainalysis.com/reports/how-terrausd-collapsed/" href="https://blog.chainalysis.com/reports/how-terrausd-collapsed/" label="The Trades That Triggered UST’s Collapse" />
+              <ArticleLink archive="https://web.archive.org/web/20220721142528/https://mtlynch.io/tinypilot-redesign/" href="https://mtlynch.io/tinypilot-redesign/" label="I Regret My $46k Website Redesign" />
+              <ArticleLink archive="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/" href="https://notes.ghed.in/posts/the-best-iphone/" label="The Best iPhone" />
+              <ArticleLink archive="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" label="The United States' Unamendable Constitution" />
+              <ArticleLink archive="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/" label='How "Tactical" Infiltrated Everyday Life' />
+              <ArticleLink archive="https://archive.fo/Tfzqc" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q" label="On Web3 Infrastructure" />
+              <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" label="My Fourth Year as a Bootstrapped Founder" href="https://mtlynch.io/solo-developer-year-4/" />
+              <ArticleLink archive="https://archive.is/fVaKb" href="https://palladiummag.com/2022/01/06/quit-your-job/" label="Quit Your Job" />
+              <ArticleLink archive="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/" href="https://future.a16z.com/software-development-building-for-99-developers/" label="Building for the 99% Developers" />
+              <ArticleLink archive="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home" href="https://johnnyrodgers.is/building-a-modern-home" label="Building a Modern Home" />
+              <ArticleLink archive="https://web.archive.org/web/20220518111806/https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" href="https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" label="I Spent Two Years Launching Tiny Projects" />
+              <ArticleLink archive="https://web.archive.org/web/20220507072842/https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" href="https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" label="The Road Most Traveled By" />
+              <ArticleLink archive="https://web.archive.org/web/20220707165319/https://robbowen.digital/wrote-about/css-blend-mode-shaders/" href="https://robbowen.digital/wrote-about/css-blend-mode-shaders/" label="Holograms, light-leaks and how to build CSS-only shaders." />
+              <ArticleLink archive="https://web.archive.org/web/20221213135831/https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" href="https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" label="Outlaw Country" />
+              <ArticleLink archive="https://web.archive.org/web/20221219034008/https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" href="https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" label="The man who bought Pine Bluff, Arkansas" />
+              <ArticleLink archive="https://web.archive.org/web/20221118214914/https://putthison.com/is-it-classist-to-be-against-fast-fashion/" href="https://putthison.com/is-it-classist-to-be-against-fast-fashion/" label="Is It Classist To Be Against Fast Fashion?" />
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
+        <hr/>
+        <div>
+          <h2>comments</h2>
+          <div class="row">
+            <div class="column">
+              <details>
+                <summary>
+                  I think React is inherently terrible... <a target="_blank" href="https://news.ycombinator.com/item?id=30358997">🔗</a>
+                </summary>
+                <blockquote>
+                  rather than your reason. I think all libraries that try to abstract an underlying technology into something that it is not, and then also have to provide escape clauses for the abstraction because the user actually has to know how the underlying stuff works, are inherently broken. I also think state-based reactivity is a terrible way to reason about things because sometimes you don't want a certain part of the state to participate in the reactivity, and then at another time you do, so you have to add another state variable to say when it is OK for the other state variable to start participating in the state. It just isn't a good way to create algorithms.
+                  The whole idea of React performing a bunch of tasks in the background and updating everything when it feels like is just all a bunch of silly magic. In fact, my state of JavaScript 2021 would be pretty damning, but because of the libraries used instead of JavaScript (like React and TypeScript), not because of JavaScript.
+                  React presents a simple view of the world, but in doing so, you now have no idea what is actually happening, and you need to know that. This isn't like an array in JavaScript that is abstraction of an array in c that needs memory allocated and new arrays created and so on. You don't need to know how that works other than that the JavaScript version is a bit slower and you accept that. You need to know how all of the stuff React hides actually works to create your program.
+                  In terms of hooks, there are so many "rules". Instead of seeing an API, the API is moved into the documentation and not visible in the code until run-time when you get one of the many errors like not adding a dependency to a hook, using a hook outside of some specific area, etc, etc. It isn't JavaScript at all, so you no longer have the tools of the language to freely use to make your life easier.
+              </blockquote>
+              </details>
+              <details>
+                <summary>
+                  This is why I like frontend development... <a target="_blank" href="https://news.ycombinator.com/item?id=30324356">🔗</a>
+                </summary>
+                <blockquote>
+                  you get to see the results of your work.
+                  It's satisfying to start with a blank screen or perhaps a times new roman mess, and leave it as something that looks great and works well.
+                  Backend development can sometimes be a tedious death march where all you get at the end of the day/week/sprint is not-an-error or perhaps just wiring up RPCs, or maybe if you are very lucky upgrading to a new point-release of a library with no other visible changes. Don't get me wrong, refactoring and fixing backend bugs can be satisfying, but I often find it is not as genuinely enjoyable as being able to actually see the results of your work.
+                </blockquote>
+              </details>
+            </div>
+            <div class="column">
+              <details>
+                <summary>
+                  I'm not sure why people think getting vaccinated is evidence of support for mandatory vaccinations... <a target="_blank" href="https://news.ycombinator.com/item?id=30340554">🔗</a>
+                </summary>
+                <blockquote>
+                  Taxes are mandatory too, I pay them not because I think they're at the right level and used for the right things, but because of the practical repercussions of what would happen if I didn't and I got found out.
+                  (it shouldn't matter, but - I'm double vaccinated, mainly because the jurisdiction I live in requires it for air travel. I have no strong feelings about vaccines either way).
+                </blockquote>
+              </details>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <div>
+          <h2 class="text-lg">albums</h2>
+          <p class="text-md my-1">
+            <b>Babytron</b> - <i class="love">Megatron</i>
+            <a target="_blank" href="https://open.spotify.com/album/02OJapNdO1Dd4sGCbKVSiX">
+              [spotify]
+            </a>
+            <br/>
+            &ensp; <span>Whole album bangs. Really love his off kilter, barely on beat flow. Beats are sensational and a breath of fresh air. Check it out.</span>
+          </p>
+          <p class="text-md my-1">
+            <b>Kendrick Lamar</b> - <i class="love">Mr Morale and the Big Steppers</i>
+            <a target="_blank" href="https://open.spotify.com/album/1atjqOZTCdrjxjMyCPZc2g">
+              [spotify]
+            </a>
+            <br/>
+            &ensp; <span>Haven't finished the album as of today (05/18/2022) but I really enjoyed the first half. <i>We Cry Together</i> is genuinely great especially followed by <i>Purple Hearts</i>.</span>
+            <br/>
+            &ensp; <span><i>N95</i> bangs and so does <i>Die Hard</i>. Overall, I enjoy the more annoyed vibe from Kendrick.</span>
+          </p>
+          <p class="text-md my-1">
+            <b>Destroy Lonely</b> - <i class="love">No Stylist</i>
+            <a target="_blank" href="https://open.spotify.com/album/4eofl3fkWPQWKpttvulret">
+              [spotify]
+            </a>
+            <br/>
+            &ensp; <span>This album worked the fill the gap Carti left recently. Very good production, quotable lines.</span>
+            <br/>
+            &ensp; <span>The first half is definitely stronger than the second but overall fun rap album.</span>
+          </p>
+          <p class="text-md my-1">
+            <b>Lucki</b> - <i class="love">Flawless Like Me</i>
+            <a target="_blank" href="https://open.spotify.com/album/5zWZi7tO66MoobIAl9OxWS">
+              [spotify]
+            </a>
+            <br/>
+            &ensp; <span>I've never loved Lucki's raps, but he has a phenomenal taste in beats, and FLM is a great example of this.</span>
+            <br/>
+            &ensp; <span>I really loved this album primarily for the production but Lucki can be catchy as well.</span>
+          </p>
+        </div>
+        <br/>
+        <GradientBar />
+      </div>
     </div>
-  </body>
+  </div>
 </Layout>
