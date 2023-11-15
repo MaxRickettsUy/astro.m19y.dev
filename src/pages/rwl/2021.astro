@@ -6,89 +6,85 @@ import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="rwl 2021">
-  <div class="flex h-[75%] mt-2">
-    <div class="w-full post">
-      <div class="inner">
-        <div class="flex flex-row justify-between">
-          <a href="/">&lt; Home</a>
-          <h1 class="text-lg">2021</h1>
-          <a href="/rwl/2022" style="float: right">2022 &gt;</a>
+  <div class="inner">
+    <div class="flex flex-row justify-between">
+      <a href="/">&lt; Home</a>
+      <h1 class="text-lg">2021</h1>
+      <a href="/rwl/2022" style="float: right">2022 &gt;</a>
+    </div>
+    <p style="float: right">⏳ - In Progress</p>
+    <p style="float: right">🎧 - Audio book</p>
+    <div>
+      <h2 class="text-lg">books</h2>
+      <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
+      <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
+      <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress/>
+      <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
+    </div>
+    <hr/>
+    <div>
+      <h2 class="text-lg">
+        articles
+      </h2>
+      <div class="flex flex-row">
+        <div class="flex flex-col">
+          <ArticleLink archive="https://web.archive.org/web/20210131111955/https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" href="https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" label="We Quit Our Jobs to Build a Cabin—Everything Went Wrong" />
+          <ArticleLink archive="https://web.archive.org/web/20210225030458/https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" href="https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" label="The Premium Mediocre Life of Maya Millenial" />
+          <ArticleLink archive="https://web.archive.org/web/20210317014451/https://charliereese.ca/article/2019-year-in-review" href="https://charliereese.ca/article/2019-year-in-review" label="2019 - My Year in Review (Charlie Reese)" />
+          <ArticleLink archive="https://web.archive.org/web/20210328223049/https://livingafi.com/2021/03/17/the-2021-early-retirement-update/" href="https://livingafi.com/2021/03/17/the-2021-early-retirement-update/" label="The 2021 Early Retirement Update" />
+          <ArticleLink archive="https://web.archive.org/web/20210409010922/https://missiveapp.com/blog/how-we-built-1m-arr-email-client" href="https://missiveapp.com/blog/how-we-built-1m-arr-email-client" label="How We Bootstrapped a $1M ARR Email Client"/>
+          <ArticleLink archive="https://web.archive.org/web/20210608103914/http://paulgraham.com/own.html" href="http://paulgraham.com/own.html" label="A Project of One's Own" />
+          <ArticleLink archive="https://web.archive.org/web/20210715203653/https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" href="https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" label="Young, Dumb, and Broke: Why Outdoorsy Types Suck at Money" />
+          <ArticleLink archive="https://web.archive.org/web/20211024115808/https://mcfunley.com/choose-boring-technology" href="https://mcfunley.com/choose-boring-technology" label="Choose Boring Technology" />
+          <ArticleLink archive="https://web.archive.org/web/20201112011102/https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" href="https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" label="My Priceless Summer on a Maine Lobster Boat" />
+          <ArticleLink archive="https://web.archive.org/web/20210116225645/https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" href="https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" label="Quantifying Technical Debt" />
+          <ArticleLink archive="https://web.archive.org/web/20210321171055/https://www.ribice.ba/go-restful-starter-kit/" href="https://www.ribice.ba/go-restful-starter-kit/" label="Golang restful starter kit - GORSK" />
+          <ArticleLink archive="https://web.archive.org/web/20210331235339/https://news.ycombinator.com/item?id=26647717" href="https://news.ycombinator.com/item?id=26647717" label="Ask HN: I've realized I'm a bad software engineer and I'm over 30, what's next?" />
+          <ArticleLink archive="https://web.archive.org/web/20210408144534if_/https://anthonynsimon.com/blog/one-man-saas-architecture/" href="https://anthonynsimon.com/blog/one-man-saas-architecture/" label="The Architecture Behind A One-Person Tech Startup" />
+          <ArticleLink archive="https://web.archive.org/web/20210610062705/https://jmmv.dev/2021/04/always-be-quitting.html" href="https://jmmv.dev/2021/04/always-be-quitting.html" label="Always Be Quitting" />
+          <ArticleLink archive="https://web.archive.org/web/20210808021055/https://matt-rickard.com/reflections-on-10-000-hours-of-programming/" href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/" label="Reflections on 10,000 Hours of Programming" />
         </div>
-        <p style="float: right">⏳ - In Progress</p>
-        <p style="float: right">🎧 - Audio book</p>
-        <div>
-          <h2 class="text-lg">books</h2>
-          <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
-          <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
-          <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress/>
-          <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
-        </div>
-        <hr/>
-        <div>
-          <h2 class="text-lg">
-            articles
-          </h2>
-          <div class="flex flex-row">
-            <div class="flex flex-col">
-              <ArticleLink archive="https://web.archive.org/web/20210131111955/https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" href="https://www.outsideonline.com/2415766/friends-diy-cabin-build-washington" label="We Quit Our Jobs to Build a Cabin—Everything Went Wrong" />
-              <ArticleLink archive="https://web.archive.org/web/20210225030458/https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" href="https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/" label="The Premium Mediocre Life of Maya Millenial" />
-              <ArticleLink archive="https://web.archive.org/web/20210317014451/https://charliereese.ca/article/2019-year-in-review" href="https://charliereese.ca/article/2019-year-in-review" label="2019 - My Year in Review (Charlie Reese)" />
-              <ArticleLink archive="https://web.archive.org/web/20210328223049/https://livingafi.com/2021/03/17/the-2021-early-retirement-update/" href="https://livingafi.com/2021/03/17/the-2021-early-retirement-update/" label="The 2021 Early Retirement Update" />
-              <ArticleLink archive="https://web.archive.org/web/20210409010922/https://missiveapp.com/blog/how-we-built-1m-arr-email-client" href="https://missiveapp.com/blog/how-we-built-1m-arr-email-client" label="How We Bootstrapped a $1M ARR Email Client"/>
-              <ArticleLink archive="https://web.archive.org/web/20210608103914/http://paulgraham.com/own.html" href="http://paulgraham.com/own.html" label="A Project of One's Own" />
-              <ArticleLink archive="https://web.archive.org/web/20210715203653/https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" href="https://www.outsideonline.com/culture/essays-culture/money-problems-outdoor-dirtbag-culture/" label="Young, Dumb, and Broke: Why Outdoorsy Types Suck at Money" />
-              <ArticleLink archive="https://web.archive.org/web/20211024115808/https://mcfunley.com/choose-boring-technology" href="https://mcfunley.com/choose-boring-technology" label="Choose Boring Technology" />
-              <ArticleLink archive="https://web.archive.org/web/20201112011102/https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" href="https://www.outsideonline.com/2418783/my-priceless-summer-maine-lobster-boat" label="My Priceless Summer on a Maine Lobster Boat" />
-              <ArticleLink archive="https://web.archive.org/web/20210116225645/https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" href="https://chelseatroy.com/2021/01/14/quantifying-technical-debt/" label="Quantifying Technical Debt" />
-              <ArticleLink archive="https://web.archive.org/web/20210321171055/https://www.ribice.ba/go-restful-starter-kit/" href="https://www.ribice.ba/go-restful-starter-kit/" label="Golang restful starter kit - GORSK" />
-              <ArticleLink archive="https://web.archive.org/web/20210331235339/https://news.ycombinator.com/item?id=26647717" href="https://news.ycombinator.com/item?id=26647717" label="Ask HN: I've realized I'm a bad software engineer and I'm over 30, what's next?" />
-              <ArticleLink archive="https://web.archive.org/web/20210408144534if_/https://anthonynsimon.com/blog/one-man-saas-architecture/" href="https://anthonynsimon.com/blog/one-man-saas-architecture/" label="The Architecture Behind A One-Person Tech Startup" />
-              <ArticleLink archive="https://web.archive.org/web/20210610062705/https://jmmv.dev/2021/04/always-be-quitting.html" href="https://jmmv.dev/2021/04/always-be-quitting.html" label="Always Be Quitting" />
-              <ArticleLink archive="https://web.archive.org/web/20210808021055/https://matt-rickard.com/reflections-on-10-000-hours-of-programming/" href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/" label="Reflections on 10,000 Hours of Programming" />
-            </div>
-          </div>
-        </div>
-        <hr/>
-        <div>
-          <h2 class="text-lg">albums</h2>
-          <p class="text-md my-1">
-            <b>Lamp of Murmuur</b> - <i class="love">Heir of Ecliptical Romanticism</i>
-            <a target="_blank" href="https://deathkvltproductions.bandcamp.com/album/heir-of-ecliptical-romanticism">
-              [bandcamp]
-            </a>
-            <br/>
-            &ensp; <span>Ripping, catchy black metal with great vocals. Highly recommended.</span>
-          </p>
-          <p class="text-md my-1">
-            <b>Playboi Carti</b> - <i class="skip">Whole Lotta Red</i>
-            <a target="_blank" href="https://www.albumoftheyear.org/album/142562-playboi-carti-whole-lotta-red.php">
-              [aoty]
-            </a>
-            <br/>
-            &ensp; <span>Very disappointing especially considering my love for Carti's past work.</span>
-            <br/>
-            &ensp; <span><i>Die Lit</i> being one of my favorite albums of all time. Skip.</span>
-          </p>
-          <p class="text-md my-1">
-            <b>Pallbearer</b> - <i class="meh">Forgotten Days</i>
-            <a target="_blank" href="https://pallbearer.bandcamp.com/album/forgotten-days">
-              [bandcamp]
-            </a>
-            <br/>
-            &ensp; <span>More of a somber album for Pallbearer, slower too. A little too slow for me. Meh</span>
-          </p>
-          <p class="text-md my-1">
-            <b>Valerie June</b> - <i class="meh">The Moon And Stars: Prescriptions For Dreamers</i>
-            <a target="_blank" href="https://valeriejune.bandcamp.com/album/the-moon-and-stars-prescriptions-for-dreamers">
-              [bandcamp]
-            </a>
-            <br/>
-            &ensp; <span>Idk if I just wasn't in the mood for this album, but I couldn't even finish it. Another disappointment from an artist I love.</span>
-          </p>
-        </div>
-        <br/>
-        <GradientBar />
       </div>
     </div>
+    <hr/>
+    <div>
+      <h2 class="text-lg">albums</h2>
+      <p class="text-md my-1">
+        <b>Lamp of Murmuur</b> - <i class="love">Heir of Ecliptical Romanticism</i>
+        <a target="_blank" href="https://deathkvltproductions.bandcamp.com/album/heir-of-ecliptical-romanticism">
+          [bandcamp]
+        </a>
+        <br/>
+        &ensp; <span>Ripping, catchy black metal with great vocals. Highly recommended.</span>
+      </p>
+      <p class="text-md my-1">
+        <b>Playboi Carti</b> - <i class="skip">Whole Lotta Red</i>
+        <a target="_blank" href="https://www.albumoftheyear.org/album/142562-playboi-carti-whole-lotta-red.php">
+          [aoty]
+        </a>
+        <br/>
+        &ensp; <span>Very disappointing especially considering my love for Carti's past work.</span>
+        <br/>
+        &ensp; <span><i>Die Lit</i> being one of my favorite albums of all time. Skip.</span>
+      </p>
+      <p class="text-md my-1">
+        <b>Pallbearer</b> - <i class="meh">Forgotten Days</i>
+        <a target="_blank" href="https://pallbearer.bandcamp.com/album/forgotten-days">
+          [bandcamp]
+        </a>
+        <br/>
+        &ensp; <span>More of a somber album for Pallbearer, slower too. A little too slow for me. Meh</span>
+      </p>
+      <p class="text-md my-1">
+        <b>Valerie June</b> - <i class="meh">The Moon And Stars: Prescriptions For Dreamers</i>
+        <a target="_blank" href="https://valeriejune.bandcamp.com/album/the-moon-and-stars-prescriptions-for-dreamers">
+          [bandcamp]
+        </a>
+        <br/>
+        &ensp; <span>Idk if I just wasn't in the mood for this album, but I couldn't even finish it. Another disappointment from an artist I love.</span>
+      </p>
+    </div>
+    <br/>
+    <GradientBar />
   </div>
 </Layout>

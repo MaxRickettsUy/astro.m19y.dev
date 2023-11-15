@@ -1,0 +1,80 @@
+---
+import Badge from '@components/Badge.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="uses">
+  <div class="pl-4 pt-4">
+    <div class="flex flex-col pb-4">
+      <span class="text-4xl flex-[1]">uses 🖥️</span>
+      <span>Last updated: 11/14/2032</span>
+    </div>
+    <h2 class="text-2xl">Hardware</h2>
+    <div class="flex flex-col gap-2 m-4 sm:p-4">
+      <div class="flex flex-col sm:flex-row sm:max-w-[60vw] gap-2 shadow-md border border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">iPhone SE (2020)</p>
+          <p>I migrated from Android to iOS around 2020. Being frugal (*cough broke) I always opted for cheap phones.
+          Eventually I tired of poor build quality and the lack of the Android updates for these phones. I used a used iPhone 6 until the 2020 SE was announced which
+          was basically an upgraded 6. The price point was perfect and I still love the "outdated" 6 form factor. I plan on using it until it too sluggish or stops receiving security updates.
+          </p>
+          <div class="flex flex-row gap-1">
+            <Badge color="gray" label="iOS 17" title="OS" />
+            <Badge color="blue" label="128 GB" title="Storage" />
+          </div>
+        </div>
+        <img class="self-center" alt="" width="200" src="/se.png" />
+      </div>
+      <div class="flex flex-col sm:flex-row sm:max-w-[60vw] border gap-2 shadow-md border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">MacBook Pro M2 14" (2023)</p>
+          <p>Quite possibly the biggest splurge of my life, but man this thing rules. My last two laptops were a 2015 Dell XPS and a 2010
+            MacBook Pro, two great machines. I eventually threw Linux Mint on both of them as Windows and MacOS are unusable on older machines, MacOS to a lesser extent.
+            I also prefer Linux from a development perspective. But eventually I stopped using both of these machine as their internals couldn't even keep up with modern Linux.
+            I'd been wanting a new MBP for a few years as I'm interested in learning iOS development but could never justify it.
+          </p>
+          <div class="flex flex-row gap-1">
+            <Badge color="gray" label="macOS Sonoma" title="OS" />
+            <Badge color="blue" label="512 GB" title="Storage" />
+            <Badge color="green" label="16 GB" title="RAM" />
+          </div>
+        </div>
+        <img class="self-center" alt="" width="300" src="/mbp.png" />
+      </div>
+      <div class="flex flex-col sm:flex-row sm:max-w-[60vw] border gap-2 shadow-md border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">Desktop</p>
+          <p>
+            My first foray into custom pc assembly (building lol). I bought everything in early, pre-pandemic 2020, before prices skyrocketed.
+            The assembly process was stressful but enjoyable and I really enjoyed the end product. Before having our first child I did a lot of gaming: Warzone, Tarkov, Apex.
+            I also dual booted Linux Mint and used it for development which was incredible with my dual (sometimes triple) monitor setup.
+            Unfortanely with our recent move and pause on gaming, it's begun gathering dust as it resides in our basement office.
+            I still think it will perform for over a decade as a Linux box at the very least.
+          </p>
+          <div class="flex flex-row gap-1">
+            <Badge color="gray" label="Windows 10" title="OS" />
+            <Badge color="gray" label="Linux Mint" title="OS" />
+            <Badge color="blue" label="128 GB" title="Storage" />
+            <Badge color="green" label="32 GB" title="RAM" />
+            <Badge color="pink" label="RTX 2070 Super" title="GPU" />
+          </div>
+          <div class="flex sm:flex-row gap-2 mt-1 flex-wrap">
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg"  width="100"/>
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/351c9a441cd970d83faee6f581d07f73.med.256p.jpg" width="100" />
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/22573d2c099a90eb53acfd285b0fbed1.256p.jpg" width="100" />
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/1ae3e6b20edd1010cea93710147c4885.256p.jpg" width="100" />
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/0f1364c4cdc0ca58589daf3027ff0e4a.256p.jpg" width="100" />
+            <img src="https://m.media-amazon.com/images/I/41V7Idv87eL.jpg" width="100" />
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/6515ab4fced8bbb2ddc3a1065ffeafad.256p.jpg" width="100" />
+            <img src="https://cdna.pcpartpicker.com/static/forever/images/product/1ee4eb7d40aaf6bb43c86b4865407c2d.256p.jpg" width="100" />
+          </div>
+          <a target="_blank" class="underline" href="https://pcpartpicker.com/user/mrucoding/saved/#view=ZtxL23">PCPartPicker List</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-row">
+      <h2 class="text-2xl">Software</h2>
+    </div>
+  </div>
+</Layout>

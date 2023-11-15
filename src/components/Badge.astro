@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  label: string;
+  color: string;
+}
+
+const classNames = {
+  blue: "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-blue-50 text-blue-700 ring-blue-700/10",
+  gray: "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-gray-50 text-gray-600 ring-gray-500/10",
+  green: "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-green-50 text-green-700 ring-green-600/20",
+  pink: "inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10"
+};
+
+const { label, title, color } = Astro.props;
+---
+
+<span class={classNames[color]} title={title}>
+  { label }
+</span>
