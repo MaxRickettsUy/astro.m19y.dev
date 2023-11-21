@@ -73,8 +73,54 @@ import Layout from '@layouts/Layout.astro';
       </div>
 
     </div>
-    <div class="flex flex-row">
+    <div class="flex flex-col gap-2 m-4 sm:p-4">
       <h2 class="text-2xl">Software</h2>
+      <div class="flex flex-col sm:max-w-[60vw] gap-2 shadow-md border border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">Professional Development</p>
+          <p>
+            Professional I like to use React for new project when possible. I think it has the best resources and support of the Javascript lib/frameworks.
+            Similar to React I love the amount of support around MUI, it's easy to use and create an attractive, accesible UI. Gitlab has been a great experience for Git repo management CI/CD.
+            The text editor journey started with Emacs and ended with Atom in school. I started my career with Atom, moved to Sublime and finally downloaded VSCode in 2018 or 2019 and haven't looked back.
+            I'm not a huge fan of MSFT products with the exception of VSCode it does everything I want with few drawbacks.
+          </p>
+        </div>
+        <div class="flex flex-row gap-4 m-4">
+          <img class="self-center" alt="" width="50" src="/software/vscode.webp" />
+          <img class="self-center" alt="" width="50" src="/software/react.png" />
+          <img class="self-center" alt="" width="50" src="/software/mui.png" />
+          <img class="self-center" alt="" width="50" src="/software/gitlab.png" />
+        </div>
+      </div>
+      <div class="flex flex-col sm:max-w-[60vw] gap-2 shadow-md border border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">Personal Development</p>
+          <p>
+            I also use VSCode in my free time on personal projects. I've tried <a href="" target="_blank">Fleet</a> but haven't installed in on my M2 yet.
+            I've migrated all my static sites to Astro; I'm pretty obsessed with it. I've been using Github since I was introduced to it by a much better developer in school.
+            I use Netlify to host all my static sites. The Github integration makes config and deployment trivial. I'll use the free tier as long as possible.
+          </p>
+        </div>
+        <div class="flex flex-row gap-4 m-4">
+          <img class="self-center" alt="" width="50" src="/software/vscode.webp" />
+          <img class="self-center" alt="" width="50" src="/software/astro.png" />
+          <img class="self-center" alt="" width="50" src="/software/github.png" />
+          <img class="self-center" alt="" width="50" src="/software/netlify.png" />
+
+        </div>
+      </div>
+      <div class="flex flex-col sm:max-w-[60vw] gap-2 shadow-md border border-dashed">
+        <div class="flex-[1] p-4">
+          <p class="text-xl">General Use</p>
+          <p>
+          </p>
+        </div>
+        <div class="flex flex-row gap-4 m-4">
+          <img class="self-center" alt="" width="50" src="/software/chrome.png" />
+          <img class="self-center" alt="" width="50" src="/software/safari.png" />
+          <img class="self-center" alt="" width="50" src="/software/brave.png" />
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
