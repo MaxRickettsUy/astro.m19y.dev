@@ -3,6 +3,8 @@ import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
 import Layout from '@layouts/Layout.astro';
+
+import articles from '@public/arcticles.json';
 ---
 
 <Layout title="rwl 2023">
@@ -30,15 +32,9 @@ import Layout from '@layouts/Layout.astro';
       </h2>
       <div class="flex flex-row">
         <div class="flex flex-col">
-          <ArticleLink archive="https://web.archive.org/web/20230128035309/https://kwon.nyc/notes/2022/" href="https://kwon.nyc/notes/2022/" label="2022 in review" />
-          <ArticleLink archive="https://web.archive.org/web/20230126152826/https://sambf.substack.com/p/ftx-pre-mortem-overview" href="https://sambf.substack.com/p/ftx-pre-mortem-overview" label="FTX Pre-Mortem Overview" />
-          <ArticleLink archive="https://web.archive.org/web/20230828233635/https://www.robkhenderson.com/p/the-age-30-crisis-and-seasons-of" href="https://www.robkhenderson.com/p/the-age-30-crisis-and-seasons-of" label="The Age 30 Crisis and Seasons of a Man's Life" />
-          <ArticleLink archive="https://web.archive.org/web/20230126185034/https://snowingpine.com/2023/01/05/on-trucking" href="https://snowingpine.com/2023/01/05/on-trucking" label="On Trucking" />
-          <ArticleLink archive="https://web.archive.org/web/20230912061710/https://www.kodingkitty.com/blog/how-to-build-a-website/" href="https://www.kodingkitty.com/blog/how-to-build-a-website/" label="How to build a website without frameworks and tons of libraries" />
-          <ArticleLink archive="https://web.archive.org/web/20231113013859/https://pthorpe92.github.io/intro/my-story/" href="https://pthorpe92.github.io/intro/my-story/" label="How I got here." />
-          <ArticleLink archive="https://web.archive.org/web/20231113080715/https://html-first.com/" href="https://html-first.com/" label="HTML First" />
-          <ArticleLink archive="https://web.archive.org/web/20230626154926/https://www.outsideonline.com/outdoor-adventure/climbing/austin-howell-fallen-soloist/" href="https://www.outsideonline.com/outdoor-adventure/climbing/austin-howell-fallen-soloist/" label="The Free Soloist Who Fell to Earth" />
-          <ArticleLink archive="https://web.archive.org/web/20230613151456/https://sashachapin.substack.com/p/in-praise-of-blowing-up-your-life" href="https://sashachapin.substack.com/p/in-praise-of-blowing-up-your-life" label="In Praise of Blowing Up Your Life" />
+          {
+            articles["2023"].map((article) => <ArticleLink article={article} /> )
+          }
         </div>
       </div>
     </div>

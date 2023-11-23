@@ -3,6 +3,8 @@ import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
 import Layout from '@layouts/Layout.astro';
+
+import articles from '@public/arcticles.json'
 ---
 
 
@@ -39,28 +41,9 @@ import Layout from '@layouts/Layout.astro';
       <h2 class="text-lg">articles</h2>
       <div class="flex flex-row">
         <div class="flex flex-col">
-          <ArticleLink archive="https://archive.is/yKBcS" href="https://moxie.org/2022/01/07/web3-first-impressions.html" label="My first impressions of web3" />
-          <ArticleLink archive="https://web.archive.org/web/20220205230836/https://connellmccarthy.com/article/my-home-office-2022/" href="https://connellmccarthy.com/article/my-home-office-2022/" label="Connell McCarthy: My home office 2022" />
-          <ArticleLink archive="https://web.archive.org/web/20220216071058/https://2021.stateofjs.com/en-US/" href="https://2021.stateofjs.com/en-US/" label="State of Javascript 2021" />
-          <ArticleLink archive="https://web.archive.org/web/20220215122105/https://github.com/readme/stories/pedro-nauck" href="https://github.com/readme/stories/pedro-nauck" label="Prioritizing health and balance over Docz" />
-          <ArticleLink archive="https://web.archive.org/web/20220109054747/https://jvns.ca/blog/2021/12/31/2021--year-in-review/" href="https://jvns.ca/blog/2021/12/31/2021--year-in-review/" label="2021: Year in Review (jvns.ca)" />
-          <ArticleLink archive="https://web.archive.org/web/20220504093935/https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" href="https://www.smashingmagazine.com/2022/05/you-dont-need-ui-framework/" label="You Don't Need a UI Framework" />
-          <ArticleLink archive="https://web.archive.org/web/20220620100926/https://blog.chainalysis.com/reports/how-terrausd-collapsed/" href="https://blog.chainalysis.com/reports/how-terrausd-collapsed/" label="The Trades That Triggered UST’s Collapse" />
-          <ArticleLink archive="https://web.archive.org/web/20220721142528/https://mtlynch.io/tinypilot-redesign/" href="https://mtlynch.io/tinypilot-redesign/" label="I Regret My $46k Website Redesign" />
-          <ArticleLink archive="https://web.archive.org/web/20220826231518/https://notes.ghed.in/posts/the-best-iphone/" href="https://notes.ghed.in/posts/the-best-iphone/" label="The Best iPhone" />
-          <ArticleLink archive="https://web.archive.org/web/20221128175149/https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" href="https://www.newyorker.com/culture/annals-of-inquiry/the-united-states-unamendable-constitution" label="The United States' Unamendable Constitution" />
-          <ArticleLink archive="https://web.archive.org/web/20221002225618/https://www.gearpatrol.com/style/a39125064/tactical-clothing/" href="https://www.gearpatrol.com/style/a39125064/tactical-clothing/" label='How "Tactical" Infiltrated Everyday Life' />
-          <ArticleLink archive="https://archive.fo/Tfzqc" href="https://mirror.xyz/suzuha.eth/vb5E5lhzmPTcpxOJcz6Q211TDgSvoFwDLA6JSM1V37Q" label="On Web3 Infrastructure" />
-          <ArticleLink archive="https://web.archive.org/web/20220202010226/https://mtlynch.io/solo-developer-year-4/" label="My Fourth Year as a Bootstrapped Founder" href="https://mtlynch.io/solo-developer-year-4/" />
-          <ArticleLink archive="https://archive.is/fVaKb" href="https://palladiummag.com/2022/01/06/quit-your-job/" label="Quit Your Job" />
-          <ArticleLink archive="https://web.archive.org/web/20220217002326/https://future.a16z.com/software-development-building-for-99-developers/" href="https://future.a16z.com/software-development-building-for-99-developers/" label="Building for the 99% Developers" />
-          <ArticleLink archive="https://web.archive.org/web/20220305191510/https://johnnyrodgers.is/building-a-modern-home" href="https://johnnyrodgers.is/building-a-modern-home" label="Building a Modern Home" />
-          <ArticleLink archive="https://web.archive.org/web/20220518111806/https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" href="https://tinyprojects.dev/posts/i_spent_two_years_launching_tiny_projects" label="I Spent Two Years Launching Tiny Projects" />
-          <ArticleLink archive="https://web.archive.org/web/20220507072842/https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" href="https://littlegreenviper.com/miscellany/the-road-most-traveled-by/" label="The Road Most Traveled By" />
-          <ArticleLink archive="https://web.archive.org/web/20220707165319/https://robbowen.digital/wrote-about/css-blend-mode-shaders/" href="https://robbowen.digital/wrote-about/css-blend-mode-shaders/" label="Holograms, light-leaks and how to build CSS-only shaders." />
-          <ArticleLink archive="https://web.archive.org/web/20221213135831/https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" href="https://magazine.atavist.com/outlaw-country-klamath-county-oregon-guns-murder/" label="Outlaw Country" />
-          <ArticleLink archive="https://web.archive.org/web/20221219034008/https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" href="https://maxread.substack.com/p/the-man-who-bought-pine-bluff-arkansas" label="The man who bought Pine Bluff, Arkansas" />
-          <ArticleLink archive="https://web.archive.org/web/20221118214914/https://putthison.com/is-it-classist-to-be-against-fast-fashion/" href="https://putthison.com/is-it-classist-to-be-against-fast-fashion/" label="Is It Classist To Be Against Fast Fashion?" />
+          {
+            articles["2022"].map((article) => <ArticleLink article={article} /> )
+          }
         </div>
       </div>
     </div>

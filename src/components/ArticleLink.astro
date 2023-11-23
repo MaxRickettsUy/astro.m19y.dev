@@ -1,16 +1,20 @@
 ---
-export interface Props {
-    archive: string,
-    href: string,
-    label: string,
+interface Article {
+  archive: string;
+  href: string;
+  label: string;
 }
 
-const { archive, href, label } = Astro.props;
+export interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
 ---
 
 <div class="lg:text-md text-md my-1">
-  <a target="_blank" href={href}>
-    <i>{label}</i>
+  <a target="_blank" href={article.href}>
+    <i>{article.label}</i>
   </a>
-  [<a class="archive text-xs" target="_blank" href={archive}>archive</a>]
+  [<a class="archive text-xs" target="_blank" href={article.archive}>archive</a>]
 </div>
