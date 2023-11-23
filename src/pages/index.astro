@@ -13,10 +13,11 @@ const years = [{href: "rwl/2021.html", label: 2021}, {href: "rwl/2022.html", lab
 import github from "../img/github.png"
 import { Image } from 'astro:assets';
 
+const version = process.env.npm_package_version;
 ---
 
 <Layout title="m19y">
-  <div class="flex flex-col">
+  <div class="flex flex-col flex-[1]">
     <div class="flex flex-col sm:flex-row flex-auto">
       <div class="flex flex-col flex-1">
         <div class="p-2 sm:w-1/2">
@@ -88,6 +89,13 @@ import { Image } from 'astro:assets';
         <a target="_blank" href="https://gossipsweb.net">
           <img src="https://gossipsweb.net/images/twwmwh-lime.jpg" alt="This website was made with hands." class="h-[40px] w-[12rem] border border-dashed p-1" />
         </a>
+        <span class="flex flex-[1]"></span>
+        <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+          <svg class="h-1.5 w-1.5 fill-green-400" viewBox="0 0 6 6" aria-hidden="true">
+            <circle cx={3} cy={3} r={3} />
+          </svg>
+          v{version}
+        </span>
       </div>
     </div>
   </div>
