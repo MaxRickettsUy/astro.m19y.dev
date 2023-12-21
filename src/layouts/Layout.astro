@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 export interface Props {
 	title: string;
 }
@@ -23,7 +25,7 @@ import Header from '@components/Header.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="shortcut icon" type="image/jpg" href="@img/merle.png"/>
+		<link rel="shortcut icon" type="image/png" href="img/merle.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<meta name="description" content="m19y.dev/random home directory.">
@@ -39,6 +41,8 @@ import Header from '@components/Header.astro';
 				color: white
 			}
 		</style>
+
+		<ViewTransitions />
 
 		<script async src="https://us.umami.is/script.js" data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
 	</head>
