@@ -243,6 +243,33 @@
       "archive": "https://web.archive.org/web/20231220100328/https://molefrog.com/notes/react-tricks",
       "href": "https://molefrog.com/notes/react-tricks",
       "label": "React Tricks: Fast, Fit and Fun"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240112031251/https://tomgreenwood.substack.com/p/should-we-try-to-be-more-self-sufficient",
+      "href": "https://tomgreenwood.substack.com/p/should-we-try-to-be-more-self-sufficient",
+      "label": "Should we try to be more self sufficient?"
+    }
+  ],
+  "2024": [
+    {
+      "archive": "https://web.archive.org/web/20240112021553/https://www.aporiamagazine.com/p/a-tale-of-two-teenagers",
+      "href": "https://www.aporiamagazine.com/p/a-tale-of-two-teenagers",
+      "label": "A Tale of Two Teenagers"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240110124555/https://papereditor.app/dev",
+      "href": "https://papereditor.app/dev",
+      "label": "9 years of Apple text editor solo dev"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240111134919/https://www.fromjason.xyz/p/notebook/where-have-all-the-websites-gone/",
+      "href": "https://www.fromjason.xyz/p/notebook/where-have-all-the-websites-gone",
+      "label": "Where have all the websites gone?"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240112025416/https://ellie.wtf/posts/i-quit-my-job-to-work-full-time-on-my-open-source-project",
+      "href": "https://ellie.wtf/posts/i-quit-my-job-to-work-full-time-on-my-open-source-project",
+      "label": "I Quit My Job To Work Full Time On My Open Source Project"
     }
   ]
 }

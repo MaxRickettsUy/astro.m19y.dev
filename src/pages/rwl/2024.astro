@@ -1,0 +1,51 @@
+---
+import ArticleLink from '@components/ArticleLink.astro';
+import BookLink from '@components/BookLink.astro';
+import GradientBar from '@components/GradientBar.astro';
+import Layout from '@layouts/Layout.astro';
+
+import articles from '@public/arcticles.json';
+---
+
+<Layout title="rwl 2023">
+  <div class="inner">
+    <div class="flex flex-row justify-between">
+      <a href="/rwl/2023">&lt; 2023</a>
+      <h1 class="text-lg">2024</h1>
+      <a href="/rwl/2024">2025 &gt;</a>
+    </div>
+    <p style="float: right">⏳ - In Progress</p>
+    <p style="float: right">🎧 - Audio book</p>
+    <div>
+      <h2>books</h2>
+      <span>Reading on hold...</span>
+    </div>
+    <hr/>
+    <div>
+      <h2>
+        articles
+      </h2>
+      <div class="flex flex-row">
+        <div class="flex flex-col">
+          {
+            articles["2024"].map((article) => <ArticleLink article={article} /> )
+          }
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <!-- <div>
+      <h2>albums</h2>
+      <p class="title-link">
+        <b>foobar</b> - <i class="love">foobar</i>
+        <a target="_blank" href="link">
+          [spotify]
+        </a>
+        <br/>
+        &ensp; <span>lorem ipsum</span>
+      </p>
+    </div> -->
+    <br/>
+    <GradientBar />
+  </div>
+</Layout>
