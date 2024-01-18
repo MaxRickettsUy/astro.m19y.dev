@@ -270,6 +270,16 @@
       "archive": "https://web.archive.org/web/20240112025416/https://ellie.wtf/posts/i-quit-my-job-to-work-full-time-on-my-open-source-project",
       "href": "https://ellie.wtf/posts/i-quit-my-job-to-work-full-time-on-my-open-source-project",
       "label": "I Quit My Job To Work Full Time On My Open Source Project"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240116001159/https://blog.cassidoo.co/post/annoyed-at-react/",
+      "href": "https://blog.cassidoo.co/post/annoyed-at-react/",
+      "label": "Kind of Annoyed at React"
+    },
+    {
+      "archive": "https://web.archive.org/web/20240117003902/https://overreacted.io/the-two-reacts/",
+      "href": "https://overreacted.io/the-two-reacts/",
+      "label": "The Two Reacts"
     }
   ]
 }
