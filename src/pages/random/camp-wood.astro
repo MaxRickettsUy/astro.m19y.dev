@@ -1,0 +1,44 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Layout from '@layouts/Layout.astro';
+
+import images from '@public/campWood.json';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="merch-collection">
+  <div class="pl-4 pt-4">
+    <h2 class="text-2xl">Camp Wood</h2>
+    <p class="text-lg pl-[2rem] pt-[1rem]">Ep 1.</p>
+    <div class="flex flex-col flex-wrap content-center md:grid lg:grid xl:grid lg:grid-cols-3 gap-4 px-[2rem]">
+      {
+        images["ep1"].map((image, i) => (
+          <div class="relative lg:overflow-hidden lg:max-h-[185px]">
+						<a target="_blank" href={image} title="Click to view in new tab.">
+							<Image
+								alt="Gallery image"
+								height="500"
+								width="500"
+								class="h-full w-full lg:object-cover lg:object-center rounded-md"
+								src={image}
+								loading="lazy"
+							/>
+						</a>
+					</div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+<style>
+  li {
+    color: white
+  }
+  img {
+    padding: 2px;
+  }
+  img:hover {
+    cursor: pointer
+  }
+</style>
