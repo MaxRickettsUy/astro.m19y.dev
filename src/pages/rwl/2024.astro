@@ -3,6 +3,7 @@ import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
 import Layout from '@layouts/Layout.astro';
+import Spotify from '@components/Spotify.astro';
 
 import articles from '@public/arcticles.json';
 ---
@@ -18,7 +19,11 @@ import articles from '@public/arcticles.json';
     <p style="float: right">🎧 - Audio book</p>
     <div>
       <h2>books</h2>
-      <span>Reading on hold...</span>
+      <BookLink
+        href="https://us.macmillan.com/books/9781250183866/extremeownership"
+        label="Extreme Ownership: How U.S. Navy SEALs Lead and Win"
+        inProgress
+      />
     </div>
     <hr/>
     <div>
@@ -34,17 +39,32 @@ import articles from '@public/arcticles.json';
       </div>
     </div>
     <hr/>
-    <!-- <div>
+    <div>
       <h2>albums</h2>
-      <p class="title-link">
-        <b>foobar</b> - <i class="love">foobar</i>
-        <a target="_blank" href="link">
-          [spotify]
-        </a>
+      <div class="title-link">
+        <b>Vital Remains</b> - <i class="love">Forever Underground (1997)</i>
+        <div class="lg:w-[25vw]">
+          <Spotify album="4QVNkNupB8vSFeVUxVKVo0" />
+        </div>
         <br/>
-        &ensp; <span>lorem ipsum</span>
-      </p>
-    </div> -->
+        &ensp; <span>I've been on a death metal kick this year, this album really stands out from the rest. The intro is hard as nails.</span>
+      </div>
+      <div class="title-link">
+        <b>Worm</b> - <i class="love">Foreverglade (2021)</i>
+        <div class="lg:w-[25vw]">
+          <Spotify album="36Q9lOsmM3UCm3bxUDifJf" />
+        </div>
+        <br/>
+        &ensp; <span>Worm has quickly become one of the favorite modern metal artists. Fantastic mix of bm, dm and doom. Love the cosmic aethestic as well.</span>
+    </div>
+    <div class="title-link">
+      <b>Ninth Realm</b> - <i class="love">A Fate Unbroken (2022)</i>
+      <div class="lg:w-[25vw]">
+        <Spotify album="06aP2l0zQRDvvAHm45qDH5" />
+      </div>
+      <br/>
+      &ensp; <span>Checked these guys out on a whim scrolling Power Trips related artists on Metallum. Really solid crossover without aping PT or sounding too core / thrash.</span>
+    </div>
     <br/>
     <GradientBar />
   </div>
