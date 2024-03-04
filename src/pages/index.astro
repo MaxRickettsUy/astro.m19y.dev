@@ -118,12 +118,14 @@ const version = process.env.npm_package_version;
           />
         </a>
         <span class="flex flex-[1]"></span>
-        <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
-          <svg class="h-1.5 w-1.5 fill-green-400" viewBox="0 0 6 6" aria-hidden="true">
-            <circle cx={3} cy={3} r={3} />
-          </svg>
-          v{version}
-        </span>
+        <a href={`https://github.com/MaxRickettsUy/astro.m19y.dev/releases/tag/${version}`}>
+          <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+            <svg class="h-1.5 w-1.5 fill-green-400" viewBox="0 0 6 6" aria-hidden="true">
+              <circle cx={3} cy={3} r={3} />
+            </svg>
+            v{version}
+          </span>
+        </a>
       </div>
     </div>
   </div>
