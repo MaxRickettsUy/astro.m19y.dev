@@ -3,19 +3,23 @@ export interface Props {
   name: string;
   href: string;
   img: string;
+  star?: boolean;
 }
 
 import { Image } from 'astro:assets';
 
-const { href, img, name } = Astro.props;
+const { href, img, name, star } = Astro.props;
 
 import externalLink from '../img/external-link.svg';
 ---
 
 <div class="m-2 shadow-lg">
-    <div class="flex flex-row">
-      <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={href}><h3>{name}</h3></a>
-      <Image alt="External link icon" src={externalLink} height="12"/>
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-row">
+        <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={href}><h3>{name}</h3></a>
+        <Image alt="External link icon" src={externalLink} height="12"/>
+      </div>
+      { star ? <span>⭐</span> : null }
     </div>
     <img class="border border-dashed p-1 my-1" style="width: 100%;" src={`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`} />
     <slot></slot>
