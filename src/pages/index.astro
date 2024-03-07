@@ -15,7 +15,7 @@ const years = [
   { href: "rwl/2024.html", label: 2024 }
 ];
 
-import github from "../img/github.png"
+import github from "../img/github.svg"
 import { Image } from 'astro:assets';
 
 const version = process.env.npm_package_version;
@@ -51,20 +51,20 @@ const version = process.env.npm_package_version;
             <p>This is a list of my ongoing personal projects.</p>
           </div>
           <div class="p-2">
-            <div class="flex flex-row">
+            <div class="flex flex-row items-center">
               <a target="_blank" class="mr-2" href="https://prsnl.site">prsnl.site</a>
               <a target="_blank" href="https://github.com/MaxRickettsUy/astro.prsnl.site ">
-                <Image alt="Github logo" width="20" height="20" src={github}/>
+                <Image alt="Github logo" width="16" height="16" src={github}/>
               </a>
             </div>
             <p class="text-sm">A curated collection of personal websites and blogs.</p>
             <p class="text-sm">Built with Astro and Tailwind.</p>
           </div>
           <div class="p-2">
-            <div class="flex flex-row">
+            <div class="flex flex-row items-center">
               <a target="_blank" class="mr-2" href="https://shoveltoss.com">shoveltoss.com</a>
               <a target="_blank" href="https://github.com/buddies-dev/astro.shoveltoss.com">
-                <Image alt="Github logo" width="20" height="20" src={github}/>
+                <Image alt="Github logo" width="16" height="16" src={github}/>
               </a>
             </div>
             <p class="text-sm">The official Shoveltoss website.</p>

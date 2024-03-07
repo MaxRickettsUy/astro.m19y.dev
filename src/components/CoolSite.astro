@@ -1,26 +1,52 @@
 ---
-export interface Props {
+export interface Site {
+  github?: string;
   name: string;
-  href: string;
   img: string;
+  href: string;
+  rss?: string;
+}
+
+export interface Props {
+  site?: Site;
   star?: boolean;
+  inactive?: boolean;
+  archived?: boolean;
 }
 
 import { Image } from 'astro:assets';
 
-const { href, img, name, star } = Astro.props;
+import Badge from '@components/Badge.astro';
+
+const { archived, site, star, inactive } = Astro.props;
 
 import externalLink from '../img/external-link.svg';
+import github from "../img/github.svg"
+import rss from "../img/rss.svg"
 ---
 
 <div class="m-2 shadow-lg">
     <div class="flex flex-row justify-between">
-      <div class="flex flex-row">
-        <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={href}><h3>{name}</h3></a>
-        <Image alt="External link icon" src={externalLink} height="12"/>
+      <div class="flex flex-row gap-1 items-center">
+        <div class="flex flex-row">
+          <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={site.href}><h3>{site.name}</h3></a>
+          <Image alt="External link icon" src={externalLink} width="16"/>
+        </div>
+        { site.github &&
+          <a target="_blank" href={site.github}>
+            <Image alt="Github logo" width="16" src={github}/>
+          </a>
+        }
+        { site.rss &&
+          <a class="text-sm" href={site.rss}>
+            <Image alt="rss" width="16" src={rss} />
+          </a>
+        }
       </div>
-      { star ? <span>⭐</span> : null }
+      { inactive && <Badge color="gray" label="Inactive"></Badge> }
+      { archived && <Badge color="gray" label="Archived"></Badge> }
+      { star && <span>⭐</span>}
     </div>
-    <img class="border border-dashed p-1 my-1" style="width: 100%;" src={`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`} />
+    <img class="border border-dashed p-1 my-1" style="width: 100%;" src={site.img} />
     <slot></slot>
 </div>

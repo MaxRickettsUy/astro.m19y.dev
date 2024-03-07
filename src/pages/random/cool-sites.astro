@@ -2,6 +2,7 @@
 import CoolSite from '@components/CoolSite.astro';
 import Layout from '@layouts/Layout.astro';
 import type { Code } from 'astro:components';
+import sites from '@public/coolSites.json'
 ---
 
 <Layout title="cool sites">
@@ -13,60 +14,60 @@ import type { Code } from 'astro:components';
       <span>However, I do not endorse any of these sites or their authors.</span>
     </div>
     <div class="lg:w-1/2 flex flex-col gap-4">
-      <CoolSite name="nft price floor" href="https://nftpricefloor.com" img="v1700368775/m19y.dev/cool-sites/nftpricefloorcom_rl0wz9.webp">
+      <CoolSite site={sites['nft-price-floor']}>
         <p>I don't know where I came across this site but I love the neo-brutalist design. One of the first I saw that used it.</p>
         <p>Previous version <a class="underline" href="https://res.cloudinary.com/shoveltoss-com/image/upload/v1653013442/m19y.dev/cool-sites/nftpricefloorcom_wgjt2s.webp">screenshot</a>.</p>
       </CoolSite>
-      <CoolSite name="tiny projects" href="https://tinyprojects.dev" img="v1653013442/m19y.dev/cool-sites/tinyprojectsdev_r1c8wq.webp">
+      <CoolSite site={sites['tiny-projects']} inactive>
         <p>I found this developer / site on HN. It seems he's gone quiet but I thought his project was cool while it lasted.</p>
       </CoolSite>
-      <CoolSite name="increment" href="https://increment.com" img="v1653013442/m19y.dev/cool-sites/incrementcom_ieofhi.webp">
+      <CoolSite site={sites['increment']} archived>
         <p>I love the design of this site and the magazines. I always wanted to purchase them but I've lost interest since then...</p>
       </CoolSite>
-      <CoolSite name="teenage engineering" href="https://teenage.engineering" img="v1653013442/m19y.dev/cool-sites/teenageengineering_uoe6c6.webp">
+      <CoolSite site={sites['teenage-engineering']}>
         <p>This website is very fitting for the products it's built to sell; incredibly unique and beautiful to look at.</p>
       </CoolSite>
-      <CoolSite name="awful library books" href="https://awfullibrarybooks.wordpress.com" img="v1700368426/m19y.dev/cool-sites/awfullibrarybookscom_kiqg3v.webp">
+      <CoolSite site={sites['awful-library-books']} archived>
         <p>I listed this site for later reading more than anything; the concept seems pretty funny.</p>
         <p>It looks like the authors have decided to move on for now (unfortunately).</p>
         <span>This site has since been <a class="underline" href="https://awfullibrarybooks.wordpress.com/2023/08/10/not-goodbye-but-see-ya-later/">archived</a>.</span>
       </CoolSite>
-      <CoolSite name="maya land" href="https://maya.land" img="v1654046000/m19y.dev/cool-sites/mayaland_jahqgp.webp">
+      <CoolSite site={sites['maya-land']}>
         <p>Super cool design. A mix of low-fi, simple static site and artfulness. They seem to have a lot of content for later reading as well.</p>
       </CoolSite>
-      <CoolSite name="based cooking" href="https://based.cooking" img="v1654046206/m19y.dev/cool-sites/basedcooking_wadtiq.webp">
+      <CoolSite site={sites['based-cooking']}>
         <p>I loved the idea of this site since it was first announced by LS. I haven't tried any of the recipes but it's a great alternative to awful recipe sites.</p>
       </CoolSite>
-      <CoolSite name="uses.tech" href="https://uses.tech" img="v1654653869/m19y.dev/cool-sites/usestech_acu5pg.webp">
+      <CoolSite site={sites['uses-tech']}>
         <p>I love the concept and execution is pretty good. I wish there was an easier way to determine when a site was added.</p>
       </CoolSite>
-      <CoolSite name="ritual dust" href="https://ritualdust.com" img="v1700370069/m19y.dev/cool-sites/ritualdustcom_rsmviy.webp">
+      <CoolSite site={sites['ritual-dust']}>
         <p>I know nothing about the author or the history the site but I love it's design. I really need to take a deep dive into it one day.</p>
         <p>Previous version <a class="underline" href="v1654654403/m19y.dev/cool-sites/ritualdustcom_f0nmhz.webp">screenshot</a>.</p>
       </CoolSite>
-      <CoolSite name="low tech magazine" href="https://solar.lowtechmagazine.com" img="v1665280499/m19y.dev/cool-sites/lowtechmagazinecom_tibedw.webp">
+      <CoolSite site={sites['low-tech-magazine']}>
         <p>Very cool concept and content. I've learned I'm a sucker for dithering.</p>
       </CoolSite>
-      <CoolSite name="standard ebooks" href="https://standardebooks.org" img="v1672367250/m19y.dev/cool-sites/standardebooksorg_t49z5k.webp">
+      <CoolSite site={sites['standard-ebooks']}>
         <p>I like the site design but I love the mission more.</p>
       </CoolSite>
-      <CoolSite name="web3 is going great" href="https://web3isgoinggreat.com" img="v1672367394/m19y.dev/cool-sites/web3isgoinggreatcom_mogxsw.webp">
+      <CoolSite site={sites['web3-is-going-great']}>
         <p>A great site. MW seems cool.</p>
       </CoolSite>
-      <CoolSite name="The 512KB Club" href="https://512kb.club/" img="v1689993151/m19y.dev/cool-sites/512kb.club_m87jwl.webp">
+      <CoolSite site={sites['the-512kb-club']}>
         <p>Love the concept. I need to spend some time finding the best sites in the bunch.</p>
       </CoolSite>
-      <CoolSite name="The Metal Archives" href="https://metal-archive.com" img="v1689993280/m19y.dev/cool-sites/metal-archives.com_lqbhnm.webp">
+      <CoolSite site={sites['the-metal-archives']} star>
         <p>Probably in my top 5 favorite websites of all-time. It's an invaluable resource as a metal fan and it's just a fantastically maintained project.</p>
       </CoolSite>
-      <CoolSite name="Astronomy Picture of the Day" href="https://apod.nasa.gov/apod/archivepix.html" img="v1698550173/m19y.dev/cool-sites/apod.nasa.gov_apod_archivepixthml_mpmgy4.webp">
+      <CoolSite site={sites['astronomy-picture-of-the-day']}>
         <p>I learned about this is 2023 from a comment on HN. Very cool space pics.</p>
       </CoolSite>
-      <CoolSite name="Evil Martians" href="https://evilmartians.com/" img="v1699502490/m19y.dev/cool-sites/evilmartianscom_xp9aue.webp">
+      <CoolSite site={sites['evil-martians']} >
         <p>Just a beautiful website. I love their custom font and assets.</p>
       </CoolSite>
-      <CoolSite name="McMansion Hell" href="https://mcmansionhell.com/" img="v1707361690/m19y.dev/cool-sites/mcmansionhellcom_c0bhmo.webp" />
-      <CoolSite name="Workspaces" href="https://www.workspaces.xyz/" img="v1709604478/m19y.dev/cool-sites/workspacesxyz_aahtdi.webp" star />
+      <CoolSite site={sites['mcmansion-hell']} />
+      <CoolSite site={sites['workspaces']} star />
     </div>
   </div>
 </Layout>

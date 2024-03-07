@@ -1,0 +1,118 @@
+{
+  "nft-price-floor": {
+    "href": "https://nftpricefloor.com",
+    "name": "nft price floor",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1700368775/m19y.dev/cool-sites/nftpricefloorcom_rl0wz9.webp",
+    "lastUpdated": ""
+  },
+  "tiny-projects": {
+    "href": "https://tinyprojects.dev",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1653013442/m19y.dev/cool-sites/tinyprojectsdev_r1c8wq.webp",
+    "name": "tiny projects",
+    "lastUpdated": ""
+  },
+  "increment": {
+    "href": "https://increment.com",
+    "name": "increment",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1653013442/m19y.dev/cool-sites/incrementcom_ieofhi.webp",
+    "lastUpdated": ""
+  },
+  "teenage-engineering": {
+    "href": "https://teenage.engineering",
+    "name": "teenage engineering",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709778991/m19y.dev/cool-sites/teenageengineering_qlmd79.webp",
+    "lastUpdated": ""
+  },
+  "awful-library-books": {
+    "href": "https://awfullibrarybooks.wordpress.com",
+    "name": "awful library books",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1700368426/m19y.dev/cool-sites/awfullibrarybookscom_kiqg3v.webp",
+    "lastUpdated": ""
+  },
+  "maya-land": {
+    "href": "https://maya.land",
+    "name": "maya land",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1654046000/m19y.dev/cool-sites/mayaland_jahqgp.webp",
+    "lastUpdated": ""
+  },
+  "based-cooking": {
+    "github": "https://github.com/LukeSmithxyz/based.cooking",
+    "href": "https://based.cooking",
+    "name": "based cooking",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1654046206/m19y.dev/cool-sites/basedcooking_wadtiq.webp",
+    "lastUpdated": ""
+  },
+  "uses-tech": {
+    "github": "https://github.com/wesbos/awesome-uses/",
+    "href": "https://uses.tech",
+    "name": "uses.tech",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1654653869/m19y.dev/cool-sites/usestech_acu5pg.webp",
+    "lastUpdated": ""
+  },
+  "ritual-dust": {
+    "href": "https://ritualdust.com",
+    "name": "ritual dust",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1700370069/m19y.dev/cool-sites/ritualdustcom_rsmviy.webp",
+    "lastUpdated": "",
+    "rss": "https://ritualdust.com/index.xml"
+  },
+  "low-tech-magazine": {
+    "href": "https://solar.lowtechmagazine.com",
+    "name": "low tech magazine",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1665280499/m19y.dev/cool-sites/lowtechmagazinecom_tibedw.webp",
+    "lastUpdated": "",
+    "rss": "https://solar.lowtechmagazine.com/posts/index.xml"
+  },
+  "standard-ebooks": {
+    "href": "https://standardebooks.org",
+    "name": "standard ebooks",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1672367250/m19y.dev/cool-sites/standardebooksorg_t49z5k.webp",
+    "lastUpdated": ""
+  },
+  "web3-is-going-great": {
+    "href": "https://www.web3isgoinggreat.com",
+    "name": "web3 is going great",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709779932/m19y.dev/cool-sites/web3isgoinggreatcom_g3tcov.webp",
+    "lastUpdated": "",
+    "rss": "https://www.web3isgoinggreat.com/feed.xml"
+  },
+  "the-512kb-club": {
+    "href": "https://512kb.club/",
+    "name": "the 512kb club",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1689993151/m19y.dev/cool-sites/512kb.club_m87jwl.webp",
+    "lastUpdated": "",
+    "rss": "https://512kb.club/feed.xml"
+  },
+  "the-metal-archives": {
+    "href": "https://metal-archives.com",
+    "name": "the metal archives",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1689993280/m19y.dev/cool-sites/metal-archives.com_lqbhnm.webp",
+    "lastUpdated": ""
+  },
+  "astronomy-picture-of-the-day": {
+    "href": "https://apod.nasa.gov/apod/archivepix.html",
+    "name": "astronomy picture of the day",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1698550173/m19y.dev/cool-sites/apod.nasa.gov_apod_archivepixthml_mpmgy4.webp",
+    "lastUpdated": ""
+  },
+  "evil-martians": {
+    "href": "https://evilmartians.com",
+    "name": "evil martians",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1699502490/m19y.dev/cool-sites/evilmartianscom_xp9aue.webp",
+    "lastUpdated": ""
+  },
+  "mcmansion-hell": {
+    "href": "https://mcmansionhell.com",
+    "name": "mcmansion hell",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1707361690/m19y.dev/cool-sites/mcmansionhellcom_c0bhmo.webp",
+    "lastUpdated": "",
+    "rss": "https://mcmansionhell.com/rss"
+  },
+  "workspaces": {
+    "href": "https://workspaces.xyz",
+    "name": "workspaces",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709604478/m19y.dev/cool-sites/workspacesxyz_aahtdi.webp",
+    "lastUpdated": "",
+    "rss": "https://www.workspaces.xyz/p/rss.xml"
+  }
+}
