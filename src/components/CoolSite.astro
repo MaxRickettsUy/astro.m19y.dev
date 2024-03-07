@@ -26,27 +26,33 @@ import rss from "../img/rss.svg"
 ---
 
 <div class="m-2 shadow-lg">
-    <div class="flex flex-row justify-between">
-      <div class="flex flex-row gap-1 items-center">
-        <div class="flex flex-row">
-          <a style="text-decoration: underline; margin-right: 4px;" target="_blank" href={site.href}><h3>{site.name}</h3></a>
-          <Image alt="External link icon" src={externalLink} width="16"/>
-        </div>
-        { site.github &&
-          <a target="_blank" href={site.github}>
-            <Image alt="Github logo" width="16" src={github}/>
-          </a>
-        }
-        { site.rss &&
-          <a class="text-sm" href={site.rss}>
-            <Image alt="rss" width="16" src={rss} />
-          </a>
-        }
+  <div class="flex flex-row justify-between">
+    <div class="flex flex-row gap-1 items-center">
+      <div class="flex flex-row">
+        <a
+          class="underline mr-1"
+          target="_blank"
+          href={site.href}
+        >
+          <h3>{site.name}</h3>
+        </a>
+        <Image alt="External link icon" src={externalLink} width="16"/>
       </div>
-      { inactive && <Badge color="gray" label="Inactive"></Badge> }
-      { archived && <Badge color="gray" label="Archived"></Badge> }
-      { star && <span>⭐</span>}
+      { site.github &&
+        <a target="_blank" href={site.github}>
+          <Image alt="Github logo" width="16" src={github}/>
+        </a>
+      }
+      { site.rss &&
+        <a class="text-sm" href={site.rss}>
+          <Image alt="rss" width="16" src={rss} />
+        </a>
+      }
     </div>
-    <img class="border border-dashed p-1 my-1" style="width: 100%;" src={site.img} />
-    <slot></slot>
+    { inactive && <Badge color="gray" label="Inactive"></Badge> }
+    { archived && <Badge color="gray" label="Archived"></Badge> }
+    { star && <span>⭐</span>}
+  </div>
+  <img class="border border-dashed rounded-lg p-1 my-1" style="width: 100%;" src={site.img} />
+  <slot></slot>
 </div>

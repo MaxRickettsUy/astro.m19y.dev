@@ -114,5 +114,12 @@
     "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709604478/m19y.dev/cool-sites/workspacesxyz_aahtdi.webp",
     "lastUpdated": "",
     "rss": "https://www.workspaces.xyz/p/rss.xml"
+  },
+  "people-and-blogs": {
+    "href": "https://peopleandblogs.com",
+    "name": "people and blogs",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709784049/m19y.dev/cool-sites/peopleandblogscom_ax8f9b.webp",
+    "lastUpdated": "",
+    "rss": "https://manuelmoreale.com/feed/peopleandblogs"
   }
 }
