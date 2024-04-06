@@ -121,5 +121,11 @@
     "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1709784049/m19y.dev/cool-sites/peopleandblogscom_ax8f9b.webp",
     "lastUpdated": "",
     "rss": "https://manuelmoreale.com/feed/peopleandblogs"
+  },
+  "remove-bg": {
+    "href": "https://remove.bg",
+    "name": "removebg",
+    "img": "https://res.cloudinary.com/shoveltoss-com/image/upload/v1712425427/m19y.dev/cool-sites/removebg_my80lp.webp",
+    "lastUpdated": ""
   }
 }
