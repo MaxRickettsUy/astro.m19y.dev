@@ -3,24 +3,23 @@ import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
 import Layout from '@layouts/Layout.astro';
 
-import images from '@public/campWood.json';
+import images from '@public/garden/2024.json';
 import { Image } from 'astro:assets';
 ---
 
 <Layout title="merch-collection">
-  <div class="pt-4">
-    <h2 class="text-2xl pl-4">Camp Wood</h2>
-    <p class="text-lg pl-4 py-1">Ep 1.</p>
+  <div class="pt-1">
+    <h2 class="text-2xl pl-4 py-1">2024</h2>
     <div class="flex flex-col flex-wrap content-center md:grid lg:grid xl:grid lg:grid-cols-3 gap-4 px-4">
       {
-        images["ep1"].map((image, i) => (
+        images["img"].map((image, i) => (
           <div class="relative lg:overflow-hidden lg:max-h-[185px]">
 						<a target="_blank" href={image} title="Click to view in new tab.">
 							<Image
 								alt="Camp image"
 								height="500"
 								width="500"
-								class="lg:h-full lg:w-full lg:object-cover lg:object-center rounded-lg !p-0"
+								class="lg:h-full lg:w-full lg:object-cover lg:object-center rounded-lg"
 								src={image}
 								loading="lazy"
 							/>
