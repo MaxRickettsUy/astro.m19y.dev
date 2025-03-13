@@ -1,7 +1,7 @@
 {
   "name": "astro.m19y.dev",
   "type": "module",
-  "version": "2024.3.7",
+  "version": "2025.3.12",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
