@@ -7,9 +7,12 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ---
 
-## [Unreleased]
+## [2026.5.9] — 2026-05-09
 
 ### Changed
+- Upgrade Astro 5 → 6.3.1; replace deprecated `<ViewTransitions />` with `<ClientRouter />`
+- Upgrade Tailwind 3 → 4; migrate from `@astrojs/tailwind` integration + `tailwind.config.cjs` to `@tailwindcss/vite` plugin with CSS-native config
+- Upgrade `@types/node` 20 → 22; pin Netlify build environment to Node.js 22
 - Reconcile `package.json` declared versions with installed lockfile (Astro 5, `@astrojs/tailwind` 6, `@types/node` 22)
 - Consolidate 6 stylesheet imports into single `src/styles/global.css`; remove dead CSS (~60% reduction)
 - Fix duplicate `<meta charset>` / `<meta viewport>` tags and broken favicon reference in `Layout.astro`
@@ -25,6 +28,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 - Remove dead local `<style>` blocks from `merch-collection.astro`, `camp-wood.astro`, `garden/2024.astro`
 - Remove dead `Header`/`Footer` imports from `camp-wood.astro` and `garden/2024.astro`
 - Add `aria-label` to `<nav>` and home link in `Header.astro`; switch avatar from `astro:assets` import to direct `<img src="/avatar.png">`
+- Rewrite `README.md` with project-specific content replacing Astro boilerplate
+
+### Fixed
 - Add `rel="noopener noreferrer"` to all `<a target="_blank">` links site-wide
 - Fix missing and empty `alt` attributes on hardware/software images in `uses.astro`; add `alt` to `CoolSite` screenshot image
 - Fix double `<hr/>` and malformed `<p>` tag in `rwl/2023.astro`
@@ -36,6 +42,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 - `src/img/favicon.png`, `github.png`, `linkedin.png`, `me.jpg`, `merle.png`, `xps13.jpg` — unreferenced images
 - `public/software/raindrop.png` — unreferenced public asset
 - `src/styles/styles.css`, `footer.css`, `header.css`, `main.css`, `new.css`, `new-styles.css` — consolidated into `global.css`
+- `tailwind.config.cjs` — replaced by Tailwind 4 CSS-native config
 
 ---
 
