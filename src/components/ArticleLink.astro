@@ -13,8 +13,8 @@ const { article } = Astro.props;
 ---
 
 <div class="lg:text-md text-md my-1">
-  <a target="_blank" href={article.href}>
+  <a target="_blank" rel="noopener noreferrer" href={article.href}>
     <i>{article.label}</i>
   </a>
-  [<a class="archive text-xs" target="_blank" href={article.archive}>archive</a>]
+  [<a class="archive text-xs" target="_blank" rel="noopener noreferrer" href={article.archive}>archive</a>]
 </div>

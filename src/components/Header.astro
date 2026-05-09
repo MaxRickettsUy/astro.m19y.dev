@@ -1,19 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-import avatar from '../../public/avatar.png';
-
-import '@styles/styles.css';
-import '@styles/footer.css';
-import '@styles/header.css';
-import '@styles/main.css';
-import '@styles/new.css';
-import '@styles/new-styles.css';
 ---
 
 <header class="header">
-  <nav class="navbar">
-    <a href="/">
-      <Image width="48" height="48" src={avatar} alt="avatar" />
+  <nav class="navbar" aria-label="Site">
+    <a href="/" aria-label="Home">
+      <img width="48" height="48" src="/avatar.png" alt="avatar" />
     </a>
   </nav>
 </header>

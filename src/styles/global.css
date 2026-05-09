@@ -1,0 +1,169 @@
+/* Reset & base */
+* {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ol > li {
+  list-style: inherit !important;
+}
+
+/* CSS variables */
+:root {
+  --primary-color: #f5f5f5;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #181717;
+  --heading-color: #f5f5f5;
+  --link: #7399be;
+  --code-bg: black;
+  --code-border: 1px solid black;
+}
+
+/* Layout */
+main {
+  overflow-y: auto;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+code {
+  color: var(--font-color);
+  background: var(--code-bg);
+  border: var(--code-border);
+}
+
+/* Navigation */
+.navbar {
+  background-color: #455A53;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+/* Footer */
+.siteFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.siteFooter__section {
+  display: flex;
+  align-items: center;
+}
+
+/* Content */
+.archive {
+  color: #BA5252;
+}
+
+.centered-div {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  color: #455A53;
+  font-size: 12px;
+}
+
+.disclaimer-container {
+  margin: 0 auto;
+}
+
+.inner {
+  padding: 1rem;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.post-text {
+  font-size: 18px;
+}
+
+.title-link {
+  margin: 1ch;
+  font-size: 18px;
+}
+
+.last-updated {
+  font-size: 8px;
+  margin: 0 auto;
+  width: 50%;
+  color: var(--primary-color);
+}
+
+.last-updated-container {
+  width: 25%;
+  margin: 0 auto;
+}
+
+/* RWL rating colors */
+.gradient {
+  height: 10px;
+  background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);
+}
+
+.love {
+  color: #C6FFDD;
+}
+
+.meh {
+  color: #FBD786;
+}
+
+.skip {
+  color: #f7797d;
+}
+
+/* Responsive */
+@media screen and (max-width: 40.5em) {
+  .disclaimer {
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  .last-updated-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .disclaimer-container {
+    text-align: justify;
+  }
+
+  .post-text {
+    font-size: 15px;
+  }
+
+  .inner {
+    margin: 0 auto;
+    width: auto;
+    padding: 10px;
+  }
+
+  .title-link {
+    font-size: 15px;
+  }
+
+  .centered-div {
+    width: 80%;
+  }
+}

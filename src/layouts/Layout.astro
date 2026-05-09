@@ -2,71 +2,56 @@
 import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
-	title: string;
+  title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = 'm19y.dev — links, projects, and media logs.' } = Astro.props;
 
-import '@styles/styles.css';
-import '@styles/footer.css';
-import '@styles/header.css';
-import '@styles/main.css';
-import '@styles/new.css';
-import '@styles/new-styles.css';
+import '@styles/global.css';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link rel="shortcut icon" type="image/png" href="img/merle.png"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="UTF-8">
-		<meta name="description" content="m19y.dev/random home directory.">
-		<meta property="og:title" content="projects">
-		<meta property="og:description" content="m19y.dev/random home directory.">
-		<meta property="og:image" content="img/merle.png">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://www.m19y.dev/pages/random.html">
-
-		<style>
-			li {
-				color: white
-			}
-		</style>
-
-		<ViewTransitions />
-
-		<script async src="https://us.umami.is/script.js" data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/avatar.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <ViewTransitions />
+    <script async src="https://us.umami.is/script.js" data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
+  </head>
   <body>
     <div class="flex flex-col h-full">
       <Header />
       <main class="flex flex-col flex-[1]">
-				<slot></slot>
-			</main>
-			<Footer />
-		</div>
-	</body>
+        <slot></slot>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #F6F6F6;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 </style>
