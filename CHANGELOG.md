@@ -7,6 +7,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ---
 
+## [Unreleased]
+
+### Removed
+- `src/pages/posts/upgrade-wiki-js-heroku.astro`, `configuring-flutter-linux-mint.astro`, `resizable-vuetify-table.astro` — outdated 2021–2022 posts
+- `src/pages/posts.astro` — manual post index, removed with the posts it listed
+
+---
+
 ## [2026.5.9] — 2026-05-09
 
 ### Changed
