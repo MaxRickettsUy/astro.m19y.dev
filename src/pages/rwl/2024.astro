@@ -3,69 +3,71 @@ import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
 import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.astro';
+import Section from '@components/Section.astro';
 import Spotify from '@components/Spotify.astro';
 
 import articles from '@public/arcticles.json';
 ---
 
 <Layout title="rwl 2024">
-  <div class="inner">
-    <div class="flex flex-row justify-between">
-      <a href="/rwl/2023">&lt; 2023</a>
-      <h2 class="text-lg">2024</h2>
+  <Page title="2024">
+    <nav class="flex flex-row justify-between" aria-label="Read watch listen years">
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2023">&lt; 2023</a>
       <span></span>
+    </nav>
+
+    <div class="space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+      <p>⏳ - In Progress</p>
+      <p>🎧 - Audio book</p>
     </div>
-    <p style="float: right">⏳ - In Progress</p>
-    <p style="float: right">🎧 - Audio book</p>
-    <div>
-      <h2>books</h2>
+
+    <Section title="books">
       <BookLink
         href="https://us.macmillan.com/books/9781250183866/extremeownership"
         label="Extreme Ownership: How U.S. Navy SEALs Lead and Win"
         inProgress
       />
-    </div>
-    <hr/>
-    <div>
-      <h2>
-        articles
-      </h2>
-      <div class="flex flex-row">
-        <div class="flex flex-col">
-          {
-            articles["2024"].map((article) => <ArticleLink article={article} /> )
-          }
+    </Section>
+
+    <hr class="border-neutral-200 dark:border-neutral-800" />
+
+    <Section title="articles">
+      <div class="flex flex-col">
+        {
+          articles["2024"].map((article) => <ArticleLink article={article} /> )
+        }
+      </div>
+    </Section>
+
+    <hr class="border-neutral-200 dark:border-neutral-800" />
+
+    <Section title="albums">
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <p><b>Vital Remains</b> - <i class="love">Forever Underground (1997)</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album="4QVNkNupB8vSFeVUxVKVo0" />
+          </div>
+          <p>I've been on a death metal kick this year, this album really stands out from the rest. The intro is hard as nails.</p>
+        </div>
+        <div class="space-y-2">
+          <p><b>Worm</b> - <i class="love">Foreverglade (2021)</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album="36Q9lOsmM3UCm3bxUDifJf" />
+          </div>
+          <p>Worm has quickly become one of the favorite modern metal artists. Fantastic mix of bm, dm and doom. Love the cosmic aethestic as well.</p>
+        </div>
+        <div class="space-y-2">
+          <p><b>Ninth Realm</b> - <i class="love">A Fate Unbroken (2022)</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album="06aP2l0zQRDvvAHm45qDH5" />
+          </div>
+          <p>Checked these guys out on a whim scrolling Power Trips related artists on Metallum. Really solid crossover without aping PT or sounding too core / thrash.</p>
         </div>
       </div>
-    </div>
-    <hr/>
-    <div>
-      <h2>albums</h2>
-      <div class="title-link">
-        <b>Vital Remains</b> - <i class="love">Forever Underground (1997)</i>
-        <div class="lg:w-[25vw]">
-          <Spotify album="4QVNkNupB8vSFeVUxVKVo0" />
-        </div>
-        <br/>
-        &ensp; <span>I've been on a death metal kick this year, this album really stands out from the rest. The intro is hard as nails.</span>
-      </div>
-      <div class="title-link">
-        <b>Worm</b> - <i class="love">Foreverglade (2021)</i>
-        <div class="lg:w-[25vw]">
-          <Spotify album="36Q9lOsmM3UCm3bxUDifJf" />
-        </div>
-        <br/>
-        &ensp; <span>Worm has quickly become one of the favorite modern metal artists. Fantastic mix of bm, dm and doom. Love the cosmic aethestic as well.</span>
-    </div>
-    <div class="title-link">
-      <b>Ninth Realm</b> - <i class="love">A Fate Unbroken (2022)</i>
-      <div class="lg:w-[25vw]">
-        <Spotify album="06aP2l0zQRDvvAHm45qDH5" />
-      </div>
-      <br/>
-      &ensp; <span>Checked these guys out on a whim scrolling Power Trips related artists on Metallum. Really solid crossover without aping PT or sounding too core / thrash.</span>
-    </div>
-    <br/>
+    </Section>
+
     <GradientBar />
-  </div>
+  </Page>
 </Layout>

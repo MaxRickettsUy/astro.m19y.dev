@@ -3,8 +3,8 @@
   "type": "module",
   "version": "2026.5.9",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "astro dev --host",
+    "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -12,9 +12,11 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.1",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.106",
     "@types/node": "^22.0.0"
   }
 }

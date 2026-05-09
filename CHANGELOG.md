@@ -9,6 +9,11 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+### Changed
+- Add a consistent page wrapper, section rhythm, heading scale, and dark-mode-aware styling across the site
+- Move homepage attribution badges into the shared footer and simplify the header to avatar navigation plus theme toggle
+- Add a persisted light/dark/system theme toggle driven by `prefers-color-scheme` by default
+
 ### Removed
 - `src/pages/posts/upgrade-wiki-js-heroku.astro`, `configuring-flutter-linux-mint.astro`, `resizable-vuetify-table.astro` — outdated 2021–2022 posts
 - `src/pages/posts.astro` — manual post index, removed with the posts it listed

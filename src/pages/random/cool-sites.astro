@@ -1,20 +1,16 @@
 ---
 import CoolSite from '@components/CoolSite.astro';
+import Page from '@components/Page.astro';
 import Layout from '@layouts/Layout.astro';
-import type { Code } from 'astro:components';
 import sites from '@public/coolSites.json'
 ---
 
 <Layout title="cool sites">
-  <div class="p-4">
-    <div class="flex flex-col pb-4">
-      <h1 class="text-2xl">😎 Cool Sites 😎</h1>
-      <span>Last updated: 03/07/2024</span>
-      <span>All of these sites caught my eye or interested me in one way or another: either design, content or both.</span>
-      <span>However, I do not endorse any of these sites or their authors.</span>
-      <span>⭐ === personal favorite</span>
-    </div>
-    <div class="lg:w-1/2 flex flex-col gap-4">
+  <Page title="😎 Cool Sites 😎" lastUpdated="03/07/2024">
+    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+      All of these sites caught my eye or interested me in one way or another: either design, content or both. However, I do not endorse any of these sites or their authors. ⭐ === personal favorite
+    </p>
+    <div class="flex flex-col gap-4">
       <CoolSite site={sites['nft-price-floor']}>
         <p>I don't know where I came across this site but I love the neo-brutalist design. One of the first I saw that used it.</p>
         <p>Previous version <a class="underline" href="https://res.cloudinary.com/shoveltoss-com/image/upload/v1653013442/m19y.dev/cool-sites/nftpricefloorcom_wgjt2s.webp">screenshot</a>.</p>
@@ -84,5 +80,5 @@ import sites from '@public/coolSites.json'
         <p>Cool utility site. I've use it for this site and other projects.</p>
       </CoolSite>
     </div>
-  </div>
+  </Page>
 </Layout>

@@ -1,4 +1,6 @@
 ---
+import Page from '@components/Page.astro';
+import Section from '@components/Section.astro';
 import Layout from '@layouts/Layout.astro';
 
 import images from '@public/campWood.json';
@@ -6,26 +8,26 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="Camp Wood">
-  <div class="pt-4">
-    <h1 class="text-2xl pl-4">Camp Wood</h1>
-    <p class="text-lg pl-4 py-1">Ep 1.</p>
-    <div class="flex flex-col flex-wrap content-center md:grid lg:grid xl:grid lg:grid-cols-3 gap-4 px-4">
-      {
-        images["ep1"].map((image, i) => (
-          <div class="relative lg:overflow-hidden lg:max-h-[185px]">
-            <a target="_blank" rel="noopener noreferrer" href={image} title="Click to view in new tab.">
-              <Image
-                alt="Camp image"
-                height="500"
-                width="500"
-                class="lg:h-full lg:w-full lg:object-cover lg:object-center rounded-lg !p-0"
-                src={image}
-                loading="lazy"
-              />
-            </a>
-          </div>
-        ))
-      }
-    </div>
-  </div>
+  <Page title="Camp Wood">
+    <Section title="Ep 1.">
+      <div class="flex flex-col flex-wrap gap-4 md:grid lg:grid xl:grid lg:grid-cols-3">
+        {
+          images["ep1"].map((image) => (
+            <div class="relative lg:overflow-hidden lg:max-h-[185px]">
+              <a target="_blank" rel="noopener noreferrer" href={image} title="Click to view in new tab.">
+                <Image
+                  alt="Camp image"
+                  height="500"
+                  width="500"
+                  class="lg:h-full lg:w-full lg:object-cover lg:object-center rounded-lg !p-0"
+                  src={image}
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+  </Page>
 </Layout>

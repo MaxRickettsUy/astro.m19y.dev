@@ -28,10 +28,23 @@ import Header from '@components/Header.astro';
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
+    <script is:inline>
+      (() => {
+        const applyTheme = () => {
+          const stored = localStorage.getItem('theme');
+          const sys = matchMedia('(prefers-color-scheme: dark)').matches;
+          const dark = stored === 'dark' || (stored !== 'light' && sys);
+          document.documentElement.classList.toggle('dark', dark);
+        };
+
+        applyTheme();
+        document.addEventListener('astro:after-swap', applyTheme);
+      })();
+    </script>
     <ClientRouter />
     <script async src="https://us.umami.is/script.js" data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
   </head>
-  <body>
+  <body class="bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50">
     <div class="flex flex-col h-full">
       <Header />
       <main class="flex flex-col flex-[1]">
@@ -41,17 +54,3 @@ import Header from '@components/Header.astro';
     </div>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #F6F6F6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>

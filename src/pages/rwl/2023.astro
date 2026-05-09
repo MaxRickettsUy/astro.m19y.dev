@@ -3,22 +3,24 @@ import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
 import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.astro';
 import Spotify from '@components/Spotify.astro';
 
 import articles from '@public/arcticles.json';
 ---
 
 <Layout title="rwl 2023">
-  <div class="inner">
-    <div class="flex flex-row justify-between">
-      <a href="/rwl/2022">&lt; 2022</a>
-      <h2 class="text-lg">2023</h2>
-      <a href="/rwl/2024">2024 &gt;</a>
+  <Page title="2023">
+    <nav class="flex flex-row justify-between" aria-label="Read watch listen years">
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2022">&lt; 2022</a>
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2024">2024 &gt;</a>
+    </nav>
+    <div class="space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+      <p>⏳ - In Progress</p>
+      <p>🎧 - Audio book</p>
     </div>
-    <p style="float: right">⏳ - In Progress</p>
-    <p style="float: right">🎧 - Audio book</p>
     <div>
-      <h2>books</h2>
+      <h2 class="text-lg font-semibold">books</h2>
       <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
       <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
       <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" complete />
@@ -26,11 +28,9 @@ import articles from '@public/arcticles.json';
       <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
       <BookLink href="https://en.wikipedia.org/wiki/Blood_Meridian" label="Blood Meridian" inProgress />
     </div>
-    <hr/>
+    <hr class="border-neutral-200 dark:border-neutral-800" />
     <div>
-      <h2>
-        articles
-      </h2>
+      <h2 class="text-lg font-semibold">articles</h2>
       <div class="flex flex-row">
         <div class="flex flex-col">
           {
@@ -39,16 +39,16 @@ import articles from '@public/arcticles.json';
         </div>
       </div>
     </div>
-    <hr/>
+    <hr class="border-neutral-200 dark:border-neutral-800" />
     <div>
-      <h2>albums</h2>
+      <h2 class="text-lg font-semibold">albums</h2>
       <div class="lg:w-[50vw]">
         <p>
           I really jumped back into listening to music this year after becoming uninterested in keeping up and/or delving into old albums around 2020.
           Most of the time I was listening to podcasts while commuting to work, doing chores or walking.
         </p>
       </div>
-      <div class="title-link">
+      <div class="my-4 space-y-2">
         <b>Rotting Christ</b> - <i class="love">Thy Mighty Contract (1993)</i>
         <div class="lg:w-[25vw]">
           <Spotify album="4bata8AhdwmbOxMmZw61a2" />
@@ -63,7 +63,7 @@ import articles from '@public/arcticles.json';
           </p>
         </div>
       </div>
-      <div class="title-link">
+      <div class="my-4 space-y-2">
         <b>Varathron</b> - <i class="love">His Majesty at the Swamp (1993)</i>
         <div class="lg:w-[25vw]">
           <Spotify album="6KoSsDPYqOaq9xR1NQDm6U" />
@@ -78,7 +78,7 @@ import articles from '@public/arcticles.json';
           </div>
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Agriculture</b> - <i class="meh">Agriculture (2023)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="12vzq91UrxC2r3zcHnhaiX" />
@@ -94,7 +94,7 @@ import articles from '@public/arcticles.json';
       </p>
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Catherine Wheel</b> - <i class="love">Ferment (1992)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="7LLZLkkBTR42Kb9JPRAzKb" />
@@ -112,7 +112,7 @@ import articles from '@public/arcticles.json';
         </p>
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>GUDSFORLADT</b> - <i class="love">Friendship, Love and War (2022)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="6pwwXi1lkq446RXMih9nHn" />
@@ -123,7 +123,7 @@ import articles from '@public/arcticles.json';
         The aethestics are great as well.
       </p>
     </div>
-    <p class="text-lg">A whole lot of Doom</p>
+    <h2 class="text-lg font-semibold">A whole lot of Doom</h2>
     <div class="lg:w-[50vw]">
       <p>
         One day I decided to listen to the entire Black Sabbath discography; I had never listened to full BS album prior. I don't remember the original motivation but I'm glad I did.
@@ -133,7 +133,7 @@ import articles from '@public/arcticles.json';
         I honestly couldn't believe that those original Sabbath albums were released in the early 70's.
       </p>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Black Sabbath</b> - <i class="love">Black Sabbath (1970)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="4ZLy3U2q17Yjw7jkjXPJQj" />
@@ -144,38 +144,37 @@ import articles from '@public/arcticles.json';
         In the future I'd like to analyze these albums more in depth.
       </p>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Pagan Altar</b> - <i class="love">Judgement of the Dead (1984)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="3owmZAYFSoNvDXLy0j9TxX" />
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Pentagram</b> - <i class="love">Relentless (1993)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="7yM5xua4r2gtT1qAUFYSdr" />
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Solitude Aeturnus</b> - <i class="love">Into the Depths of Sorrow (1991)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="02iH5pxrznY3IgAc6ZQBbk" />
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Trouble</b> - <i class="love">Psalm 9 (1991)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="36Ml1dybEUn95Ka3f6c3hn" />
       </div>
     </div>
-    <div class="title-link">
+    <div class="my-4 space-y-2">
       <b>Thergothon</b> - <i class="love">Stream From The Heavens (1994)</i>
       <div class="lg:w-[25vw]">
         <Spotify album="2cnVd2w8adi6kIo5DfErRk" />
       </div>
     </div>
     <p>All of these bands / albums are amazing in their own right and all owe at least part of their sounds to Sabbath.</p>
-    <br/>
     <GradientBar />
-  </div>
+  </Page>
 </Layout>

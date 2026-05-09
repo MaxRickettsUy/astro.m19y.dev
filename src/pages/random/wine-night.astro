@@ -1,15 +1,15 @@
 ---
+import Page from "@components/Page.astro";
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 ---
 
 <Layout title="wine night">
-  <div class="pl-4 pt-4">
-    <h1 class="text-2xl">Wine Night 🍷</h1>
-    <div class="mt-4">
-      <h3 class="text-xl">03/08/2025</h3>
-      <div class="flex flex-col md:flex-row lg:flex-row gap-2 p-4">
+  <Page title="Wine Night 🍷">
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">03/08/2025</h2>
+      <div class="flex flex-col gap-2 md:flex-row lg:flex-row">
           <Image
             alt="Wine night photo"
             width="200"
@@ -51,9 +51,9 @@ import { Image } from "astro:assets";
           />
       </div>
     </div>
-    <div class="mt-4">
-      <h3 class="text-xl">10/26/2024</h3>
-      <div class="flex flex-col md:flex-row lg:flex-row gap-2 p-4">
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">10/26/2024</h2>
+      <div class="flex flex-col gap-2 md:flex-row lg:flex-row">
           <Image
             alt="Wine night photo"
             width="200"
@@ -80,9 +80,9 @@ import { Image } from "astro:assets";
           />
       </div>
     </div>
-    <div class="mt-4">
-      <h3 class="text-xl">04/20/2024</h3>
-      <div class="flex flex-col md:flex-row lg:flex-row gap-2 p-4">
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">04/20/2024</h2>
+      <div class="flex flex-col gap-2 md:flex-row lg:flex-row">
         <a target="_blank" rel="noopener noreferrer" href="https://www.totalwine.com/wine/red-wine/red-blend/prats-symington-post-scriptum-douro/p/2126239163?s=401&igrules=true">
           <Image
             alt="Prats &amp; Symington Post Scriptum Douro"
@@ -109,9 +109,9 @@ import { Image } from "astro:assets";
         </a>
       </div>
     </div>
-    <div class="mt-4">
-      <h3 class="text-xl">11/11/2023</h3>
-      <div class="flex flex-col md:flex-row lg:flex-row gap-2 p-4">
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">11/11/2023</h2>
+      <div class="flex flex-col gap-2 md:flex-row lg:flex-row">
         <a target="_blank" rel="noopener noreferrer" href="https://www.totalwine.com/wine/white-wine/gruner-veltliner/gruber-roschitz-gruner-veltliner-dac-muhlberg/p/120233750">
           <Image
             alt="Gruber Roschitz Gruner Veltliner DAC Muhlberg"
@@ -150,5 +150,5 @@ import { Image } from "astro:assets";
         </a>
       </div>
     </div>
-  </div>
+  </Page>
 </Layout>

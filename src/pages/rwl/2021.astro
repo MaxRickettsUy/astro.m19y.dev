@@ -2,6 +2,8 @@
 import ArticleLink from '@components/ArticleLink.astro';
 import BookLink from '@components/BookLink.astro';
 import GradientBar from '@components/GradientBar.astro';
+import Page from '@components/Page.astro';
+import Section from '@components/Section.astro';
 import Spotify from '@components/Spotify.astro';
 import Layout from '@layouts/Layout.astro';
 
@@ -9,73 +11,70 @@ import articles from '@public/arcticles.json';
 ---
 
 <Layout title="rwl 2021">
-  <div class="inner">
-    <div class="flex flex-row justify-between">
-      <a href="/">&lt; Home</a>
-      <h2 class="text-lg">2021</h2>
-      <a href="/rwl/2022" style="float: right">2022 &gt;</a>
+  <Page title="2021">
+    <nav class="flex flex-row justify-between" aria-label="Read watch listen years">
+      <a class="text-blue-600 underline dark:text-blue-400" href="/">&lt; Home</a>
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2022">2022 &gt;</a>
+    </nav>
+
+    <div class="space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+      <p>⏳ - In Progress</p>
+      <p>🎧 - Audio book</p>
     </div>
-    <p style="float: right">⏳ - In Progress</p>
-    <p style="float: right">🎧 - Audio book</p>
-    <div>
-      <h2 class="text-lg">books</h2>
+
+    <Section title="books">
       <BookLink href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life" label="The Snowball: Warren Buffett and the Business of Life" wiki inProgress/>
       <BookLink href="https://itrevolution.com/the-phoenix-project/" label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" inProgress />
       <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress/>
       <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
-    </div>
-    <hr/>
-    <div>
-      <h2 class="text-lg">
-        articles
-      </h2>
-      <div class="flex flex-row">
-        <div class="flex flex-col">
-          {
-            articles["2021"].map((article) => <ArticleLink article={article} /> )
-          }
+    </Section>
+
+    <hr class="border-neutral-200 dark:border-neutral-800" />
+
+    <Section title="articles">
+      <div class="flex flex-col">
+        {
+          articles["2021"].map((article) => <ArticleLink article={article} /> )
+        }
+      </div>
+    </Section>
+
+    <hr class="border-neutral-200 dark:border-neutral-800" />
+
+    <Section title="albums">
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <p><b>Lamp of Murmuur</b> - <i class="love">Heir of Ecliptical Romanticism</i></p>
+          <div class="lg:w-[25vw]">
+            <iframe title="Heir Of Ecliptical Romanticism by Lamp Of Murmuur" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3383959679/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://lampofmurmuur.bandcamp.com/album/heir-of-ecliptical-romanticism">Heir Of Ecliptical Romanticism by Lamp Of Murmuur</a></iframe>
+          </div>
+          <p>Ripping, catchy black metal with great vocals. Highly recommended.</p>
+        </div>
+        <div class="space-y-2">
+          <p><b>Playboi Carti</b> - <i class="skip">Whole Lotta Red</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album='2QRedhP5RmKJiJ1i8VgDGR' />
+          </div>
+          <p>Very disappointing especially considering my love for Carti's past work.</p>
+          <p><i>Die Lit</i> being one of my favorite albums of all time. Skip.</p>
+        </div>
+        <div class="space-y-2">
+          <p><b>Pallbearer</b> - <i class="meh">Forgotten Days</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album='7j2AkxHOjfHWD4HSsh7QD5' />
+          </div>
+          <p>More of a somber album for Pallbearer, slower too. A little too slow for me. Meh</p>
+        </div>
+        <div class="space-y-2">
+          <p><b>Valerie June</b> - <i class="meh">The Moon And Stars: Prescriptions For Dreamers</i></p>
+          <div class="lg:w-[25vw]">
+            <Spotify album='3pjk4sukkPuJXmRhvvYEhO' />
+          </div>
+          <p>Idk if I just wasn't in the mood for this album, but I couldn't even finish it. Another disappointment from an artist I love.</p>
         </div>
       </div>
-    </div>
-    <hr/>
-    <div>
-      <h2 class="text-lg">albums</h2>
-      <div class="title-link">
-        <b>Lamp of Murmuur</b> - <i class="love">Heir of Ecliptical Romanticism</i>
-        <div class="lg:w-[25vw]">
-          <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3383959679/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://lampofmurmuur.bandcamp.com/album/heir-of-ecliptical-romanticism">Heir Of Ecliptical Romanticism by Lamp Of Murmuur</a></iframe>
-        </div>
-        <br />
-        &ensp; <span>Ripping, catchy black metal with great vocals. Highly recommended.</span>
-      </div>
-      <p class="title-link">
-        <b>Playboi Carti</b> - <i class="skip">Whole Lotta Red</i>
-        <div class="lg:w-[25vw]">
-          <Spotify album='2QRedhP5RmKJiJ1i8VgDGR' />
-        </div>
-        <br/>
-        &ensp; <span>Very disappointing especially considering my love for Carti's past work.</span>
-        <br/>
-        &ensp; <span><i>Die Lit</i> being one of my favorite albums of all time. Skip.</span>
-      </p>
-      <p class="text-md my-1">
-        <b>Pallbearer</b> - <i class="meh">Forgotten Days</i>
-        <div class="lg:w-[25vw]">
-          <Spotify album='7j2AkxHOjfHWD4HSsh7QD5' />
-        </div>
-        <br/>
-        &ensp; <span>More of a somber album for Pallbearer, slower too. A little too slow for me. Meh</span>
-      </p>
-      <p class="text-md my-1">
-        <b>Valerie June</b> - <i class="meh">The Moon And Stars: Prescriptions For Dreamers</i>
-        <div class="lg:w-[25vw]">
-          <Spotify album='3pjk4sukkPuJXmRhvvYEhO' />
-        </div>
-        <br/>
-        &ensp; <span>Idk if I just wasn't in the mood for this album, but I couldn't even finish it. Another disappointment from an artist I love.</span>
-      </p>
-    </div>
-    <br/>
+    </Section>
+
     <GradientBar />
-  </div>
+  </Page>
 </Layout>

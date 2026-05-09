@@ -14,39 +14,30 @@ export interface Props {
   archived?: boolean;
 }
 
-import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 
 import Badge from '@components/Badge.astro';
+import ExternalLink from '@components/ExternalLink.astro';
 
 const { archived, site, star, inactive } = Astro.props;
-
-import externalLink from '../img/external-link.svg';
-import github from "../img/github.svg"
-import rss from "../img/rss.svg"
 ---
 
-<div class="m-2 shadow-lg">
+<div class="p-3 space-y-2 border border-dashed rounded-md shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none">
   <div class="flex flex-row justify-between">
     <div class="flex flex-row gap-1 items-center">
       <div class="flex flex-row">
-        <a
-          class="underline mr-1"
-          target="_blank"
-          rel="noopener noreferrer"
-          href={site.href}
-        >
-          <h3>{site.name}</h3>
-        </a>
-        <Image alt="External link icon" src={externalLink} width="16"/>
+        <ExternalLink href={site.href} class="mr-1" icon>
+          <h3 class="text-lg font-semibold">{site.name}</h3>
+        </ExternalLink>
       </div>
       { site.github &&
-        <a target="_blank" rel="noopener noreferrer" href={site.github}>
-          <Image alt="Github logo" width="16" src={github}/>
+        <a class="text-neutral-700 dark:text-neutral-300" target="_blank" rel="noopener noreferrer" href={site.github} aria-label={`${site.name} GitHub`}>
+          <Icon name="lucide:github" class="w-4 h-4" aria-hidden="true" />
         </a>
       }
       { site.rss &&
-        <a class="text-sm" href={site.rss}>
-          <Image alt="rss" width="16" src={rss} />
+        <a class="text-neutral-700 dark:text-neutral-300" href={site.rss} aria-label={`${site.name} RSS feed`}>
+          <Icon name="lucide:rss" class="w-4 h-4" aria-hidden="true" />
         </a>
       }
     </div>
@@ -54,6 +45,8 @@ import rss from "../img/rss.svg"
     { archived && <Badge color="gray" label="Archived"></Badge> }
     { star && <span>⭐</span>}
   </div>
-  <img class="border border-dashed rounded-lg p-1 my-1" style="width: 100%;" src={site.img} alt={site.name} />
-  <slot></slot>
+  <img class="w-full p-1 my-1 border border-dashed rounded-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900" src={site.img} alt={site.name} />
+  <div class="space-y-2">
+    <slot></slot>
+  </div>
 </div>

@@ -1,15 +1,15 @@
 ---
+import ExternalLink from '@components/ExternalLink.astro';
+import Page from '@components/Page.astro';
+import Section from '@components/Section.astro';
 import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
-
 ---
 
 <Layout title="beans">
-  <div class="pl-4 pt-4">
-    <h2 class="text-2xl">Beans ☕</h2>
-    <div class="mt-4">
-      <h3 class="text-xl">Coffee Bean Direct - Italian Roast Espresso</h3>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.coffeebeandirect.com/collections/roasted-coffee/products/italian-roast-espresso">
+  <Page title="Beans ☕">
+    <Section title="Coffee Bean Direct - Italian Roast Espresso">
+      <ExternalLink href="https://www.coffeebeandirect.com/collections/roasted-coffee/products/italian-roast-espresso">
         <Image
           alt="Coffee Bean Direct Italian Roast Espresso"
           height="200"
@@ -17,8 +17,8 @@ import { Image } from 'astro:assets';
           src="/cbd.png"
           title="Coffee Bean Direct Italian Roast Espresso"
         />
-      </a>
+      </ExternalLink>
       <p>We've been using these beans for years now. Now much to compare to but they're pretty good.</p>
-    </div>
-  </div>
+    </Section>
+  </Page>
 </Layout>
