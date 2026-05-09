@@ -9,14 +9,26 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.9.1] — 2026-05-09
+
+### Added
+- Persisted light/dark/system theme toggle driven by `prefers-color-scheme` by default; re-applied across view-transition swaps (`ThemeToggle.astro`)
+- Shared `Page.astro` and `Section.astro` components for consistent page wrapper, section rhythm, and unified heading/body type scale
+- `ExternalLink.astro` component centralizing `rel="noopener noreferrer"` and external-link styling
+- `AttributionBadges.astro` component; attribution badges now live in the shared footer instead of the homepage sidebar
+- `astro-icon` integration with Lucide icon set; replaces hand-imported icon SVGs
+- LAN access via `astro dev --host` baked into `npm run dev` / `npm run start`
+- `AGENTS.md` for agent-collaboration guidance
+
 ### Changed
-- Add a consistent page wrapper, section rhythm, heading scale, and dark-mode-aware styling across the site
-- Move homepage attribution badges into the shared footer and simplify the header to avatar navigation plus theme toggle
-- Add a persisted light/dark/system theme toggle driven by `prefers-color-scheme` by default
+- Refactor every page (`index`, `uses`, `cool-sites`, `rwl/*`, `random/*`) onto the shared `Page` / `Section` components with unified spacing and typography
+- Simplify `Header.astro` to avatar navigation + theme toggle
+- Replace `src/img/external-link.svg`, `github.svg`, `rss.svg` usages with `<Icon name="lucide:…">`
 
 ### Removed
 - `src/pages/posts/upgrade-wiki-js-heroku.astro`, `configuring-flutter-linux-mint.astro`, `resizable-vuetify-table.astro` — outdated 2021–2022 posts
 - `src/pages/posts.astro` — manual post index, removed with the posts it listed
+- `src/img/external-link.svg`, `src/img/github.svg`, `src/img/rss.svg` — replaced by Iconify Lucide icons
 
 ---
 
