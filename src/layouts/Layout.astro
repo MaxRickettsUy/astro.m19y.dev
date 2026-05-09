@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -28,7 +28,7 @@ import Header from '@components/Header.astro';
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
-    <ViewTransitions />
+    <ClientRouter />
     <script async src="https://us.umami.is/script.js" data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
   </head>
   <body>
