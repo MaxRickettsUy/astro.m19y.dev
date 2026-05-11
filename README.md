@@ -1,4 +1,5 @@
 # m19y.dev
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1674354b-de91-417d-93e3-ec2657142d59/deploy-status)](https://app.netlify.com/projects/loving-jones-f50bca/deploys)
 
 Personal site — links, projects, and yearly read/watch/listen logs.
 
