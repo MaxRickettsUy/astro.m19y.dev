@@ -9,6 +9,19 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.10] — 2026-05-10
+
+### Added
+- `shoveltoss.ing` project card on homepage (Shoveltoss video game)
+- Project cards now show status badge (Active/Paused), GitHub icon link, and tech-stack icons (Astro, Tailwind, Claude, Codex, HTML Canvas) via `astro-icon` Lucide + Simple Icons sets
+- `.github/workflows/deploy-netlify.yml` — deploy to Netlify on GitHub release publish
+
+### Changed
+- Copy editing pass on `uses.astro` (punctuation, capitalization: macOS, JavaScript, GitHub, GitLab, VS Code, PC)
+- Tighten copy on `random/cool-sites.astro` and `rwl/2021`–`rwl/2024.astro`
+
+---
+
 ## [2026.5.9.1] — 2026-05-09
 
 ### Added
