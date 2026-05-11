@@ -2,24 +2,24 @@
 import CoolSite from '@components/CoolSite.astro';
 import Page from '@components/Page.astro';
 import Layout from '@layouts/Layout.astro';
-import sites from '@public/coolSites.json'
+import sites from '@public/coolSites.json';
 ---
 
 <Layout title="cool sites">
   <Page title="😎 Cool Sites 😎" lastUpdated="03/07/2024">
     <p class="text-sm text-neutral-600 dark:text-neutral-400">
-      All of these sites caught my eye or interested me in one way or another: either design, content or both. However, I do not endorse any of these sites or their authors. ⭐ === personal favorite
+      All of these sites caught my eye or interested me in one way or another, whether for their design, content, or both. However, I do not endorse any of these sites or their authors. ⭐ = personal favorite
     </p>
     <div class="flex flex-col gap-4">
       <CoolSite site={sites['nft-price-floor']}>
-        <p>I don't know where I came across this site but I love the neo-brutalist design. One of the first I saw that used it.</p>
+        <p>I don't know where I came across this site, but I love the neo-brutalist design. It was one of the first sites I saw using it.</p>
         <p>Previous version <a class="underline" href="https://res.cloudinary.com/shoveltoss-com/image/upload/v1653013442/m19y.dev/cool-sites/nftpricefloorcom_wgjt2s.webp">screenshot</a>.</p>
       </CoolSite>
       <CoolSite site={sites['tiny-projects']} inactive>
-        <p>I found this developer / site on HN. It seems he's gone quiet but I thought his project was cool while it lasted.</p>
+        <p>I found this developer/site on HN. It seems he's gone quiet, but I thought his project was cool while it lasted.</p>
       </CoolSite>
       <CoolSite site={sites['increment']} archived>
-        <p>I love the design of this site and the magazines. I always wanted to purchase them but I've lost interest since then...</p>
+        <p>I love the design of this site and the magazines. I always wanted to purchase them, but I've lost interest since then...</p>
       </CoolSite>
       <CoolSite site={sites['teenage-engineering']}>
         <p>This website is very fitting for the products it's built to sell; incredibly unique and beautiful to look at.</p>
@@ -30,16 +30,16 @@ import sites from '@public/coolSites.json'
         <span>This site has since been <a class="underline" href="https://awfullibrarybooks.wordpress.com/2023/08/10/not-goodbye-but-see-ya-later/">archived</a>.</span>
       </CoolSite>
       <CoolSite site={sites['maya-land']}>
-        <p>Super cool design. A mix of low-fi, simple static site and artfulness. They seem to have a lot of content for later reading as well.</p>
+        <p>Super cool design. It's a mix of lo-fi, simple static site, and artfulness. They seem to have a lot of content for later reading as well.</p>
       </CoolSite>
       <CoolSite site={sites['based-cooking']}>
-        <p>I loved the idea of this site since it was first announced by LS. I haven't tried any of the recipes but it's a great alternative to awful recipe sites.</p>
+        <p>I've loved the idea of this site since it was first announced by LS. I haven't tried any of the recipes, but it's a great alternative to awful recipe sites.</p>
       </CoolSite>
       <CoolSite site={sites['uses-tech']}>
-        <p>I love the concept and execution is pretty good. I wish there was an easier way to determine when a site was added.</p>
+        <p>I love the concept, and the execution is pretty good. I wish there were an easier way to determine when a site was added.</p>
       </CoolSite>
       <CoolSite site={sites['ritual-dust']}>
-        <p>I know nothing about the author or the history the site but I love it's design. I really need to take a deep dive into it one day.</p>
+        <p>I know nothing about the author or the site's history, but I love its design. I really need to take a deep dive into it one day.</p>
         <p>Previous version <a class="underline" href="v1654654403/m19y.dev/cool-sites/ritualdustcom_f0nmhz.webp">screenshot</a>.</p>
       </CoolSite>
       <CoolSite site={sites['low-tech-magazine']}>
@@ -55,10 +55,10 @@ import sites from '@public/coolSites.json'
         <p>Love the concept. I need to spend some time finding the best sites in the bunch.</p>
       </CoolSite>
       <CoolSite site={sites['the-metal-archives']} star>
-        <p>Probably in my top 5 favorite websites of all-time. It's an invaluable resource as a metal fan and it's just a fantastically maintained project.</p>
+        <p>Probably in my top 5 favorite websites of all time. It's an invaluable resource as a metal fan, and it's just a fantastically maintained project.</p>
       </CoolSite>
       <CoolSite site={sites['astronomy-picture-of-the-day']}>
-        <p>I learned about this is 2023 from a comment on HN. Very cool space pics.</p>
+        <p>I learned about this in 2023 from a comment on HN. Very cool space pics.</p>
       </CoolSite>
       <CoolSite site={sites['evil-martians']} >
         <p>Just a beautiful website. I love their custom font and assets.</p>
@@ -77,7 +77,7 @@ import sites from '@public/coolSites.json'
       </CoolSite>
       <CoolSite site={sites['people-and-blogs']} />
       <CoolSite site={sites['remove-bg']}>
-        <p>Cool utility site. I've use it for this site and other projects.</p>
+        <p>Cool utility site. I've used it for this site and other projects.</p>
       </CoolSite>
     </div>
   </Page>
