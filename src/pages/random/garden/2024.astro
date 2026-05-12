@@ -3,27 +3,45 @@ import Page from '@components/Page.astro';
 import Layout from '@layouts/Layout.astro';
 
 import images from '@public/garden/2024.json';
-import { Image } from 'astro:assets';
+
+const previewWidths = [320, 480, 720, 960];
+const cloudinaryImagePath = '/image/upload/';
+
+const optimizeGardenImage = (image: string, width: number) =>
+  image.replace(cloudinaryImagePath, `${cloudinaryImagePath}f_auto,q_auto,c_limit,w_${width}/`);
+
+const getGardenImage = (image: string) => ({
+  src: optimizeGardenImage(image, 720),
+  srcset: previewWidths.map((width) => `${optimizeGardenImage(image, width)} ${width}w`).join(', '),
+});
 ---
 
 <Layout title="Garden 2024">
   <Page title="Garden 2024">
     <div class="flex flex-col flex-wrap gap-4 md:grid lg:grid xl:grid lg:grid-cols-3">
       {
-        images["img"].map((image) => (
-          <div class="relative lg:overflow-hidden lg:max-h-[185px]">
-            <a target="_blank" rel="noopener noreferrer" href={image} title="Click to view in new tab.">
-              <Image
-                alt="Garden photo"
-                height="500"
-                width="500"
-                class="rounded-lg lg:h-full lg:w-full lg:object-cover lg:object-center"
-                src={image}
-                loading="lazy"
-              />
-            </a>
-          </div>
-        ))
+        images["img"].map((image, index) => {
+          const optimizedImage = getGardenImage(image);
+
+          return (
+            <div class="relative lg:overflow-hidden lg:max-h-[185px]">
+              <a target="_blank" rel="noopener noreferrer" href={image} title="Click to view in new tab.">
+                <img
+                  alt="Garden photo"
+                  height="500"
+                  width="500"
+                  class="rounded-lg lg:h-full lg:w-full lg:object-cover lg:object-center"
+                  src={optimizedImage.src}
+                  srcset={optimizedImage.srcset}
+                  sizes="(min-width: 1024px) 229px, (min-width: 768px) 704px, calc(100vw - 2rem)"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchpriority={index === 0 ? 'high' : 'auto'}
+                />
+              </a>
+            </div>
+          );
+        })
       }
     </div>
   </Page>
