@@ -1,23 +1,52 @@
 ---
+import { Icon } from "astro-icon/components";
+
 export interface Props {
   img: string;
   alt?: string;
 }
 
 const { img, alt = "Merch collection item" } = Astro.props;
+
+const base = `https://res.cloudinary.com/shoveltoss-com/image/upload/`;
+const cloudinaryPath = "/image/upload/";
+
+const cld = (transforms: string) =>
+  `${base}${transforms}/${img}`;
+
+const srcset = [400, 800, 1200]
+  .map((w) => `${cld(`f_auto,q_auto,dpr_auto,c_limit,w_${w}`)} ${w}w`)
+  .join(", ");
+
+const src = cld("f_auto,q_auto,dpr_auto,c_limit,w_800");
+const full = `${base}f_auto,q_auto,dpr_auto,w_1600/${img}`;
 ---
 
 <div
   class="p-1 border border-dashed rounded-lg lg:w-1/2 border-neutral-200 dark:border-neutral-700"
 >
-  <a
-    target="_blank"
-    rel="noopener noreferrer"
-    href=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`
+  <button
+    type="button"
+    class="group relative block w-full cursor-pointer"
+    data-photo={full}
+    aria-label={`Open: ${alt}`}
   >
     <img
-      alt={alt}
-      src=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`
+      {alt}
+      {src}
+      {srcset}
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      width="800"
+      height="600"
+      loading="lazy"
+      decoding="async"
+      class="rounded-md w-full"
     />
-  </a>
+    <span
+      class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-md bg-black/60 text-white opacity-0 ring-1 ring-white/20 transition group-hover:opacity-90"
+      aria-hidden="true"
+    >
+      <Icon name="lucide:expand" class="h-4 w-4" />
+    </span>
+  </button>
 </div>
