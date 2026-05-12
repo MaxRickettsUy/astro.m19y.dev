@@ -17,7 +17,7 @@ import { Icon } from 'astro-icon/components';
 <script>
   const order = ['system', 'light', 'dark'];
 
-  const applyTheme = (theme) => {
+  const applyTheme = (theme?: string) => {
     const stored = theme ?? localStorage.getItem('theme') ?? 'system';
     const sys = matchMedia('(prefers-color-scheme: dark)').matches;
     const dark = stored === 'dark' || (stored === 'system' && sys);
