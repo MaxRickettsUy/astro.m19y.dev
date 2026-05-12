@@ -1,8 +1,8 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
   label: string;
-  color: string;
+  color: keyof typeof classNames;
 }
 
 const classNames = {
