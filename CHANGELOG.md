@@ -9,6 +9,22 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.11] — 2026-05-11
+
+### Added
+
+- `PhotoGrid.astro` — shared image grid with Cloudinary srcset (`f_auto`, `q_auto`, `dpr_auto`, responsive widths), pointer-enter preloading, and expand icon overlay on hover
+- `Lightbox.astro` — shared native `<dialog>` lightbox with close button, backdrop blur, and `astro:after-swap` rebinding for view transitions
+- Camp Wood and Wine Night links added to the Random section on the homepage
+
+### Changed
+
+- Prettier + `prettier-plugin-astro` set up; all source files formatted
+- `@astrojs/check` + TypeScript installed; 25 type errors fixed across `Badge`, `CoolSite`, `Spotify`, `ThemeToggle`, `Layout`, and `rwl/2021`
+- `camp-wood` and `garden/2024` migrated to `PhotoGrid`
+- `wine-night` images optimized via Cloudinary; data moved to typed session array; lightbox added
+- `Merch.astro` optimized with Cloudinary srcset and lightbox replacing new-tab links
+
 ## [2026.5.10] — 2026-05-10
 
 ### Added
