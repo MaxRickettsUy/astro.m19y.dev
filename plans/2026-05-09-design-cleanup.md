@@ -47,12 +47,12 @@
 
 User confirmed: same font family across the site, **all headers the same size, all body the same size**. Headings differentiate from body via weight only.
 
-| Use | Class | Size |
-| --- | --- | --- |
-| `<h1>` / `<h2>` / `<h3>` | `text-lg font-semibold` | 1.125rem, weight 600 |
-| Body, lists, paragraphs | `text-base` (default) | 1rem |
-| Small / metadata / "last updated" | `text-sm text-neutral-600 dark:text-neutral-400` | 0.875rem |
-| Footnote / disclaimer | `text-xs text-neutral-600 dark:text-neutral-400` | 0.75rem |
+| Use                               | Class                                            | Size                 |
+| --------------------------------- | ------------------------------------------------ | -------------------- |
+| `<h1>` / `<h2>` / `<h3>`          | `text-lg font-semibold`                          | 1.125rem, weight 600 |
+| Body, lists, paragraphs           | `text-base` (default)                            | 1rem                 |
+| Small / metadata / "last updated" | `text-sm text-neutral-600 dark:text-neutral-400` | 0.875rem             |
+| Footnote / disclaimer             | `text-xs text-neutral-600 dark:text-neutral-400` | 0.75rem              |
 
 Headings keep their semantic tags (`<h1>`/`<h2>`/`<h3>`) for structure and a11y, but render at the same size. The single visual differentiator between headings and body is weight (semibold vs. normal). No size jumps between page title and section title.
 
@@ -69,13 +69,13 @@ User confirmed: **Tailwind `dark:` variant utilities directly**. No CSS custom p
 
 Standard pairings used throughout the refactor:
 
-| Surface | Light | Dark |
-| --- | --- | --- |
-| Body bg / text | `bg-neutral-50 text-neutral-900` | `dark:bg-neutral-950 dark:text-neutral-50` |
-| Muted text (metadata, disclaimer) | `text-neutral-600` | `dark:text-neutral-400` |
-| Border (cards, header/footer rules) | `border-neutral-200` | `dark:border-neutral-800` |
-| Link | `text-blue-600 underline` | `dark:text-blue-400` |
-| Card shadow | `shadow-md` | `dark:shadow-none` (shadows look bad on dark) |
+| Surface                             | Light                            | Dark                                          |
+| ----------------------------------- | -------------------------------- | --------------------------------------------- |
+| Body bg / text                      | `bg-neutral-50 text-neutral-900` | `dark:bg-neutral-950 dark:text-neutral-50`    |
+| Muted text (metadata, disclaimer)   | `text-neutral-600`               | `dark:text-neutral-400`                       |
+| Border (cards, header/footer rules) | `border-neutral-200`             | `dark:border-neutral-800`                     |
+| Link                                | `text-blue-600 underline`        | `dark:text-blue-400`                          |
+| Card shadow                         | `shadow-md`                      | `dark:shadow-none` (shadows look bad on dark) |
 
 `global.css` only declares `@import "tailwindcss";` and `@custom-variant dark …;`. No `:root` token block.
 
@@ -90,19 +90,19 @@ Standard pairings used throughout the refactor:
 
 ## Components to introduce / refactor
 
-| Component | Purpose | Replaces |
-| --- | --- | --- |
-| `Page.astro` (new) | Wraps page content with the shared `px-4 sm:px-6 py-6 max-w-3xl space-y-8` + `<h1>` slot + optional "last updated" subtitle. | Repeated `<div class="p-4">` / `<div class="pl-4 pt-4">` blocks across every page. |
-| `Section.astro` (new) | `<section>` with `<h2>` slot and `space-y-2` body. | Repeated `<div class="p-2"><h2 class="text-xl">…</h2>…</div>` patterns in `index.astro` and `uses.astro`. |
-| `ThemeToggle.astro` (new) | Three-state button (system / light / dark) with svg icons. | n/a — net-new. |
-| `Header.astro` (refactor) | Avatar + nav links + ThemeToggle, using flex/gap utilities, no `.navbar` class. | Current green-bar header. |
-| `Footer.astro` (refactor) | Single-row disclaimer with muted color. Drop the dead `last-updated` element. | Current footer. |
-| `ExternalLink.astro` (new) | `<a target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 underline">` with optional external-link icon slot. | ~30 hand-rolled `<a target="_blank" rel="noopener noreferrer">` instances across pages. |
-| `Hr.astro` or just delete | The `<hr/>` in `rwl/*.astro` is fine as-is. Skip. | n/a |
-| `GradientBar.astro` | Used only at the bottom of `rwl/*.astro`. Keep as-is — it's the one decorative element and is intentional. Confirm. | n/a |
-| `Badge.astro` | Already fine. Keep. Maybe add `dark:` variants to the four color classNames. | n/a |
-| `CoolSite.astro` | Refactor to use new `ExternalLink` and add `dark:` border variant. | n/a |
-| `ArticleLink.astro`, `BookLink.astro`, `Spotify.astro`, `Merch.astro` | Already small, keep. Audit hardcoded colors only. | n/a |
+| Component                                                             | Purpose                                                                                                                                   | Replaces                                                                                                  |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `Page.astro` (new)                                                    | Wraps page content with the shared `px-4 sm:px-6 py-6 max-w-3xl space-y-8` + `<h1>` slot + optional "last updated" subtitle.              | Repeated `<div class="p-4">` / `<div class="pl-4 pt-4">` blocks across every page.                        |
+| `Section.astro` (new)                                                 | `<section>` with `<h2>` slot and `space-y-2` body.                                                                                        | Repeated `<div class="p-2"><h2 class="text-xl">…</h2>…</div>` patterns in `index.astro` and `uses.astro`. |
+| `ThemeToggle.astro` (new)                                             | Three-state button (system / light / dark) with svg icons.                                                                                | n/a — net-new.                                                                                            |
+| `Header.astro` (refactor)                                             | Avatar + nav links + ThemeToggle, using flex/gap utilities, no `.navbar` class.                                                           | Current green-bar header.                                                                                 |
+| `Footer.astro` (refactor)                                             | Single-row disclaimer with muted color. Drop the dead `last-updated` element.                                                             | Current footer.                                                                                           |
+| `ExternalLink.astro` (new)                                            | `<a target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 underline">` with optional external-link icon slot. | ~30 hand-rolled `<a target="_blank" rel="noopener noreferrer">` instances across pages.                   |
+| `Hr.astro` or just delete                                             | The `<hr/>` in `rwl/*.astro` is fine as-is. Skip.                                                                                         | n/a                                                                                                       |
+| `GradientBar.astro`                                                   | Used only at the bottom of `rwl/*.astro`. Keep as-is — it's the one decorative element and is intentional. Confirm.                       | n/a                                                                                                       |
+| `Badge.astro`                                                         | Already fine. Keep. Maybe add `dark:` variants to the four color classNames.                                                              | n/a                                                                                                       |
+| `CoolSite.astro`                                                      | Refactor to use new `ExternalLink` and add `dark:` border variant.                                                                        | n/a                                                                                                       |
+| `ArticleLink.astro`, `BookLink.astro`, `Spotify.astro`, `Merch.astro` | Already small, keep. Audit hardcoded colors only.                                                                                         | n/a                                                                                                       |
 
 `GradientBar`, `ArticleLink`, `BookLink`, `Spotify`, `Merch`, `Badge`, `CoolSite` — keep all of these; do not over-componentize.
 
@@ -120,7 +120,7 @@ Standard pairings used throughout the refactor:
   - Drop the `* { padding: 0 }` reset (Tailwind's preflight handles it).
   - Drop unused `:root` vars (`--bg-color`, `--font-color`, `--secondary-color`, `--heading-color`, `--link`, `--code-bg`, `--code-border`, `--primary-color`).
   - Drop `.navbar`, `.siteFooter*`, `.disclaimer*`, `.last-updated*`, `.inner`, `.post-text`, `.title-link`, `.page-title`, `.centered-div` — all replaced by Tailwind utilities in PRs 2–4.
-  - Keep `.archive`, `.gradient`, `.love`, `.meh`, `.skip` (used in rwl/* and `GradientBar`) — but extend each with a `dark:` variant via `@variant dark { … }`.
+  - Keep `.archive`, `.gradient`, `.love`, `.meh`, `.skip` (used in rwl/\* and `GradientBar`) — but extend each with a `dark:` variant via `@variant dark { … }`.
   - Move the `html { font-family: system-ui, sans-serif; background-color: … }` from `Layout.astro:44-57` here, and replace the hardcoded background with `bg-neutral-50 text-neutral-900` applied to `<body>` directly in markup.
   - Drop the unused `--accent` / `--accent-gradient` vars.
 - `Layout.astro`:
@@ -130,13 +130,14 @@ Standard pairings used throughout the refactor:
     ```html
     <script is:inline>
       (() => {
-        const stored = localStorage.getItem('theme');
-        const sys = matchMedia('(prefers-color-scheme: dark)').matches;
-        const dark = stored === 'dark' || (stored !== 'light' && sys);
-        document.documentElement.classList.toggle('dark', dark);
+        const stored = localStorage.getItem("theme");
+        const sys = matchMedia("(prefers-color-scheme: dark)").matches;
+        const dark = stored === "dark" || (stored !== "light" && sys);
+        document.documentElement.classList.toggle("dark", dark);
       })();
     </script>
     ```
+
   - Add `<script>` listening for `astro:after-swap` that re-runs the same logic so view transitions keep the class.
   - Apply base classes on `<body>`: `bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50`.
 
@@ -151,7 +152,13 @@ Standard pairings used throughout the refactor:
   <div class="px-4 sm:px-6 py-6 max-w-3xl space-y-8">
     <header class="space-y-1">
       <h1 class="text-lg font-semibold">{title}</h1>
-      {lastUpdated && <p class="text-sm text-neutral-600 dark:text-neutral-400">Last updated {lastUpdated}</p>}
+      {
+        lastUpdated && (
+          <p class="text-sm text-neutral-600 dark:text-neutral-400">
+            Last updated {lastUpdated}
+          </p>
+        )
+      }
     </header>
     <slot />
   </div>
@@ -160,8 +167,13 @@ Standard pairings used throughout the refactor:
 - **`ThemeToggle.astro`** — single button cycling `system → light → dark → system`. Reads/writes `localStorage.theme`. Renders sun/moon/monitor svg by current state.
 - **`Header.astro`** — drop `.navbar`. Avatar (home link) + theme toggle, nothing else:
   ```astro
-  <header class="px-4 sm:px-6 py-4 border-b border-neutral-200 dark:border-neutral-800">
-    <nav class="flex items-center justify-between max-w-3xl mx-auto" aria-label="Site">
+  <header
+    class="px-4 sm:px-6 py-4 border-b border-neutral-200 dark:border-neutral-800"
+  >
+    <nav
+      class="flex items-center justify-between max-w-3xl mx-auto"
+      aria-label="Site"
+    >
       <a href="/" aria-label="Home" class="flex items-center gap-2">
         <img src="/avatar.png" alt="" width="32" height="32" />
       </a>
@@ -171,21 +183,39 @@ Standard pairings used throughout the refactor:
   ```
 - **`Footer.astro`** — strip the dead `last-updated` element. Two rows: attribution badges (moved from `index.astro:92-130`) and disclaimer:
   ```astro
-  <footer class="px-4 sm:px-6 py-6 border-t border-neutral-200 dark:border-neutral-800 space-y-4">
+  <footer
+    class="px-4 sm:px-6 py-6 border-t border-neutral-200 dark:border-neutral-800 space-y-4"
+  >
     <div class="max-w-3xl mx-auto flex flex-wrap items-center gap-3">
-      <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">…tailwind svg…</a>
-      <a target="_blank" rel="noopener noreferrer" href="https://astro.build">…astro badge…</a>
-      <a target="_blank" rel="noopener noreferrer" href="https://gossipsweb.net">…</a>
-      <a target="_blank" rel="noopener noreferrer" href="https://bukmark.club/">…</a>
-      <a href={`https://github.com/MaxRickettsUy/astro.m19y.dev/releases/tag/${version}`}>
-        <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ring-neutral-300 dark:ring-neutral-700 text-neutral-900 dark:text-neutral-50">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://tailwindcss.com/">…tailwind svg…</a
+      >
+      <a target="_blank" rel="noopener noreferrer" href="https://astro.build"
+        >…astro badge…</a
+      >
+      <a target="_blank" rel="noopener noreferrer" href="https://gossipsweb.net"
+        >…</a
+      >
+      <a target="_blank" rel="noopener noreferrer" href="https://bukmark.club/"
+        >…</a
+      >
+      <a
+        href={`https://github.com/MaxRickettsUy/astro.m19y.dev/releases/tag/${version}`}
+      >
+        <span
+          class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ring-neutral-300 dark:ring-neutral-700 text-neutral-900 dark:text-neutral-50"
+        >
           <svg class="h-1.5 w-1.5 fill-green-500" …></svg>
           v{version}
         </span>
       </a>
     </div>
     <p class="text-xs text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-      Disclaimer: All content on this site relates to personal opinions/experiences and does not reflect my work, employer and/or colleagues.
+      Disclaimer: All content on this site relates to personal
+      opinions/experiences and does not reflect my work, employer and/or
+      colleagues.
     </p>
   </footer>
   ```
@@ -275,8 +305,8 @@ Use `astro-icon` as the icon source — wraps the Iconify ecosystem so any icon 
 - `npm install astro-icon` (or `npx astro add astro-icon`).
 - Add the integration to `astro.config.mjs`:
   ```js
-  import { defineConfig } from 'astro/config';
-  import icon from 'astro-icon';
+  import { defineConfig } from "astro/config";
+  import icon from "astro-icon";
   export default defineConfig({
     integrations: [icon()],
   });
@@ -288,23 +318,27 @@ Use `astro-icon` as the icon source — wraps the Iconify ecosystem so any icon 
 
 ```astro
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
-<Icon name="lucide:sun" class="w-5 h-5 text-neutral-700 dark:text-neutral-300" />
+
+<Icon
+  name="lucide:sun"
+  class="w-5 h-5 text-neutral-700 dark:text-neutral-300"
+/>
 ```
 
 `astro-icon` inlines the SVG at build time — no runtime fetch, no `<script>` cost — and tree-shakes to only the icons actually used.
 
 ### Icons needed for this refactor
 
-| Component | Icon | Iconify name |
-| --- | --- | --- |
-| `ThemeToggle.astro` (system state) | monitor | `lucide:monitor` |
-| `ThemeToggle.astro` (light state) | sun | `lucide:sun` |
-| `ThemeToggle.astro` (dark state) | moon | `lucide:moon` |
-| `ExternalLink.astro` (optional) | arrow-up-right or external-link | `lucide:arrow-up-right` |
-| `CoolSite.astro` / link rows | github | `lucide:github` |
-| `CoolSite.astro` / link rows | rss | `lucide:rss` |
+| Component                          | Icon                            | Iconify name            |
+| ---------------------------------- | ------------------------------- | ----------------------- |
+| `ThemeToggle.astro` (system state) | monitor                         | `lucide:monitor`        |
+| `ThemeToggle.astro` (light state)  | sun                             | `lucide:sun`            |
+| `ThemeToggle.astro` (dark state)   | moon                            | `lucide:moon`           |
+| `ExternalLink.astro` (optional)    | arrow-up-right or external-link | `lucide:arrow-up-right` |
+| `CoolSite.astro` / link rows       | github                          | `lucide:github`         |
+| `CoolSite.astro` / link rows       | rss                             | `lucide:rss`            |
 
 ### Migration of existing SVG assets
 

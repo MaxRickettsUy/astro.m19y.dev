@@ -1,37 +1,57 @@
 ---
-import Badge from '@components/Badge.astro';
-import ExternalLink from '@components/ExternalLink.astro';
-import Page from '@components/Page.astro';
-import Section from '@components/Section.astro';
-import Layout from '@layouts/Layout.astro';
+import Badge from "@components/Badge.astro";
+import ExternalLink from "@components/ExternalLink.astro";
+import Page from "@components/Page.astro";
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="uses">
   <Page title="uses 🖥️" lastUpdated="11/14/2023">
     <Section title="Hardware">
       <div class="flex flex-col gap-2">
-        <div class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">iPhone SE (2020)</h3>
-            <p>I migrated from Android to iOS around 2020. Being frugal (*cough broke), I always opted for cheap phones.
-            Eventually, I tired of poor build quality and the lack of Android updates for these phones. I used a used iPhone 6 until the 2020 SE was announced, which
-            was basically an upgraded 6. The price point was perfect, and I still love the "outdated" 6 form factor. I plan on using it until it gets too sluggish or stops receiving security updates.
+            <p>
+              I migrated from Android to iOS around 2020. Being frugal (*cough
+              broke), I always opted for cheap phones. Eventually, I tired of
+              poor build quality and the lack of Android updates for these
+              phones. I used a used iPhone 6 until the 2020 SE was announced,
+              which was basically an upgraded 6. The price point was perfect,
+              and I still love the "outdated" 6 form factor. I plan on using it
+              until it gets too sluggish or stops receiving security updates.
             </p>
             <div class="flex flex-row flex-wrap gap-1">
               <Badge color="gray" label="iOS 17" title="OS" />
               <Badge color="blue" label="128 GB" title="Storage" />
             </div>
           </div>
-          <img class="self-center" alt="iPhone SE (2020)" width="200" src="/se.png" />
+          <img
+            class="self-center"
+            alt="iPhone SE (2020)"
+            width="200"
+            src="/se.png"
+          />
         </div>
 
-        <div class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">MacBook Pro M2 14" (2023)</h3>
-            <p>Quite possibly the biggest splurge of my life, but man, this thing rules. My last two laptops were a 2015 Dell XPS and a 2010
-              MacBook Pro, two great machines. I eventually threw Linux Mint on both of them, as Windows and macOS are unusable on older machines, macOS to a lesser extent.
-              I also prefer Linux from a development perspective. But eventually, I stopped using both of these machines, as their internals couldn't even keep up with modern Linux.
-              I'd been wanting a new MBP for a few years, as I'm interested in learning iOS development but could never justify it.
+            <p>
+              Quite possibly the biggest splurge of my life, but man, this thing
+              rules. My last two laptops were a 2015 Dell XPS and a 2010 MacBook
+              Pro, two great machines. I eventually threw Linux Mint on both of
+              them, as Windows and macOS are unusable on older machines, macOS
+              to a lesser extent. I also prefer Linux from a development
+              perspective. But eventually, I stopped using both of these
+              machines, as their internals couldn't even keep up with modern
+              Linux. I'd been wanting a new MBP for a few years, as I'm
+              interested in learning iOS development but could never justify it.
             </p>
             <div class="flex flex-row flex-wrap gap-1">
               <Badge color="gray" label="macOS Sonoma" title="OS" />
@@ -39,18 +59,30 @@ import Layout from '@layouts/Layout.astro';
               <Badge color="green" label="16 GB" title="RAM" />
             </div>
           </div>
-          <img class="self-center" alt="MacBook Pro M2 14-inch (2023)" width="300" src="/mbp.png" />
+          <img
+            class="self-center"
+            alt="MacBook Pro M2 14-inch (2023)"
+            width="300"
+            src="/mbp.png"
+          />
         </div>
 
-        <div class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md sm:flex-row border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">Desktop</h3>
             <p>
-              My first foray into custom PC assembly (building lol). I bought everything in early, pre-pandemic 2020, before prices skyrocketed.
-              The assembly process was stressful but enjoyable, and I really enjoyed the end product. Before having our first child, I did a lot of gaming: Warzone, Tarkov, Apex.
-              I also dual booted Linux Mint and used it for development, which was incredible with my dual (sometimes triple) monitor setup.
-              Unfortunately, with our recent move and pause on gaming, it's begun gathering dust as it resides in our basement office.
-              I still think it will perform for over a decade as a Linux box at the very least.
+              My first foray into custom PC assembly (building lol). I bought
+              everything in early, pre-pandemic 2020, before prices skyrocketed.
+              The assembly process was stressful but enjoyable, and I really
+              enjoyed the end product. Before having our first child, I did a
+              lot of gaming: Warzone, Tarkov, Apex. I also dual booted Linux
+              Mint and used it for development, which was incredible with my
+              dual (sometimes triple) monitor setup. Unfortunately, with our
+              recent move and pause on gaming, it's begun gathering dust as it
+              resides in our basement office. I still think it will perform for
+              over a decade as a Linux box at the very least.
             </p>
             <div class="flex flex-row flex-wrap gap-1">
               <Badge color="gray" label="Windows 10" title="OS" />
@@ -60,7 +92,7 @@ import Layout from '@layouts/Layout.astro';
               <Badge color="pink" label="RTX 2070 Super" title="GPU" />
             </div>
             <div class="flex flex-wrap gap-2 p-4 mt-1 sm:flex-row">
-              <img src="/desktop/case.png" alt="PC case" width="100"/>
+              <img src="/desktop/case.png" alt="PC case" width="100" />
               <img src="/desktop/cpu.png" alt="CPU" width="100" />
               <img src="/desktop/fan.png" alt="CPU cooler fan" width="100" />
               <img src="/desktop/gpu.png" alt="GPU" width="100" />
@@ -69,7 +101,10 @@ import Layout from '@layouts/Layout.astro';
               <img src="/desktop/ram.png" alt="RAM" width="100" />
               <img src="/desktop/ssd.png" alt="SSD" width="100" />
             </div>
-            <ExternalLink href="https://pcpartpicker.com/user/mrucoding/saved/#view=ZtxL23">PCPartPicker List</ExternalLink>
+            <ExternalLink
+              href="https://pcpartpicker.com/user/mrucoding/saved/#view=ZtxL23"
+              >PCPartPicker List</ExternalLink
+            >
           </div>
         </div>
       </div>
@@ -77,49 +112,123 @@ import Layout from '@layouts/Layout.astro';
 
     <Section title="Software">
       <div class="flex flex-col gap-2">
-        <div class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">Professional Development</h3>
             <p>
-              Professionally, I like to use React for new projects when possible. I think it has the best resources and support of the JavaScript libraries/frameworks.
-              Similar to React, I love the amount of support around MUI; it's easy to use and makes it easy to create an attractive, accessible UI. GitLab has been a great experience for Git repo management and CI/CD.
-              The text editor journey started with Emacs and ended with Atom in school. I started my career with Atom, moved to Sublime, and finally downloaded VS Code in 2018 or 2019 and haven't looked back.
-              I'm not a huge fan of MSFT products, with the exception of VS Code. It does everything I want with few drawbacks.
+              Professionally, I like to use React for new projects when
+              possible. I think it has the best resources and support of the
+              JavaScript libraries/frameworks. Similar to React, I love the
+              amount of support around MUI; it's easy to use and makes it easy
+              to create an attractive, accessible UI. GitLab has been a great
+              experience for Git repo management and CI/CD. The text editor
+              journey started with Emacs and ended with Atom in school. I
+              started my career with Atom, moved to Sublime, and finally
+              downloaded VS Code in 2018 or 2019 and haven't looked back. I'm
+              not a huge fan of MSFT products, with the exception of VS Code. It
+              does everything I want with few drawbacks.
             </p>
           </div>
           <div class="flex flex-row flex-wrap gap-4 m-4">
-            <img class="self-center" alt="VSCode logo" width="50" src="/software/vscode.webp" />
-            <img class="self-center" alt="React logo" width="50" src="/software/react.png" />
-            <img class="self-center" alt="MUI logo" width="50" src="/software/mui.png" />
-            <img class="self-center" alt="GitLab logo" width="50" src="/software/gitlab.png" />
+            <img
+              class="self-center"
+              alt="VSCode logo"
+              width="50"
+              src="/software/vscode.webp"
+            />
+            <img
+              class="self-center"
+              alt="React logo"
+              width="50"
+              src="/software/react.png"
+            />
+            <img
+              class="self-center"
+              alt="MUI logo"
+              width="50"
+              src="/software/mui.png"
+            />
+            <img
+              class="self-center"
+              alt="GitLab logo"
+              width="50"
+              src="/software/gitlab.png"
+            />
           </div>
         </div>
 
-        <div class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">Personal Development</h3>
             <p>
-              I also use VS Code in my free time on personal projects. I've tried <ExternalLink href="https://www.jetbrains.com/fleet/">Fleet</ExternalLink>, but haven't installed it on my M2 yet.
-              I've migrated all my static sites to Astro; I'm pretty obsessed with it. I've been using GitHub since I was introduced to it by a much better developer in school.
-              I use Netlify to host all my static sites. The GitHub integration makes config and deployment trivial. I'll use the free tier as long as possible.
+              I also use VS Code in my free time on personal projects. I've
+              tried <ExternalLink href="https://www.jetbrains.com/fleet/"
+                >Fleet</ExternalLink
+              >, but haven't installed it on my M2 yet. I've migrated all my
+              static sites to Astro; I'm pretty obsessed with it. I've been
+              using GitHub since I was introduced to it by a much better
+              developer in school. I use Netlify to host all my static sites.
+              The GitHub integration makes config and deployment trivial. I'll
+              use the free tier as long as possible.
             </p>
           </div>
           <div class="flex flex-row flex-wrap gap-4 m-4">
-            <img class="self-center" alt="VSCode logo" width="50" src="/software/vscode.webp" />
-            <img class="self-center" alt="Astro logo" width="50" src="/software/astro.png" />
-            <img class="self-center" alt="GitHub logo" width="50" src="/software/github.png" />
-            <img class="self-center" alt="Netlify logo" width="50" src="/software/netlify.png" />
+            <img
+              class="self-center"
+              alt="VSCode logo"
+              width="50"
+              src="/software/vscode.webp"
+            />
+            <img
+              class="self-center"
+              alt="Astro logo"
+              width="50"
+              src="/software/astro.png"
+            />
+            <img
+              class="self-center"
+              alt="GitHub logo"
+              width="50"
+              src="/software/github.png"
+            />
+            <img
+              class="self-center"
+              alt="Netlify logo"
+              width="50"
+              src="/software/netlify.png"
+            />
           </div>
         </div>
 
-        <div class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none">
+        <div
+          class="flex flex-col gap-2 border border-dashed shadow-md border-neutral-200 dark:border-neutral-700 dark:shadow-none"
+        >
           <div class="flex-[1] p-4 space-y-2">
             <h3 class="text-lg font-semibold">General Use</h3>
           </div>
           <div class="flex flex-row flex-wrap gap-4 m-4">
-            <img class="self-center" alt="Chrome logo" width="50" src="/software/chrome.png" />
-            <img class="self-center" alt="Safari logo" width="50" src="/software/safari.png" />
-            <img class="self-center" alt="Brave logo" width="50" src="/software/brave.png" />
+            <img
+              class="self-center"
+              alt="Chrome logo"
+              width="50"
+              src="/software/chrome.png"
+            />
+            <img
+              class="self-center"
+              alt="Safari logo"
+              width="50"
+              src="/software/safari.png"
+            />
+            <img
+              class="self-center"
+              alt="Brave logo"
+              width="50"
+              src="/software/brave.png"
+            />
           </div>
         </div>
       </div>

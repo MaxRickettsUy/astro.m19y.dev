@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   href: string;
@@ -7,18 +7,26 @@ export interface Props {
   icon?: boolean;
 }
 
-const { href, class: className = '', icon = false } = Astro.props;
+const { href, class: className = "", icon = false } = Astro.props;
 ---
 
 <a
   class:list={[
-    'inline-flex items-center gap-1 text-blue-600 underline dark:text-blue-400',
-    className
+    "inline-flex items-center gap-1 text-blue-600 underline dark:text-blue-400",
+    className,
   ]}
   href={href}
   target="_blank"
   rel="noopener noreferrer"
 >
   <slot />
-  {icon && <Icon name="lucide:arrow-up-right" class="w-4 h-4 shrink-0" aria-hidden="true" />}
+  {
+    icon && (
+      <Icon
+        name="lucide:arrow-up-right"
+        class="w-4 h-4 shrink-0"
+        aria-hidden="true"
+      />
+    )
+  }
 </a>

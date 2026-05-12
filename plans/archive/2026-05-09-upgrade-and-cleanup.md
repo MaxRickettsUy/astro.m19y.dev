@@ -14,7 +14,7 @@
 - **Hardcoded `.html` hrefs** in `src/pages/index.astro:12-15` (`rwl/2021.html`–`rwl/2024.html`) and `src/pages/posts.astro:12,17,22` (`posts/*.html`).
 - **`Layout.astro` `<head>` duplication:** `<meta charset="UTF-8">` appears on both line 23 and line 30; `<meta name="viewport">` appears on both line 24 and line 29; favicon is declared twice (line 25 SVG, line 28 PNG with broken relative path `img/merle.png` that will 404 from any nested route). OG metadata is hardcoded (`og:title=projects`, `og:url=…/random.html`, `og:image=img/merle.png`).
 - **Heading hierarchy:** `index.astro` uses `<h1>` four times (Welcome, Random, Projects, RWL) — should be one `<h1>` and the rest `<h2>`. `posts.astro` uses `<h1 class="text-xl">` for the page title while peers use `<h2 class="text-2xl">`. `rwl/2024.astro:11` opens `<h3>` and closes with `</h1>` (broken closing tag) — same bug at lines 65 and 102 of `wine-night.astro`. `rwl/2024.astro` and `rwl/2023.astro` use `<h2>` without size classes; `rwl/2021.astro` and `rwl/2022.astro` use `<h2 class="text-lg">`.
-- **`<a target="_blank">` without `rel="noopener noreferrer"`** is widespread (uses, wine-night, merch, rwl/*). Only `resizable-vuetify-table.astro` does it correctly.
+- **`<a target="_blank">` without `rel="noopener noreferrer"`** is widespread (uses, wine-night, merch, rwl/\*). Only `resizable-vuetify-table.astro` does it correctly.
 - **Empty `alt=""` on real images** in `uses.astro` (5+ instances) and `wine-night.astro` (every wine image). Some `<img>` tags in `uses.astro:62-69` have no `alt` at all.
 - **Header.astro imports `avatar` from `'../../public/avatar.png'`** instead of using the `@public/` alias or moving to `src/img/`. Importing from `public/` through `astro:assets` is non-idiomatic.
 - **Globally-leaked styles:** `Layout.astro:39-43` has a non-`is:global` `<style>` block applying `li { color: white }`. `merch-collection.astro`, `camp-wood.astro`, `garden/2024.astro` all repeat the same `li { color: white }` + image padding/cursor block locally.
@@ -176,7 +176,7 @@ Reconstruct entries from `git log`. Tagged releases visible in history:
 - **2023.11.22** — Articles JSON migration, RWL refactor, version badge, Cloudflare/Umami analytics, Astro upgrade + ViewTransitions, uses page (`ff4b889` and surrounding commits).
 - **Pre-2023.11.22 (Initial)** — Astro/Tailwind setup, legacy page conversion, RWL pages, cool sites, wine-night, uses, layouts. Group as a single seed entry.
 
-Document the going-forward policy in the CHANGELOG header: *"Bumping `package.json:version` requires (a) a matching `CHANGELOG.md` entry and (b) a matching GitHub release tag."* Reinforce this in `CLAUDE.md`'s Versioning section.
+Document the going-forward policy in the CHANGELOG header: _"Bumping `package.json:version` requires (a) a matching `CHANGELOG.md` entry and (b) a matching GitHub release tag."_ Reinforce this in `CLAUDE.md`'s Versioning section.
 
 ---
 

@@ -1,20 +1,27 @@
 ---
-import Page from '@components/Page.astro';
-import Section from '@components/Section.astro';
-import Layout from '@layouts/Layout.astro';
+import Page from "@components/Page.astro";
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
 
-import images from '@public/campWood.json';
-import { Image } from 'astro:assets';
+import images from "@public/campWood.json";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Camp Wood">
   <Page title="Camp Wood">
     <Section title="Ep 1.">
-      <div class="flex flex-col flex-wrap gap-4 md:grid lg:grid xl:grid lg:grid-cols-3">
+      <div
+        class="flex flex-col flex-wrap gap-4 md:grid lg:grid xl:grid lg:grid-cols-3"
+      >
         {
           images["ep1"].map((image) => (
             <div class="relative lg:overflow-hidden lg:max-h-[185px]">
-              <a target="_blank" rel="noopener noreferrer" href={image} title="Click to view in new tab.">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={image}
+                title="Click to view in new tab."
+              >
                 <Image
                   alt="Camp image"
                   height="500"
