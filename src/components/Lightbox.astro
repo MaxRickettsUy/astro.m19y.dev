@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<dialog
+  id="photo-lightbox"
+  class="m-auto max-h-[calc(100dvh-2rem)] max-w-[calc(100vw-2rem)] overflow-hidden rounded-md bg-transparent p-0 backdrop:bg-black/80"
+>
+  <div class="relative">
+    <img
+      id="lightbox-img"
+      class="max-h-[calc(100dvh-2rem)] max-w-[calc(100vw-2rem)] rounded-md object-contain"
+      src=""
+      alt=""
+    />
+    <button
+      class="absolute right-2 top-2 flex h-9 w-9 items-center justify-center rounded-md bg-black/70 text-white ring-1 ring-white/20 transition hover:bg-black/85"
+      type="button"
+      data-lightbox-close
+      aria-label="Close image"
+    >
+      <Icon name="lucide:x" class="h-5 w-5" />
+    </button>
+  </div>
+</dialog>
+
+<style is:global>
+  #photo-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+  }
+</style>
+
+<script>
+  function setupLightbox() {
+    const dialog = document.getElementById(
+      "photo-lightbox",
+    ) as HTMLDialogElement | null;
+    const dialogImage = document.getElementById(
+      "lightbox-img",
+    ) as HTMLImageElement | null;
+    const closeButton = document.querySelector<HTMLButtonElement>(
+      "[data-lightbox-close]",
+    );
+
+    if (!dialog || !dialogImage) return;
+
+    closeButton?.addEventListener("click", () => dialog.close());
+
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+
+    document
+      .querySelectorAll<HTMLButtonElement>("[data-photo]")
+      .forEach((btn) => {
+        if (btn.dataset.bound) return;
+        btn.dataset.bound = "true";
+
+        btn.addEventListener("pointerenter", () => {
+          const src = btn.dataset.photo!;
+          if (!document.querySelector(`link[rel="preload"][href="${src}"]`)) {
+            const link = document.createElement("link");
+            link.rel = "preload";
+            link.as = "image";
+            link.href = src;
+            document.head.appendChild(link);
+          }
+        });
+
+        btn.addEventListener("click", () => {
+          dialogImage.src = btn.dataset.photo!;
+          dialogImage.alt = btn.getAttribute("aria-label") ?? "";
+          dialog.showModal();
+        });
+      });
+  }
+
+  setupLightbox();
+  document.addEventListener("astro:after-swap", setupLightbox);
+</script>

@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import Lightbox from "@components/Lightbox.astro";
+
+interface Props {
+  images: string[];
+  alt?: string;
+}
+
+const { images, alt = "Photo" } = Astro.props;
+
+const previewWidths = [320, 480, 720, 960];
+const cloudinaryPath = "/image/upload/";
+
+const thumb = (url: string, w: number) =>
+  url.replace(
+    cloudinaryPath,
+    `${cloudinaryPath}f_auto,q_auto,dpr_auto,c_limit,w_${w}/`,
+  );
+
+const full = (url: string) =>
+  url.replace(cloudinaryPath, `${cloudinaryPath}f_auto,q_auto,dpr_auto,w_1600/`);
+---
+
+<div class="flex flex-col flex-wrap gap-4 md:grid lg:grid xl:grid lg:grid-cols-3">
+  {
+    images.map((image, i) => (
+      <div class="relative lg:overflow-hidden lg:max-h-[185px]">
+        <button
+          type="button"
+          class="group relative block w-full h-full cursor-pointer text-left"
+          data-photo={full(image)}
+          aria-label={`Open ${alt.toLowerCase()} ${i + 1}`}
+        >
+          <img
+            alt={`${alt} ${i + 1}`}
+            width="500"
+            height="500"
+            class="rounded-lg lg:h-full lg:w-full lg:object-cover lg:object-center"
+            src={thumb(image, 720)}
+            srcset={previewWidths.map((w) => `${thumb(image, w)} ${w}w`).join(", ")}
+            sizes="(min-width: 1024px) 229px, (min-width: 768px) 704px, calc(100vw - 2rem)"
+            loading={i === 0 ? "eager" : "lazy"}
+            decoding="async"
+            fetchpriority={i === 0 ? "high" : "auto"}
+          />
+          <span
+            class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-md bg-black/60 text-white opacity-0 ring-1 ring-white/20 transition group-hover:opacity-90"
+            aria-hidden="true"
+          >
+            <Icon name="lucide:expand" class="h-4 w-4" />
+          </span>
+        </button>
+      </div>
+    ))
+  }
+</div>
+
+<Lightbox />
