@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <button
@@ -9,39 +9,57 @@ import { Icon } from 'astro-icon/components';
   aria-label="Theme: system"
   title="Theme: system"
 >
-  <Icon data-theme-icon="system" name="lucide:monitor" class="w-5 h-5" aria-hidden="true" />
-  <Icon data-theme-icon="light" name="lucide:sun" class="hidden w-5 h-5" aria-hidden="true" />
-  <Icon data-theme-icon="dark" name="lucide:moon" class="hidden w-5 h-5" aria-hidden="true" />
+  <Icon
+    data-theme-icon="system"
+    name="lucide:monitor"
+    class="w-5 h-5"
+    aria-hidden="true"
+  />
+  <Icon
+    data-theme-icon="light"
+    name="lucide:sun"
+    class="hidden w-5 h-5"
+    aria-hidden="true"
+  />
+  <Icon
+    data-theme-icon="dark"
+    name="lucide:moon"
+    class="hidden w-5 h-5"
+    aria-hidden="true"
+  />
 </button>
 
 <script>
-  const order = ['system', 'light', 'dark'];
+  const order = ["system", "light", "dark"];
 
   const applyTheme = (theme?: string) => {
-    const stored = theme ?? localStorage.getItem('theme') ?? 'system';
-    const sys = matchMedia('(prefers-color-scheme: dark)').matches;
-    const dark = stored === 'dark' || (stored === 'system' && sys);
+    const stored = theme ?? localStorage.getItem("theme") ?? "system";
+    const sys = matchMedia("(prefers-color-scheme: dark)").matches;
+    const dark = stored === "dark" || (stored === "system" && sys);
 
-    document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.classList.toggle("dark", dark);
 
-    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
-      button.setAttribute('aria-label', `Theme: ${stored}`);
-      button.setAttribute('title', `Theme: ${stored}`);
-      button.querySelectorAll('[data-theme-icon]').forEach((icon) => {
-        icon.classList.toggle('hidden', icon.getAttribute('data-theme-icon') !== stored);
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      button.setAttribute("aria-label", `Theme: ${stored}`);
+      button.setAttribute("title", `Theme: ${stored}`);
+      button.querySelectorAll("[data-theme-icon]").forEach((icon) => {
+        icon.classList.toggle(
+          "hidden",
+          icon.getAttribute("data-theme-icon") !== stored,
+        );
       });
     });
   };
 
   const bindThemeToggles = () => {
-    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
-      if (button.getAttribute('data-theme-bound') === 'true') return;
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      if (button.getAttribute("data-theme-bound") === "true") return;
 
-      button.setAttribute('data-theme-bound', 'true');
-      button.addEventListener('click', () => {
-        const current = localStorage.getItem('theme') ?? 'system';
+      button.setAttribute("data-theme-bound", "true");
+      button.addEventListener("click", () => {
+        const current = localStorage.getItem("theme") ?? "system";
         const next = order[(order.indexOf(current) + 1) % order.length];
-        localStorage.setItem('theme', next);
+        localStorage.setItem("theme", next);
         applyTheme(next);
       });
     });
@@ -50,6 +68,8 @@ import { Icon } from 'astro-icon/components';
   };
 
   bindThemeToggles();
-  document.addEventListener('astro:after-swap', bindThemeToggles);
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => applyTheme());
+  document.addEventListener("astro:after-swap", bindThemeToggles);
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () =>
+    applyTheme(),
+  );
 </script>

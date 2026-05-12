@@ -1,23 +1,23 @@
 ---
-import AttributionBadges from '@components/AttributionBadges.astro';
-import ExternalLink from '@components/ExternalLink.astro';
-import Page from '@components/Page.astro';
-import Section from '@components/Section.astro';
-import Layout from '@layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+import AttributionBadges from "@components/AttributionBadges.astro";
+import ExternalLink from "@components/ExternalLink.astro";
+import Page from "@components/Page.astro";
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
 const years = [
   { href: "/rwl/2021", label: 2021 },
   { href: "/rwl/2022", label: 2022 },
   { href: "/rwl/2023", label: 2023 },
-  { href: "/rwl/2024", label: 2024 }
+  { href: "/rwl/2024", label: 2024 },
 ];
 
 const randomLinks = [
   { href: "/random/cool-sites", label: "Cool Sites" },
   { href: "/random/garden/2024", label: "Garden" },
   { href: "/random/merch-collection", label: "Merch Collection" },
-  { href: "/uses", label: "Uses" }
+  { href: "/uses", label: "Uses" },
 ];
 
 const projects = [
@@ -29,8 +29,8 @@ const projects = [
     description: "A curated collection of personal websites and blogs.",
     tech: [
       { icon: "simple-icons:astro", label: "Astro" },
-      { icon: "simple-icons:tailwindcss", label: "Tailwind CSS" }
-    ]
+      { icon: "simple-icons:tailwindcss", label: "Tailwind CSS" },
+    ],
   },
   {
     href: "https://shoveltoss.com",
@@ -42,8 +42,8 @@ const projects = [
       { icon: "simple-icons:astro", label: "Astro" },
       { icon: "simple-icons:tailwindcss", label: "Tailwind CSS" },
       { icon: "simple-icons:claude", label: "Claude" },
-      { icon: "simple-icons:openai", label: "Codex" }
-    ]
+      { icon: "simple-icons:openai", label: "Codex" },
+    ],
   },
   {
     href: "https://shoveltoss.ing",
@@ -54,9 +54,9 @@ const projects = [
     tech: [
       { icon: "simple-icons:html5", label: "HTML Canvas" },
       { icon: "simple-icons:claude", label: "Claude" },
-      { icon: "simple-icons:openai", label: "Codex" }
-    ]
-  }
+      { icon: "simple-icons:openai", label: "Codex" },
+    ],
+  },
 ];
 ---
 
@@ -64,7 +64,10 @@ const projects = [
   <Page title="Welcome! I'm Max.👋🏼">
     <Section>
       <p>I'm a front-end software developer.</p>
-      <p>This site is an archive of interesting articles, links, sites, and other things I've come across.</p>
+      <p>
+        This site is an archive of interesting articles, links, sites, and other
+        things I've come across.
+      </p>
       <p>Outside of software, I enjoy music, gardening, and hiking.</p>
     </Section>
 
@@ -73,7 +76,7 @@ const projects = [
         {
           randomLinks.map((link) => (
             <a
-              class="block rounded-md border border-neutral-200 p-3 text-blue-600 underline shadow-md dark:border-neutral-800 dark:text-blue-400 dark:shadow-none"
+              class="block rounded-md border-dashed border border-neutral-200 p-3 text-blue-600 underline shadow-md dark:border-neutral-800 dark:text-blue-400 dark:shadow-none"
               href={link.href}
             >
               {link.label}
@@ -88,16 +91,24 @@ const projects = [
       <div class="grid gap-2 sm:grid-cols-2">
         {
           projects.map((project) => (
-            <div class="space-y-1 rounded-md border border-neutral-200 p-3 shadow-md dark:border-neutral-800 dark:shadow-none">
+            <div class="space-y-2 rounded-md border border-dashed border-neutral-200 p-3 shadow-md dark:border-neutral-800 dark:shadow-none">
               <div class="flex items-start justify-between gap-3">
                 <div class="flex flex-wrap items-center gap-2">
-                  <ExternalLink href={project.href}>{project.label}</ExternalLink>
-                  {project.status && <span class:list={[
-                    "rounded-sm border px-1.5 py-0.5 text-xs font-medium",
-                    project.status === "Active"
-                      ? "border-emerald-300 bg-emerald-50 text-emerald-800 dark:border-emerald-700 dark:bg-emerald-950 dark:text-emerald-200"
-                      : "border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-200"
-                  ]}>{project.status}</span>}
+                  <ExternalLink href={project.href}>
+                    {project.label}
+                  </ExternalLink>
+                  {project.status && (
+                    <span
+                      class:list={[
+                        "rounded-sm border px-1.5 py-0.5 text-xs font-medium",
+                        project.status === "Active"
+                          ? "border-emerald-300 bg-emerald-50 text-emerald-800 dark:border-emerald-700 dark:bg-emerald-950 dark:text-emerald-200"
+                          : "border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-200",
+                      ]}
+                    >
+                      {project.status}
+                    </span>
+                  )}
                 </div>
                 <a
                   class="text-neutral-700 dark:text-neutral-300"
@@ -106,19 +117,26 @@ const projects = [
                   rel="noopener noreferrer"
                   aria-label={`${project.label} GitHub`}
                 >
-                  <Icon name="lucide:github" class="h-4 w-4" aria-hidden="true" />
+                  <Icon
+                    name="lucide:github"
+                    class="h-4 w-4"
+                    aria-hidden="true"
+                  />
                 </a>
               </div>
-              <p>{project.description}</p>
-              <div class="flex gap-2 text-neutral-600 dark:text-neutral-400" aria-label={`Built with ${project.tech.map((tech) => tech.label).join(", ")}`}>
-                {
-                  project.tech.map((tech) => (
-                    <span title={tech.label}>
-                      <Icon name={tech.icon} class="h-4 w-4" aria-hidden="true" />
-                      <span class="sr-only">{tech.label}</span>
-                    </span>
-                  ))
-                }
+              <p class="text-neutral-600 dark:text-neutral-400 text-xs">
+                {project.description}
+              </p>
+              <div
+                class="flex gap-2 text-neutral-600 dark:text-neutral-400"
+                aria-label={`Built with ${project.tech.map((tech) => tech.label).join(", ")}`}
+              >
+                {project.tech.map((tech) => (
+                  <span title={tech.label}>
+                    <Icon name={tech.icon} class="h-4 w-4" aria-hidden="true" />
+                    <span class="sr-only">{tech.label}</span>
+                  </span>
+                ))}
               </div>
             </div>
           ))
@@ -132,7 +150,7 @@ const projects = [
         {
           years.map((year) => (
             <a
-              class="block rounded-md border border-neutral-200 p-3 text-blue-600 underline shadow-md dark:border-neutral-800 dark:text-blue-400 dark:shadow-none"
+              class="block rounded-md border border-dashed border-neutral-200 p-3 text-blue-600 underline shadow-md dark:border-neutral-800 dark:text-blue-400 dark:shadow-none"
               href={year.href}
             >
               {year.label}

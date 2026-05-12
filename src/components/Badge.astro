@@ -8,13 +8,14 @@ interface Props {
 const classNames = {
   blue: "inline-flex items-center rounded-md px-1 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-blue-50 text-blue-700 ring-blue-700/10 dark:bg-blue-950 dark:text-blue-300 dark:ring-blue-300/20",
   gray: "inline-flex items-center rounded-md px-1 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-gray-50 text-gray-600 ring-gray-500/10 dark:bg-neutral-900 dark:text-neutral-300 dark:ring-neutral-700",
-  green: "inline-flex items-center rounded-md px-1 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-950 dark:text-green-300 dark:ring-green-300/20",
-  pink: "inline-flex items-center rounded-md bg-pink-50 px-1 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-950 dark:text-pink-300 dark:ring-pink-300/20"
+  green:
+    "inline-flex items-center rounded-md px-1 py-1 text-xs font-medium ring-1 ring-inset mt-1 bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-950 dark:text-green-300 dark:ring-green-300/20",
+  pink: "inline-flex items-center rounded-md bg-pink-50 px-1 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-950 dark:text-pink-300 dark:ring-pink-300/20",
 };
 
 const { label, title, color } = Astro.props;
 ---
 
 <span class={classNames[color]} title={title}>
-  { label }
+  {label}
 </span>

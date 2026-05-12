@@ -1,19 +1,26 @@
 ---
-import ArticleLink from '@components/ArticleLink.astro';
-import BookLink from '@components/BookLink.astro';
-import GradientBar from '@components/GradientBar.astro';
-import Layout from '@layouts/Layout.astro';
-import Page from '@components/Page.astro';
-import Spotify from '@components/Spotify.astro';
+import ArticleLink from "@components/ArticleLink.astro";
+import BookLink from "@components/BookLink.astro";
+import GradientBar from "@components/GradientBar.astro";
+import Layout from "@layouts/Layout.astro";
+import Page from "@components/Page.astro";
+import Spotify from "@components/Spotify.astro";
 
-import articles from '@public/arcticles.json';
+import articles from "@public/arcticles.json";
 ---
 
 <Layout title="rwl 2023">
   <Page title="2023">
-    <nav class="flex flex-row justify-between" aria-label="Read watch listen years">
-      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2022">&lt; 2022</a>
-      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2024">2024 &gt;</a>
+    <nav
+      class="flex flex-row justify-between"
+      aria-label="Read watch listen years"
+    >
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2022"
+        >&lt; 2022</a
+      >
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2024"
+        >2024 &gt;</a
+      >
     </nav>
     <div class="space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
       <p>⏳ - In Progress</p>
@@ -21,21 +28,48 @@ import articles from '@public/arcticles.json';
     </div>
     <div>
       <h2 class="text-lg font-semibold">books</h2>
-      <BookLink href="How_to_Win_Friends_and_Influence_People" label="How to Win Friends and Influence People" wiki inProgress audiobook/>
-      <BookLink href="The_Intelligent_Investor" label="The Intelligent Investor" wiki inProgress />
-      <BookLink href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/" label="Cheap Land Colorado" complete />
-      <BookLink href="https://jamesclear.com/atomic-habits" label="Atomic Habits" complete audiobook />
-      <BookLink href="The_Rise_of_Theodore_Roosevelt" label="The Rise of Theodore Roosevelt" inProgress audiobook />
-      <BookLink href="https://en.wikipedia.org/wiki/Blood_Meridian" label="Blood Meridian" inProgress />
+      <BookLink
+        href="How_to_Win_Friends_and_Influence_People"
+        label="How to Win Friends and Influence People"
+        wiki
+        inProgress
+        audiobook
+      />
+      <BookLink
+        href="The_Intelligent_Investor"
+        label="The Intelligent Investor"
+        wiki
+        inProgress
+      />
+      <BookLink
+        href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/"
+        label="Cheap Land Colorado"
+        complete
+      />
+      <BookLink
+        href="https://jamesclear.com/atomic-habits"
+        label="Atomic Habits"
+        complete
+        audiobook
+      />
+      <BookLink
+        href="The_Rise_of_Theodore_Roosevelt"
+        label="The Rise of Theodore Roosevelt"
+        inProgress
+        audiobook
+      />
+      <BookLink
+        href="https://en.wikipedia.org/wiki/Blood_Meridian"
+        label="Blood Meridian"
+        inProgress
+      />
     </div>
     <hr class="border-neutral-200 dark:border-neutral-800" />
     <div>
       <h2 class="text-lg font-semibold">articles</h2>
       <div class="flex flex-row">
         <div class="flex flex-col">
-          {
-            articles["2023"].map((article) => <ArticleLink article={article} /> )
-          }
+          {articles["2023"].map((article) => <ArticleLink article={article} />)}
         </div>
       </div>
     </div>
@@ -44,8 +78,10 @@ import articles from '@public/arcticles.json';
       <h2 class="text-lg font-semibold">albums</h2>
       <div class="lg:w-[50vw]">
         <p>
-          I really jumped back into listening to music this year after becoming uninterested in keeping up and/or delving into old albums around 2020.
-          Most of the time, I was listening to podcasts while commuting to work, doing chores, or walking.
+          I really jumped back into listening to music this year after becoming
+          uninterested in keeping up and/or delving into old albums around 2020.
+          Most of the time, I was listening to podcasts while commuting to work,
+          doing chores, or walking.
         </p>
       </div>
       <div class="my-4 space-y-2">
@@ -53,13 +89,16 @@ import articles from '@public/arcticles.json';
         <div class="lg:w-[25vw]">
           <Spotify album="4bata8AhdwmbOxMmZw61a2" />
         </div>
-        <br/>
+        <br />
         <div class="lg:w-[50vw]">
           <p>
-            I'm still working through the classics of all the metal subgenres, and I finally got around to this one.
-            By the name, I honestly thought it would be another Norwegianesque blastfest, but I was so pleasantly surprised.
-            This album was such a nice transition from my journey into NWOBHM and thrash back to BM. They perfectly mix groove, melody, and thrashing with black metal vocals and blast beats.
-            This quickly became one of my top 10 BM albums.
+            I'm still working through the classics of all the metal subgenres,
+            and I finally got around to this one. By the name, I honestly
+            thought it would be another Norwegianesque blastfest, but I was so
+            pleasantly surprised. This album was such a nice transition from my
+            journey into NWOBHM and thrash back to BM. They perfectly mix
+            groove, melody, and thrashing with black metal vocals and blast
+            beats. This quickly became one of my top 10 BM albums.
           </p>
         </div>
       </div>
@@ -68,14 +107,16 @@ import articles from '@public/arcticles.json';
         <div class="lg:w-[25vw]">
           <Spotify album="6KoSsDPYqOaq9xR1NQDm6U" />
         </div>
-        <br/>
-          <div class="lg:w-[50vw]">
-            <p>
-              After finally checking out TMC, I had to check out other classic Hellenic albums.
-              This album is a fantastic companion to TMC, and I've heard members of RC play on this one (the riff on Lustful Father was a dead giveaway).
-              It's just as fantastic as TMC and could overtake TMC as one of my favorites with more spins.
-            </p>
-          </div>
+        <br />
+        <div class="lg:w-[50vw]">
+          <p>
+            After finally checking out TMC, I had to check out other classic
+            Hellenic albums. This album is a fantastic companion to TMC, and
+            I've heard members of RC play on this one (the riff on Lustful
+            Father was a dead giveaway). It's just as fantastic as TMC and could
+            overtake TMC as one of my favorites with more spins.
+          </p>
+        </div>
       </div>
     </div>
     <div class="my-4 space-y-2">
@@ -83,15 +124,18 @@ import articles from '@public/arcticles.json';
       <div class="lg:w-[25vw]">
         <Spotify album="12vzq91UrxC2r3zcHnhaiX" />
       </div>
-      <br/>
+      <br />
       <div class="lg:w-[50vw]">
-        <p>I wanted to chronicle this one so I can revisit it in the future.
-        I'm rating it as meh because it doesn't stick with me, but I didn't hate what I heard.
-        Quickly reading about them, I see the term "ecstatic black metal" and "joyful" descriptors.
-        I'm not sure how I feel about the gimmick, but I want to keep up with them.
-        I'm sure they're despised in the trad BM scene, similar to Deafheaven and other "hipster BM" bands (if that's even still a common derogative).
-        Their logo rules though lol.
-      </p>
+        <p>
+          I wanted to chronicle this one so I can revisit it in the future. I'm
+          rating it as meh because it doesn't stick with me, but I didn't hate
+          what I heard. Quickly reading about them, I see the term "ecstatic
+          black metal" and "joyful" descriptors. I'm not sure how I feel about
+          the gimmick, but I want to keep up with them. I'm sure they're
+          despised in the trad BM scene, similar to Deafheaven and other
+          "hipster BM" bands (if that's even still a common derogative). Their
+          logo rules though lol.
+        </p>
       </div>
     </div>
     <div class="my-4 space-y-2">
@@ -99,16 +143,24 @@ import articles from '@public/arcticles.json';
       <div class="lg:w-[25vw]">
         <Spotify album="7LLZLkkBTR42Kb9JPRAzKb" />
       </div>
-      <br/>
+      <br />
       <div class="lg:w-[50vw]">
         <p>
-          Wow. This album, man. I hopped on the shoegaze bandwagon in the early 2010s when numerous hardcore bands started aping the style.
-          Most of the classics did nothing for me as I was still accustomed to breakdowns and blast beats. Hum were really the only band that stuck out.
-          During the summer, I decided to delve into some classics again with a focus on "bands that inspired Nothing," and Catherine Wheel was at the top of that list.
-          From track 1, I was hooked. There's plenty of heaviness that I don't hear in a lot of other Brit bands from that era, which I love.
-          The only miss on the album for me is <i>I Want To Touch You</i>, a single off <i>Ferment</i>. It has the classic jangly Brit pop-rock sound that I absolutely despise.
-          Luckily, that song is an outlier, and the rest of the album is a divine mix of heavy, ethereal, and overall super catchy rock.
-          Highly recommend. Also listen to Nothing :)
+          Wow. This album, man. I hopped on the shoegaze bandwagon in the early
+          2010s when numerous hardcore bands started aping the style. Most of
+          the classics did nothing for me as I was still accustomed to
+          breakdowns and blast beats. Hum were really the only band that stuck
+          out. During the summer, I decided to delve into some classics again
+          with a focus on "bands that inspired Nothing," and Catherine Wheel was
+          at the top of that list. From track 1, I was hooked. There's plenty of
+          heaviness that I don't hear in a lot of other Brit bands from that
+          era, which I love. The only miss on the album for me is <i
+            >I Want To Touch You</i
+          >, a single off <i>Ferment</i>. It has the classic jangly Brit
+          pop-rock sound that I absolutely despise. Luckily, that song is an
+          outlier, and the rest of the album is a divine mix of heavy, ethereal,
+          and overall super catchy rock. Highly recommend. Also listen to
+          Nothing :)
         </p>
       </div>
     </div>
@@ -117,20 +169,25 @@ import articles from '@public/arcticles.json';
       <div class="lg:w-[25vw]">
         <Spotify album="6pwwXi1lkq446RXMih9nHn" />
       </div>
-      <br/>
+      <br />
       <p class="lg:w-[50vw]">
-        I need more time with this one, but I like what I heard. It's lo-fi without sounding like shit.
-        The aesthetics are great as well.
+        I need more time with this one, but I like what I heard. It's lo-fi
+        without sounding like shit. The aesthetics are great as well.
       </p>
     </div>
     <h2 class="text-lg font-semibold">A whole lot of Doom</h2>
     <div class="lg:w-[50vw]">
       <p>
-        One day, I decided to listen to the entire Black Sabbath discography; I had never listened to a full BS album before. I don't remember the original motivation, but I'm glad I did.
-        I always associated Sabbath with dad/butt rock since it was mixed in with Puddle of Mudd and Seether on the radio.
-        As I eventually migrated to metal from hardcore, I always skipped over Doom and never thought to really check out Sabbath.
-        Sabbath is incredible. The amount of hits on the first two albums is insane, and the later albums are obviously a major inspiration for not only modern doom but all metal.
-        I honestly couldn't believe that those original Sabbath albums were released in the early 70s.
+        One day, I decided to listen to the entire Black Sabbath discography; I
+        had never listened to a full BS album before. I don't remember the
+        original motivation, but I'm glad I did. I always associated Sabbath
+        with dad/butt rock since it was mixed in with Puddle of Mudd and Seether
+        on the radio. As I eventually migrated to metal from hardcore, I always
+        skipped over Doom and never thought to really check out Sabbath. Sabbath
+        is incredible. The amount of hits on the first two albums is insane, and
+        the later albums are obviously a major inspiration for not only modern
+        doom but all metal. I honestly couldn't believe that those original
+        Sabbath albums were released in the early 70s.
       </p>
     </div>
     <div class="my-4 space-y-2">
@@ -138,10 +195,11 @@ import articles from '@public/arcticles.json';
       <div class="lg:w-[25vw]">
         <Spotify album="4ZLy3U2q17Yjw7jkjXPJQj" />
       </div>
-      <br/>
+      <br />
       <p class="lg:w-[50vw]">
-        Sabbath was my entry point into the Doom rabbit hole. What I found were some incredible albums that I regret not looking into earlier.
-        In the future, I'd like to analyze these albums more in depth.
+        Sabbath was my entry point into the Doom rabbit hole. What I found were
+        some incredible albums that I regret not looking into earlier. In the
+        future, I'd like to analyze these albums more in depth.
       </p>
     </div>
     <div class="my-4 space-y-2">
@@ -157,7 +215,9 @@ import articles from '@public/arcticles.json';
       </div>
     </div>
     <div class="my-4 space-y-2">
-      <b>Solitude Aeturnus</b> - <i class="love">Into the Depths of Sorrow (1991)</i>
+      <b>Solitude Aeturnus</b> - <i class="love"
+        >Into the Depths of Sorrow (1991)</i
+      >
       <div class="lg:w-[25vw]">
         <Spotify album="02iH5pxrznY3IgAc6ZQBbk" />
       </div>
@@ -174,7 +234,10 @@ import articles from '@public/arcticles.json';
         <Spotify album="2cnVd2w8adi6kIo5DfErRk" />
       </div>
     </div>
-    <p>All of these bands/albums are amazing in their own right, and all owe at least part of their sound to Sabbath.</p>
+    <p>
+      All of these bands/albums are amazing in their own right, and all owe at
+      least part of their sound to Sabbath.
+    </p>
     <GradientBar />
   </Page>
 </Layout>

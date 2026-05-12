@@ -1,14 +1,23 @@
 ---
 export interface Props {
-    img: string;
-    alt?: string;
+  img: string;
+  alt?: string;
 }
 
 const { img, alt = "Merch collection item" } = Astro.props;
 ---
 
-<div class="p-1 border border-dashed rounded-lg lg:w-1/2 border-neutral-200 dark:border-neutral-700">
-  <a target="_blank" rel="noopener noreferrer" href=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`>
-    <img alt={alt} src=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}` />
+<div
+  class="p-1 border border-dashed rounded-lg lg:w-1/2 border-neutral-200 dark:border-neutral-700"
+>
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`
+  >
+    <img
+      alt={alt}
+      src=`https://res.cloudinary.com/shoveltoss-com/image/upload/${img}`
+    />
   </a>
 </div>

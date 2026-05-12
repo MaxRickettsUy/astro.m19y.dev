@@ -6,27 +6,28 @@ main {
   overflow-y: auto;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: system-ui, sans-serif;
 }
 
 /* RWL rating colors */
 .archive {
-  color: #BA5252;
+  color: #ba5252;
 }
 
 .gradient {
   height: 10px;
-  background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);
+  background: linear-gradient(to left, #f7797d, #fbd786, #c6ffdd);
 }
 
 .love {
-  color: #C6FFDD;
+  color: #c6ffdd;
 }
 
 .meh {
-  color: #FBD786;
+  color: #fbd786;
 }
 
 .skip {

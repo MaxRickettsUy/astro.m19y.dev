@@ -12,11 +12,13 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2026.5.10] — 2026-05-10
 
 ### Added
+
 - `shoveltoss.ing` project card on homepage (Shoveltoss video game)
 - Project cards now show status badge (Active/Paused), GitHub icon link, and tech-stack icons (Astro, Tailwind, Claude, Codex, HTML Canvas) via `astro-icon` Lucide + Simple Icons sets
 - `.github/workflows/deploy-netlify.yml` — deploy to Netlify on GitHub release publish
 
 ### Changed
+
 - Copy editing pass on `uses.astro` (punctuation, capitalization: macOS, JavaScript, GitHub, GitLab, VS Code, PC)
 - Tighten copy on `random/cool-sites.astro` and `rwl/2021`–`rwl/2024.astro`
 
@@ -25,6 +27,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2026.5.9.1] — 2026-05-09
 
 ### Added
+
 - Persisted light/dark/system theme toggle driven by `prefers-color-scheme` by default; re-applied across view-transition swaps (`ThemeToggle.astro`)
 - Shared `Page.astro` and `Section.astro` components for consistent page wrapper, section rhythm, and unified heading/body type scale
 - `ExternalLink.astro` component centralizing `rel="noopener noreferrer"` and external-link styling
@@ -34,11 +37,13 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 - `AGENTS.md` for agent-collaboration guidance
 
 ### Changed
+
 - Refactor every page (`index`, `uses`, `cool-sites`, `rwl/*`, `random/*`) onto the shared `Page` / `Section` components with unified spacing and typography
 - Simplify `Header.astro` to avatar navigation + theme toggle
 - Replace `src/img/external-link.svg`, `github.svg`, `rss.svg` usages with `<Icon name="lucide:…">`
 
 ### Removed
+
 - `src/pages/posts/upgrade-wiki-js-heroku.astro`, `configuring-flutter-linux-mint.astro`, `resizable-vuetify-table.astro` — outdated 2021–2022 posts
 - `src/pages/posts.astro` — manual post index, removed with the posts it listed
 - `src/img/external-link.svg`, `src/img/github.svg`, `src/img/rss.svg` — replaced by Iconify Lucide icons
@@ -48,6 +53,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2026.5.9] — 2026-05-09
 
 ### Changed
+
 - Upgrade Astro 5 → 6.3.1; replace deprecated `<ViewTransitions />` with `<ClientRouter />`
 - Upgrade Tailwind 3 → 4; migrate from `@astrojs/tailwind` integration + `tailwind.config.cjs` to `@tailwindcss/vite` plugin with CSS-native config
 - Upgrade `@types/node` 20 → 22; pin Netlify build environment to Node.js 22
@@ -69,12 +75,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 - Rewrite `README.md` with project-specific content replacing Astro boilerplate
 
 ### Fixed
+
 - Add `rel="noopener noreferrer"` to all `<a target="_blank">` links site-wide
 - Fix missing and empty `alt` attributes on hardware/software images in `uses.astro`; add `alt` to `CoolSite` screenshot image
 - Fix double `<hr/>` and malformed `<p>` tag in `rwl/2023.astro`
 - Rename `garden/2024.astro` page title from `"merch-collection"` to `"Garden 2024"`
 
 ### Removed
+
 - `scripts.js` — unreferenced legacy file from the pre-Astro site
 - `src/components/Card.astro` — unused component (0 imports)
 - `src/img/favicon.png`, `github.png`, `linkedin.png`, `me.jpg`, `merle.png`, `xps13.jpg` — unreferenced images
@@ -87,6 +95,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2025.3.12] — 2025-03-12
 
 ### Added
+
 - New wine night entries (03/08/2025 session)
 - Additional merch collection photos
 
@@ -95,12 +104,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2024.3.7] — 2024-03-06
 
 ### Added
+
 - Bukmark.club member badge on homepage
 - Camp Wood photo gallery (`/random/camp-wood`)
 - Cool sites JSON config; new site entries
 - Spotify embeds on RWL pages
 
 ### Changed
+
 - Layout updates
 
 ---
@@ -108,11 +119,13 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2024.1.11] — 2024-01-11
 
 ### Added
+
 - Garden photo gallery (`/random/garden/2024`) — 2024-08-31
 - Beans page (`/random/beans`) — 2024-04-06
 - Wine night entry (04/28/2024)
 
 ### Changed
+
 - RWL 2023 and 2024 updates
 
 ---
@@ -120,6 +133,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [2023.11.22] — 2023-11-22
 
 ### Added
+
 - `uses` page
 - Version badge on homepage linked to GitHub release tag
 - Umami analytics
@@ -127,6 +141,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 - View transitions via Astro `<ViewTransitions />`
 
 ### Changed
+
 - Articles migrated from inline HTML to `arcticles.json`
 - RWL pages refactored to map over JSON data
 - Astro upgraded to v3
@@ -136,6 +151,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 ## [Initial] — 2023-10-25
 
 ### Added
+
 - Astro + Tailwind site scaffold
 - Converted legacy HTML pages to Astro components
 - `Layout.astro` with shared Header/Footer
