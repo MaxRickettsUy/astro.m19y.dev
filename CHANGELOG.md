@@ -9,6 +9,17 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.19.1] — 2026-05-19
+
+### Security
+
+- Bumped `devalue` 5.8.0 → 5.8.1 via `npm audit fix` (GHSA-77vg-94rm-hx3p, DoS via sparse array deserialization)
+- Added `overrides.yaml: ^2.8.3` to patch transitive `yaml-language-server` chain (GHSA-48c2-rrv3-qjmp, stack overflow via deeply nested collections)
+
+### Changed
+
+- Bumped `astro` 6.3.1 → 6.3.5
+
 ## [2026.5.19] — 2026-05-19
 
 ### Added

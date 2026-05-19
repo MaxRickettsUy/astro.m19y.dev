@@ -1,7 +1,7 @@
 {
   "name": "astro.m19y.dev",
   "type": "module",
-  "version": "2026.5.19",
+  "version": "2026.5.19.1",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev --host",
@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.1",
+    "astro": "^6.3.5",
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
@@ -24,5 +24,8 @@
     "@types/node": "^22.0.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "overrides": {
+    "yaml": "^2.8.3"
   }
 }
