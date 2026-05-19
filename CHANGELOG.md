@@ -9,6 +9,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.19] — 2026-05-19
+
+### Added
+
+- `wumbotron` project tile on the homepage Projects section
+
+### Fixed
+
+- Corrected GitHub links for `prsnl.site` and `shoveltoss-game` project tiles (moved from `buddies-dev/` to `MaxRickettsUy/`)
+
 ## [2026.5.11] — 2026-05-11
 
 ### Added
