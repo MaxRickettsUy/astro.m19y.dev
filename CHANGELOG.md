@@ -9,6 +9,20 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.29] — 2026-05-29
+
+### Added
+
+- Decap CMS admin at `/admin/` for editing RWL books and article links.
+- Local CMS workflow with `npm run cms` using `decap-server`.
+- `public/rwl.json` for editable RWL book link/status data.
+
+### Changed
+
+- RWL year pages now render book links from JSON instead of hardcoded Astro markup.
+- Renamed `public/arcticles.json` to `public/articles.json`.
+- Archived the completed design cleanup plan.
+
 ## [2026.5.19.1] — 2026-05-19
 
 ### Security
