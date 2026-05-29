@@ -6,7 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import Page from "@components/Page.astro";
 import Spotify from "@components/Spotify.astro";
 
-import articles from "@public/arcticles.json";
+import articles from "@public/articles.json";
+import rwl from "@public/rwl.json";
 ---
 
 <Layout title="rwl 2023">
@@ -28,41 +29,7 @@ import articles from "@public/arcticles.json";
     </div>
     <div>
       <h2 class="text-lg font-semibold">books</h2>
-      <BookLink
-        href="How_to_Win_Friends_and_Influence_People"
-        label="How to Win Friends and Influence People"
-        wiki
-        inProgress
-        audiobook
-      />
-      <BookLink
-        href="The_Intelligent_Investor"
-        label="The Intelligent Investor"
-        wiki
-        inProgress
-      />
-      <BookLink
-        href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/"
-        label="Cheap Land Colorado"
-        complete
-      />
-      <BookLink
-        href="https://jamesclear.com/atomic-habits"
-        label="Atomic Habits"
-        complete
-        audiobook
-      />
-      <BookLink
-        href="The_Rise_of_Theodore_Roosevelt"
-        label="The Rise of Theodore Roosevelt"
-        inProgress
-        audiobook
-      />
-      <BookLink
-        href="https://en.wikipedia.org/wiki/Blood_Meridian"
-        label="Blood Meridian"
-        inProgress
-      />
+      {rwl["2023"].books.map((book) => <BookLink {...book} />)}
     </div>
     <hr class="border-neutral-200 dark:border-neutral-800" />
     <div>

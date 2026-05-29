@@ -6,7 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import Page from "@components/Page.astro";
 import Spotify from "@components/Spotify.astro";
 
-import articles from "@public/arcticles.json";
+import articles from "@public/articles.json";
+import rwl from "@public/rwl.json";
 ---
 
 <Layout title="rwl 2022">
@@ -28,63 +29,24 @@ import articles from "@public/arcticles.json";
     </div>
     <div>
       <h2 class="text-lg font-semibold">books</h2>
-      <BookLink
-        href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life"
-        label="The Snowball: Warren Buffett and the Business of Life"
-        wiki
-        inProgress
-      />
-      <BookLink
-        href="https://itrevolution.com/the-phoenix-project/"
-        label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win"
-        inProgress
-      />
-      <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki complete />
-      <details>
-        <summary>Thoughts</summary>
-        In general, it's worth the read, though probably longer than necessary. <br
-        /> I was well aware of the concept of BS jobs before reading, <br /> so nothing
-        was very mind-blowing or surprising. But for those <br /> who have never read
-        the original essay and question the value <br /> of spending their life at
-        their 9-to-5, I think it's something to check out.
-      </details>
-      <BookLink
-        href="How_to_Win_Friends_and_Influence_People"
-        label="How to Win Friends and Influence People"
-        wiki
-        inProgress
-        audiobook
-      />
-      <BookLink
-        href="The_Intelligent_Investor"
-        label="The Intelligent Investor"
-        wiki
-        inProgress
-      />
-      <BookLink
-        href="King_Leopold%27s_Ghost"
-        label="King Leopold's Ghost"
-        wiki
-        complete
-        audiobook
-      />
-      <BookLink
-        href="https://www.penguinrandomhouse.com/books/573452/cheap-land-colorado-by-ted-conover/"
-        label="Cheap Land Colorado"
-        inProgress
-      />
-      <BookLink
-        href="https://jamesclear.com/atomic-habits"
-        label="Atomic Habits"
-        inProgress
-        audiobook
-      />
-      <BookLink
-        href="The_Rise_of_Theodore_Roosevelt"
-        label="The Rise of Theodore Roosevelt"
-        inProgress
-        audiobook
-      />
+      {
+        rwl["2022"].books.map((book) => (
+          <>
+            <BookLink {...book} />
+            {book.thoughts ? (
+              <details>
+                <summary>Thoughts</summary>
+                {book.thoughts.map((thought) => (
+                  <>
+                    {thought}
+                    <br />
+                  </>
+                ))}
+              </details>
+            ) : null}
+          </>
+        ))
+      }
     </div>
     <hr class="border-neutral-200 dark:border-neutral-800" />
     <div>

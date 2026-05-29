@@ -7,7 +7,8 @@ import Section from "@components/Section.astro";
 import Spotify from "@components/Spotify.astro";
 import Layout from "@layouts/Layout.astro";
 
-import articles from "@public/arcticles.json";
+import articles from "@public/articles.json";
+import rwl from "@public/rwl.json";
 ---
 
 <Layout title="rwl 2021">
@@ -30,25 +31,7 @@ import articles from "@public/arcticles.json";
     </div>
 
     <Section title="books">
-      <BookLink
-        href="The_Snowball:_Warren_Buffett_and_the_Business_of_Life"
-        label="The Snowball: Warren Buffett and the Business of Life"
-        wiki
-        inProgress
-      />
-      <BookLink
-        href="https://itrevolution.com/the-phoenix-project/"
-        label="The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win"
-        inProgress
-      />
-      <BookLink href="Bullshit_Jobs" label="Bullshit Jobs" wiki inProgress />
-      <BookLink
-        href="How_to_Win_Friends_and_Influence_People"
-        label="How to Win Friends and Influence People"
-        wiki
-        inProgress
-        audiobook
-      />
+      {rwl["2021"].books.map((book) => <BookLink {...book} />)}
     </Section>
 
     <hr class="border-neutral-200 dark:border-neutral-800" />

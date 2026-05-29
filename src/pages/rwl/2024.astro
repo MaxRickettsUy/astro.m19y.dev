@@ -7,7 +7,8 @@ import Page from "@components/Page.astro";
 import Section from "@components/Section.astro";
 import Spotify from "@components/Spotify.astro";
 
-import articles from "@public/arcticles.json";
+import articles from "@public/articles.json";
+import rwl from "@public/rwl.json";
 ---
 
 <Layout title="rwl 2024">
@@ -28,11 +29,7 @@ import articles from "@public/arcticles.json";
     </div>
 
     <Section title="books">
-      <BookLink
-        href="https://us.macmillan.com/books/9781250183866/extremeownership"
-        label="Extreme Ownership: How U.S. Navy SEALs Lead and Win"
-        inProgress
-      />
+      {rwl["2024"].books.map((book) => <BookLink {...book} />)}
     </Section>
 
     <hr class="border-neutral-200 dark:border-neutral-800" />
