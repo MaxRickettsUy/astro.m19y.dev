@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "cms": "decap-server",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "@iconify-json/lucide": "^1.2.106",
     "@iconify-json/simple-icons": "^1.2.81",
     "@types/node": "^22.0.0",
+    "decap-server": "^3.7.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1"
   },

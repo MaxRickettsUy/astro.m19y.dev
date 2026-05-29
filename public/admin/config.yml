@@ -1,0 +1,135 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "rwl"
+    label: "Read Watch Listen"
+    files:
+      - name: "rwl_books"
+        label: "RWL Books"
+        file: "public/rwl.json"
+        format: "json"
+        fields:
+          - label: "2021"
+            name: "2021"
+            widget: "object"
+            fields:
+              - label: "Books"
+                name: "books"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL or Wikipedia Slug", name: "href", widget: "string" }
+                  - { label: "Wikipedia Slug", name: "wiki", widget: "boolean", required: false }
+                  - { label: "In Progress", name: "inProgress", widget: "boolean", required: false }
+                  - { label: "Complete", name: "complete", widget: "boolean", required: false }
+                  - { label: "Audiobook", name: "audiobook", widget: "boolean", required: false }
+                  - label: "Thoughts"
+                    name: "thoughts"
+                    widget: "list"
+                    required: false
+                    field: { label: "Thought", name: "thought", widget: "string" }
+          - label: "2022"
+            name: "2022"
+            widget: "object"
+            fields:
+              - label: "Books"
+                name: "books"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL or Wikipedia Slug", name: "href", widget: "string" }
+                  - { label: "Wikipedia Slug", name: "wiki", widget: "boolean", required: false }
+                  - { label: "In Progress", name: "inProgress", widget: "boolean", required: false }
+                  - { label: "Complete", name: "complete", widget: "boolean", required: false }
+                  - { label: "Audiobook", name: "audiobook", widget: "boolean", required: false }
+                  - label: "Thoughts"
+                    name: "thoughts"
+                    widget: "list"
+                    required: false
+                    field: { label: "Thought", name: "thought", widget: "string" }
+          - label: "2023"
+            name: "2023"
+            widget: "object"
+            fields:
+              - label: "Books"
+                name: "books"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL or Wikipedia Slug", name: "href", widget: "string" }
+                  - { label: "Wikipedia Slug", name: "wiki", widget: "boolean", required: false }
+                  - { label: "In Progress", name: "inProgress", widget: "boolean", required: false }
+                  - { label: "Complete", name: "complete", widget: "boolean", required: false }
+                  - { label: "Audiobook", name: "audiobook", widget: "boolean", required: false }
+                  - label: "Thoughts"
+                    name: "thoughts"
+                    widget: "list"
+                    required: false
+                    field: { label: "Thought", name: "thought", widget: "string" }
+          - label: "2024"
+            name: "2024"
+            widget: "object"
+            fields:
+              - label: "Books"
+                name: "books"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL or Wikipedia Slug", name: "href", widget: "string" }
+                  - { label: "Wikipedia Slug", name: "wiki", widget: "boolean", required: false }
+                  - { label: "In Progress", name: "inProgress", widget: "boolean", required: false }
+                  - { label: "Complete", name: "complete", widget: "boolean", required: false }
+                  - { label: "Audiobook", name: "audiobook", widget: "boolean", required: false }
+                  - label: "Thoughts"
+                    name: "thoughts"
+                    widget: "list"
+                    required: false
+                    field: { label: "Thought", name: "thought", widget: "string" }
+      - name: "rwl_articles"
+        label: "RWL Articles"
+        file: "public/articles.json"
+        format: "json"
+        fields:
+          - label: "2021"
+            name: "2021"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Archive URL", name: "archive", widget: "string" }
+          - label: "2022"
+            name: "2022"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Archive URL", name: "archive", widget: "string" }
+          - label: "2023"
+            name: "2023"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Archive URL", name: "archive", widget: "string" }
+          - label: "2024"
+            name: "2024"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Archive URL", name: "archive", widget: "string" }
