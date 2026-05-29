@@ -9,6 +9,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions follo
 
 ## [Unreleased]
 
+## [2026.5.29.1] — 2026-05-29
+
+### Added
+
+- `.node-version` pin for Node.js 22 so Netlify and related tooling can detect the project runtime.
+
+### Fixed
+
+- Netlify Identity invite/login callbacks now open the Identity widget from regular site pages and redirect back to `/admin/`.
+
 ## [2026.5.29] — 2026-05-29
 
 ### Added

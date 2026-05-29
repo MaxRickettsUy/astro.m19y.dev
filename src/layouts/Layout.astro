@@ -45,6 +45,44 @@ import Header from "@components/Header.astro";
     <ClientRouter />
     <script
       is:inline
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script is:inline>
+      (() => {
+        const adminPath = "/admin/";
+        const identityHashPattern =
+          /(confirmation_token|invite_token|recovery_token|access_token)=/;
+
+        const initIdentity = () => {
+          const identity = window.netlifyIdentity;
+
+          if (!identity) return;
+
+          identity.on("init", (user) => {
+            if (!user && identityHashPattern.test(window.location.hash)) {
+              identity.open();
+            }
+          });
+
+          identity.on("login", () => {
+            window.location.assign(adminPath);
+          });
+
+          identity.on("signup", () => {
+            window.location.assign(adminPath);
+          });
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initIdentity, {
+            once: true,
+          });
+        } else {
+          initIdentity();
+        }
+      })();
+    </script>
+    <script
+      is:inline
       async
       src="https://us.umami.is/script.js"
       data-website-id="83243f0c-772c-4829-8d72-645a3bee15b9"></script>
