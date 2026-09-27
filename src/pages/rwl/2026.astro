@@ -1,0 +1,31 @@
+---
+import ArticleLink from "@components/ArticleLink.astro";
+import GradientBar from "@components/GradientBar.astro";
+import Layout from "@layouts/Layout.astro";
+import Page from "@components/Page.astro";
+import Section from "@components/Section.astro";
+
+import articles from "@public/articles.json";
+---
+
+<Layout title="rwl 2026">
+  <Page title="2026">
+    <nav
+      class="flex flex-row justify-between"
+      aria-label="Read watch listen years"
+    >
+      <a class="text-blue-600 underline dark:text-blue-400" href="/rwl/2024"
+        >&lt; 2024</a
+      >
+      <span></span>
+    </nav>
+
+    <Section title="articles">
+      <div class="flex flex-col">
+        {articles["2026"].map((article) => <ArticleLink article={article} />)}
+      </div>
+    </Section>
+
+    <GradientBar />
+  </Page>
+</Layout>

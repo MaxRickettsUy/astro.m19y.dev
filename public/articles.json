@@ -291,5 +291,292 @@
       "href": "https://vitalik.eth.limo/general/2024/01/31/end.html",
       "label": "The end of my childhood"
     }
+  ],
+  "2026": [
+    {
+      "archive": "https://web.archive.org/web/*/https://robert.ocallahan.org/2026/09/goodbye-google.html",
+      "href": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
+      "label": "Goodbye Google"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://sunilpai.dev/posts/the-senior-engineer-death-spiral/",
+      "href": "https://sunilpai.dev/posts/the-senior-engineer-death-spiral/",
+      "label": "the senior engineer death spiral"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://drericlevi.pages.dev/the-darker-side-of-being-a-doctor/",
+      "href": "https://drericlevi.pages.dev/the-darker-side-of-being-a-doctor/",
+      "label": "The darker side of being a doctor"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.iankduncan.com/personal/2026-09-16-sex-ai-and-the-apocalypse",
+      "href": "https://www.iankduncan.com/personal/2026-09-16-sex-ai-and-the-apocalypse",
+      "label": "Sex, AI, and the Apocalypse - Ian Duncan"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+      "href": "https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+      "label": "A warning about ‘model welfare’"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://princetonponders.bearblog.dev/rogue-ai-is-bullshit/",
+      "href": "https://princetonponders.bearblog.dev/rogue-ai-is-bullshit/",
+      "label": "\"Rogue AI\" is Bullshit: Article Reading List"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://publicdomainreview.org/collection/atlantic-city-sand-sculpture/",
+      "href": "https://publicdomainreview.org/collection/atlantic-city-sand-sculpture/",
+      "label": "Photographs of Atlantic City Sand Sculpture (ca. 1880–1920)"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://news.ycombinator.com/item?id=49716525",
+      "href": "https://news.ycombinator.com/item?id=49716525",
+      "label": "i mean do you want the honest answer? i’m not a white american guy so i can say ... | Hacker News"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://jmarriott.substack.com/p/the-dawn-of-the-post-literate-society-aa1",
+      "href": "https://jmarriott.substack.com/p/the-dawn-of-the-post-literate-society-aa1",
+      "label": "The dawn of the post-literate society"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
+      "href": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
+      "label": "De-Brainrot Vacations"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://graybeard.ing/software-drives-people-insane/",
+      "href": "https://graybeard.ing/software-drives-people-insane/",
+      "label": "Software Drives People Insane"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://strategictree.bearblog.dev/i-think-i-hate-the-internet/",
+      "href": "https://strategictree.bearblog.dev/i-think-i-hate-the-internet/",
+      "label": "I think I hate the internet"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://x.com/hilbertspaess/status/2097476196791709843#m",
+      "href": "https://x.com/hilbertspaess/status/2097476196791709843#m",
+      "label": "I resigned from Anthropic today. I spent the last three years doing pretraining research at both OpenAI and Anthropic. Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives. More thoughts below."
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
+      "href": "https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
+      "label": "The Real Luxuries In Life"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://jennywanger.com/articles/burnt-out-on-a-three-day-week/",
+      "href": "https://jennywanger.com/articles/burnt-out-on-a-three-day-week/",
+      "label": "Burnt out on a three-day week"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.noahpinion.blog/p/the-death-of-market-street",
+      "href": "https://www.noahpinion.blog/p/the-death-of-market-street",
+      "label": "The death of Market Street"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://signalundefied.bearblog.dev/i-wanna-live-an-npc-life/",
+      "href": "https://signalundefied.bearblog.dev/i-wanna-live-an-npc-life/",
+      "label": "i wanna live an npc life"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "href": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "label": "The Hugging Face incident and the road ahead"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
+      "href": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
+      "label": "Anger, Anxiety and Agency"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+      "href": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+      "label": "Where Did All the Public Bathrooms Go? - JSTOR Daily"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
+      "href": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
+      "label": "Building a backyard office, the build and cost breakdown"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
+      "href": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
+      "label": "Three important steps in my maturation process – Thomas Dullien / Halvar Flake"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://schlarp.com/posts/everything-i-own-owned/",
+      "href": "https://schlarp.com/posts/everything-i-own-owned/",
+      "label": "Everything I own, owned"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/",
+      "href": "https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/",
+      "label": "Building an (almost) fully self-hosted, sandboxed, agentic software factory"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://blighttown.bearblog.dev/re-where-did-my-friends-go/",
+      "href": "https://blighttown.bearblog.dev/re-where-did-my-friends-go/",
+      "label": "Re: Where did my friends go?"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
+      "href": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
+      "label": "Being ambitious and being a dad | Nicholas Charriere"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://82mhz.net/posts/2026/08/i-used-to-be-excited-about-new-tech-but-i-rarely-am-anymore/",
+      "href": "https://82mhz.net/posts/2026/08/i-used-to-be-excited-about-new-tech-but-i-rarely-am-anymore/",
+      "label": "I used to be excited about new tech, but I rarely am anymore - 82MHz"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://fornoone.bearblog.dev/things-to-do-after-your-dad-dies/",
+      "href": "https://fornoone.bearblog.dev/things-to-do-after-your-dad-dies/",
+      "label": "Things to do after your dad dies"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://householderkarl.com/everything-is-suffering/",
+      "href": "https://householderkarl.com/everything-is-suffering/",
+      "label": "Everything Is Suffering"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://yourbrainonmoney.substack.com/p/women-are-making-more-money-why-are",
+      "href": "https://yourbrainonmoney.substack.com/p/women-are-making-more-money-why-are",
+      "label": "Women are making more money. Why are they still doing everything else?"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+      "href": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+      "label": "Defending my own brain against enshittification"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+      "href": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+      "label": "Why Is Everyone In Tech So Sad? - NOEMA"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
+      "href": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
+      "label": "In Memory of My Wife, Elise Cawley (1961–2026), with Thanks for 36 Wonderful Years—Stephen Wolfram Writings"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://en.andros.dev/blog/b6c32a90/i-added-a-real-time-chat-to-my-blog-people-used-it-to-attack-me/",
+      "href": "https://en.andros.dev/blog/b6c32a90/i-added-a-real-time-chat-to-my-blog-people-used-it-to-attack-me/",
+      "label": "I added a real-time chat to my blog, people used it to attack me | Andros Fenollosa"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://householderkarl.com/a-sick-people/",
+      "href": "https://householderkarl.com/a-sick-people/",
+      "label": "A Sick People"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.raptitude.com/2026/07/how-to-exist/",
+      "href": "https://www.raptitude.com/2026/07/how-to-exist/",
+      "label": "How to Exist"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://christianselig.com/2026/07/iphone-air-review/",
+      "href": "https://christianselig.com/2026/07/iphone-air-review/",
+      "label": "I have thoughts on the iPhone Air"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "href": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "label": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://turntrout.com/why-i-left-google-deepmind",
+      "href": "https://turntrout.com/why-i-left-google-deepmind",
+      "label": "Why I Left Google DeepMind"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://thinkingmachines.ai/news/introducing-inkling/",
+      "href": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "label": "Inkling: Our Open-Weights Model"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.ayush.digital/blog/the-memory-heist",
+      "href": "https://www.ayush.digital/blog/the-memory-heist",
+      "label": "The Memory Heist"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
+      "href": "https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
+      "label": "Zig Creator Calls Spade a Spade, Anthropic Blows Smoke"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://geohot.github.io//blog/jekyll/update/2026/07/11/ai-2040.html",
+      "href": "https://geohot.github.io//blog/jekyll/update/2026/07/11/ai-2040.html",
+      "label": "AI 2040 and the Cult of Intelligence"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://geohot.github.io//blog/jekyll/update/2026/05/03/punk-or-why-i-dont-stream.html",
+      "href": "https://geohot.github.io//blog/jekyll/update/2026/05/03/punk-or-why-i-dont-stream.html",
+      "label": "Punk, or why I don’t stream anymore"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html",
+      "href": "https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html",
+      "label": "My Thoughts on the Bun Rust Rewrite - Andrew Kelley"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://bun.com/blog/bun-in-rust",
+      "href": "https://bun.com/blog/bun-in-rust",
+      "label": "Rewriting Bun in Rust"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/",
+      "href": "https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/",
+      "label": "Tris Sherliker"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://nooneshappy.com/article/the-demoralization-of-the-white-collar-worker/",
+      "href": "https://nooneshappy.com/article/the-demoralization-of-the-white-collar-worker/",
+      "label": "The Demoralization of The White-Collar Worker — No One's Happy"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://blog.absurdpirate.com/im-calling-it-gta-vi-is-going-to-be-a-dissappointment/",
+      "href": "https://blog.absurdpirate.com/im-calling-it-gta-vi-is-going-to-be-a-dissappointment/",
+      "label": "I'm Calling It, GTA VI is Going to Be a Dissappointment"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html",
+      "href": "https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html",
+      "label": "Why I Stopped Arguing With People"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://yourbrainonmoney.substack.com/p/can-you-buy-taste",
+      "href": "https://yourbrainonmoney.substack.com/p/can-you-buy-taste",
+      "label": "Can you buy taste?"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship",
+      "href": "https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship",
+      "label": "The quiet grief of adult friendship"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://urflow.bearblog.dev/jobs-and-software-is-fucked/",
+      "href": "https://urflow.bearblog.dev/jobs-and-software-is-fucked/",
+      "label": "Jobs and Software is Fucked"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://erildrun.bearblog.dev/spotify-killed-the-thrill-of-the-hunt/",
+      "href": "https://erildrun.bearblog.dev/spotify-killed-the-thrill-of-the-hunt/",
+      "label": "Spotify killed the thrill of the hunt"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://tiramisu.bearblog.dev/so-long-spotify/",
+      "href": "https://tiramisu.bearblog.dev/so-long-spotify/",
+      "label": "so long, spotify"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://wilsoniumite.com/2026/06/19/the-room-the-economy-cant-see/",
+      "href": "https://wilsoniumite.com/2026/06/19/the-room-the-economy-cant-see/",
+      "label": "The room the economy can't see - Wilsons Blog"
+    },
+    {
+      "archive": "https://web.archive.org/web/*/https://www.seangoedecke.com/doing-nothing-at-work/",
+      "href": "https://www.seangoedecke.com/doing-nothing-at-work/",
+      "label": "Doing nothing at work"
+    }
   ]
 }
