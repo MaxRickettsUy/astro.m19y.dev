@@ -15,7 +15,7 @@
     "@astrojs/check": "^0.9.10",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^7.3.5",
-    "astro-icon": "^1.1.5",
+    "astro-icon": "^1.2.0",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   },
@@ -23,11 +23,12 @@
     "@iconify-json/lucide": "^1.2.106",
     "@iconify-json/simple-icons": "^1.2.81",
     "@types/node": "^22.0.0",
-    "decap-server": "^3.7.0",
+    "decap-server": "^3.11.3",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1"
   },
   "overrides": {
+    "@hapi/joi": "npm:joi@17.13.6",
     "yaml": "^2.8.3"
   }
 }
